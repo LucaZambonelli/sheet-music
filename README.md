@@ -1,2 +1,0 @@
-# Stairway
-Stairway to Heaven
