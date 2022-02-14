@@ -361,53 +361,67 @@ makePercent =
                 \new Staff
                 \relative c'' {
                     \set Staff.instrumentName = #"intro "
-                    \clef treble
+                    \clef "treble^8"
                     \key c \major
                     \time 6/8
-                    R2.
+                    f8. e16 d8 f e d | g8. f16 e8 g f e |
+                    a4. g | fis2. \bar"|."
                 }
                 \new Staff
                 \relative c'' {
-                    \set Staff.instrumentName = #"al rit "
+                    \set Staff.instrumentName = #"al rit. "
                     \clef treble
                     \key g \major
                     \time 6/8
-                    R2.
+                    r8 r c b c4 | b2. | R2. | R |
                 }
             >>
         }
 
-%    \score {
-%        \header {
-%            piece = "Tu scendi dalle stelle - p. 57"
-%        }
-%        \new Staff
-%        \relative c' {
-%            \clef treble
-%            \key d \major
-%            \time 6/8
-%            fis8. g16 a8 g a b |
-%            e,8. fis16 g8 fis g a |
-%            d,8. e16 fis8 e fis g |
-%            cis, d e fis4. |
-%            d fis \bar "|."
-%        }
-%    }
-%
-%    \score {
-%        \header {
-%            piece = "Tu sei - p. 40"
-%        }
-%        \new Staff
-%        \relative c''' {
-%            \clef treble
-%            \key c \major
-%            \time 4/4
-%            \partial 8 c8 |
-%            c4. b8 b4. a8 | a4. g8 a4. c8 |
-%            c4. b8 b4. a8 | a4. g8 a2 \bar "|."
-%        }
-%    }
-%
+        \score {
+            \header {
+                piece = "Tu scendi dalle stelle - p. 57"
+            }
+            \new Staff
+            \relative c' {
+                    \set Staff.instrumentName = #"intro "
+                \clef treble
+                \key d \major
+                \time 6/8
+                fis8. g16 a8 g a b |
+                e,8. fis16 g8 fis g a |
+                d,8. e16 fis8 e fis g |
+                cis, d e fis4. |
+                d fis \bar "|."
+            }
+        }
+
+        \score {
+            \header {
+                piece = "Tu sei - p. 40"
+            }
+            \new Staff
+            \relative c''' {
+                \clef "treble^8"
+                \key c \major
+                \time 4/4
+                \partial 8 c8 |
+                c4. b8 b4. a8 | a4. g8 a4. c8 |
+                c4. b8 b4. a8 | a4. g8 a2 \bar "|."
+            }
+        }
+
+        \score {
+            \header {
+                piece = "Vivere la vita - p. 33"
+            }
+            \new Staff
+            \relative c {
+                \clef treble
+                \key d \major
+                \time 4/4
+                R1 \bar"|."
+            }
+        }
     }
 }
