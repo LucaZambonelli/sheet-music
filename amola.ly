@@ -126,18 +126,27 @@
     \score {
         \header {
             piece = "Cristo è risorto veramente - p. 41"
-            opera = "intro"
         }
-        \new Staff
-        \relative c'' {
-            \clef treble
-            \key f \major
-            \time 4/4
-            d8 e f f a4. a8 | g f d4 c2 |
-            f4 g8 a c4. d8 | c a g4 f4. a8 |
-            g f c4 e d | f g e f |
-            e f c d \fermata \bar"|."
-        }
+        << 
+            \new Staff
+            \relative c'' {
+                \set Staff.instrumentName = #"intro "
+                \clef treble
+                \key f \major
+                \time 4/4
+                a4-. f-. g-. c8 bes | a4-. a8 bes g f g4 |
+                a-. f g c8 bes | a4-. a8 bes g2 \bar"|."
+            }
+            \new Staff
+            \relative c'' {
+                \set Staff.instrumentName = #"controcanto "
+                \clef treble
+                \key f \major
+                \time 4/4
+                g4 f8. bes16 a4. r8 | d4 bes8. g16 a4. r16 bes |
+                g8. f16 g8. a16 f2 | a1 \bar"|."
+            }
+        >>
     }
 
     \score {
