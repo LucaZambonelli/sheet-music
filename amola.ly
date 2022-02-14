@@ -27,7 +27,7 @@
             \key a \major
             \time 4/4
             \partial 4 e8 fis |
-            gis4 gis fis8 e cis e~ |
+            gis4 gis \tuplet 3/2 { fis e cis } |
             e1 \fermata \bar "|."
         }
     }
@@ -62,6 +62,38 @@
 
     \score {
         \header {
+            piece = "Agnello di Dio"
+        }
+        \new Staff
+        \relative c'' {
+            \clef treble
+            \key g \major
+            \time 6/8
+            \repeat volta 2 {
+                e4.~ e8 fis g | a4.~ a8 g a |
+                b2. | b4 a g
+            }
+            fis2. \fermata \bar"|."
+        }
+    }
+
+    \score {
+        \header {
+            piece = "Alleluia (Dio ha visitato) - p. 61"
+        }
+        \new Staff
+        \relative c'' {
+            \clef treble
+            \key g \major
+            \time 4/4
+            d2 fis4 d | a'1 |
+            b2 fis4 d | g1 |
+            b2 fis4 d | fis1 | e \bar "|."
+        }
+    }
+
+    \score {
+        \header {
             piece = "Benedetto tu, Signore - p. 42"
         }
         \new Staff
@@ -72,6 +104,39 @@
             f2 g | a1 |
             f2 e | d1 |
             r8 g c e r g, f' e | r g, c e r a, f'16 e c8 \bar "|."
+        }
+    }
+
+    \score {
+        \header {
+            piece = "Come il cervo va all'acqua viva - p. 53"
+        }
+        \new Staff
+        \relative c'' {
+            \clef treble
+            \key f \major
+            \time 4/4
+            d8 e f f a4. a8 | g f d4 c2 |
+            f4 g8 a c4. d8 | c a g4 f4. a8 |
+            g f c4 e d | f g e f |
+            e f c d \fermata \bar"|."
+        }
+    }
+
+    \score {
+        \header {
+            piece = "Cristo è risorto veramente - p. 41"
+            opera = "intro"
+        }
+        \new Staff
+        \relative c'' {
+            \clef treble
+            \key f \major
+            \time 4/4
+            d8 e f f a4. a8 | g f d4 c2 |
+            f4 g8 a c4. d8 | c a g4 f4. a8 |
+            g f c4 e d | f g e f |
+            e f c d \fermata \bar"|."
         }
     }
 
@@ -109,8 +174,6 @@
             fis2 e \bar "|."
         }
     }
-
-    \pageBreak
 
     \score {
         \header {
