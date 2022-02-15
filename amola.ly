@@ -86,11 +86,6 @@ makePercent =
                     \set Staff.instrumentName = #"tra strofe "
                     \repeat percent 5 { \makePercent s2. }
                 }
-                \new Staff
-                \relative c {
-                    \set Staff.instrumentName = #"all'ultima "
-                    R2. R R R R
-                }
             >>
         }
     }
