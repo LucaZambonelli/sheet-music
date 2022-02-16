@@ -142,6 +142,19 @@ makePercent =
 
         \score {
             \header {
+                piece = "Come terra buona - p. 60"
+            }
+            \new Staff
+            \relative c {
+                \clef treble
+                \key d \major
+                \time 4/4
+                R1 \bar"|."
+            }
+        }
+
+        \score {
+            \header {
                 piece = "Cristo è risorto veramente - p. 41"
             }
             << 
