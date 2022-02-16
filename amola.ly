@@ -290,9 +290,9 @@ makePercent =
                 piece = "Iubilate Deo - p. 4"
             }
             \new Staff
-            \relative c' {
+            \relative c'' {
                 \set Staff.instrumentName = #"intro "
-                \clef treble
+                \clef "treble^8"
                 \key g \major
                 \time 4/4
                 d8 fis b a fis d~ d4 | d8 fis b a fis2 \bar"|."
@@ -303,21 +303,28 @@ makePercent =
             \header {
                 piece = "Ora è tempo di gioia - p. 24"
             }
-            \new Staff
-            \relative c'' {
-                \set Staff.instrumentName = #"intro "
-                \clef treble
-                \key d \major
-                \time 4/4
-                \repeat volta 2 {
-                    fis4 d fis2 | g4 e g2 |
-                    a4 fis a2 |
-                }
-                \alternative {
-                    { g4 e g2 | }
-                    { g4. fis16 e d2 \bar "|."}
-                }
-            }
+            <<
+                \new Staff
+                \relative c'' {
+                    \set Staff.instrumentName = #"intro "
+                    \clef "treble^8"
+                    \key d \major
+                    \time 4/4
+                    \repeat volta 2 {
+                        fis4 d fis2 | g4 e g2 |
+                        a4 fis a2 |
+                        }
+                    \alternative {
+                        { g4 e g2 | }
+                        { g4. fis16 e d2 \bar "|."}
+                        }
+                    }
+                \new Staff
+                \relative c'' {
+                    \set Staff.instrumentName = #"tra strofe "
+                    \repeat percent 5 { \makePercent s1 }
+                    }
+            >>
         }
 
         \score {
