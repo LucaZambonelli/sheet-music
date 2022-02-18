@@ -125,6 +125,20 @@ makePercent =
 
         \score {
             \header {
+                piece = "Cantate al Signore un canto nuovo - p. 63"
+            }
+            \new Staff
+            \relative c'' {
+                \set Staff.instrumentName = #"intro "
+                \clef "treble^8"
+                \key f \major
+                \time 4/4
+                d8 e f c r f a c | bes4-. a-. g-. f8 f \bar"|."
+            }
+        }
+
+        \score {
+            \header {
                 piece = "Come il cervo va all'acqua viva - p. 53"
             }
             \new Staff
@@ -248,6 +262,25 @@ makePercent =
                 e8 fis g4 fis8 e d4 | e8 fis d2. \bar"|."
             }
         }
+        \score {
+            \header {
+                piece = "Invochiamo la tua presenza - p. 42"
+            }
+            \new Staff
+            \relative c''' {
+                \set Staff.instrumentName = #"intro "
+                \clef "treble^8"
+                \key f \major
+                \time 4/4
+                r8 f16 f e d c c~ c bes8 c16~ c8 d |
+                c8. bes16~ bes8 a g8. a16~ a8 bes |
+                a8. bes16~ bes8  c d2 |
+                c8. bes16~ bes8 a g2 | f8 e d2.
+                \repeat volta 2 {
+                    R1 | R | f8 e d2. | R1 | \makePercent s
+                }
+            }
+        }
 
         \score {
             \header {
@@ -328,6 +361,9 @@ makePercent =
             >>
         }
 
+    }
+
+    \bookpart {
         \score {
             \header {
                 piece = "Perché tu sei con me - p. 35"
@@ -366,9 +402,7 @@ makePercent =
                 }
             >>
         }
-    }
 
-    \bookpart {
         \score {
             \header {
                 piece = "Questo io credo - p. "
@@ -446,7 +480,7 @@ makePercent =
 
         \score {
             \header {
-                piece = "Vieni al Signor - p. "
+                piece = "Vieni al Signor - p. 51"
             }
             \new Staff
             \relative c'' {
