@@ -79,7 +79,7 @@ makePercent =
                         e4.~ e8 fis g | a4.~ a8 g a |
                         b2. | b4 a g
                     }
-                    fis2. \fermata \bar"|."
+                    e2. \fermata \bar"|."
                 }
                 \new Staff
                 \relative c {
