@@ -30,7 +30,7 @@ makePercent =
                 \time 4/4
                 \partial 4 e8 fis |
                 gis4 gis \tuplet 3/2 { fis e cis } |
-                e1 \fermata \bar "|."
+                e1 \bar "|."
             }
         }
 
@@ -45,7 +45,7 @@ makePercent =
                 \key c \major
                 \time 4/4
                 g8 a b c d c d4 |
-                c1 \fermata \bar "|."
+                c1 \bar "|."
             }
         }
 
@@ -60,7 +60,7 @@ makePercent =
                 \key g \major
                 \time 4/4
                 d4 d e g |
-                g fis8 e fis2 \fermata \bar"|."
+                g fis8 e fis2 \bar"|."
             }
         }
 
@@ -79,7 +79,7 @@ makePercent =
                         e4.~ e8 fis g | a4.~ a8 g a |
                         b2. | b4 a g
                     }
-                    e2. \fermata \bar"|."
+                    e2. \bar"|."
                 }
                 \new Staff
                 \relative c {
@@ -87,6 +87,39 @@ makePercent =
                     \repeat percent 5 { \makePercent s2. }
                 }
             >>
+        }
+    }
+
+    \bookpart {
+        \score {
+            \header {
+                piece = "tipo 1"
+                }
+        \new Staff
+        \relative c'' {
+            \set Staff.instrumentName = #"ou? "
+            \clef "treble^8"
+            \key g \major
+            \time 4/4
+            c8 d e fis g a b4 |
+            d,8 e fis g a b d4 |
+            b1 \bar"|."
+            }
+        }
+
+        \score {
+            \header {
+                piece = "tipo 2"
+                }
+        \new Staff
+        \relative c''' {
+            \set Staff.instrumentName = #"ou? "
+            \clef "treble^8"
+            \key g \major
+            \time 4/4
+            g2 a4. g8 | fis4 e d2 |
+            g4 fis e d | e fis e2 \bar"|."
+            }
         }
     }
 
@@ -144,13 +177,10 @@ makePercent =
             \new Staff
             \relative c'' {
                 \set Staff.instrumentName = #"intro "
-                \clef "treble^8"
-                \key f \major
+                \clef treble
+                \key c \major
                 \time 4/4
-                d8 e f f a4. a8 | g f d4 c2 |
-                f4 g8 a c4. d8 | c a g4 f4. a8 |
-                g f c4 e d | f g e f |
-                e f c d \fermata \bar"|."
+                R1 \bar"|."
             }
         }
 
@@ -207,7 +237,7 @@ makePercent =
                 gis2 cis~ | cis \tuplet 3/2 {cis4 b gis} |
                 e2 gis~ | gis \tuplet 3/2 {gis4 fis e} |
                 cis2 e | a, \tuplet 3/2 {e'4 dis b} |
-                cis1 \fermata \bar "|."
+                cis1 \bar "|."
             }
         }
 
@@ -222,7 +252,7 @@ makePercent =
                 \key d \major
                 \time 4/4
                 \partial 4 a4 | d8 cis cis a a b b4 |
-                d, fis e8 d e4 | d1 \fermata \bar"|."
+                d, fis e8 d e4 | d1 \bar"|."
             }
         }
 
@@ -262,24 +292,32 @@ makePercent =
                 e8 fis g4 fis8 e d4 | e8 fis d2. \bar"|."
             }
         }
+
         \score {
             \header {
                 piece = "Invochiamo la tua presenza - p. 42"
             }
-            \new Staff
-            \relative c''' {
-                \set Staff.instrumentName = #"intro "
-                \clef "treble^8"
-                \key f \major
-                \time 4/4
-                r8 f16 f e d c c~ c bes8 c16~ c8 d |
-                c8. bes16~ bes8 a g8. a16~ a8 bes |
-                a8. bes16~ bes8  c d2 |
-                c8. bes16~ bes8 a g2 | f8 e d2.
-                \repeat volta 2 {
-                    R1 | R | f8 e d2. | R1 | \makePercent s
+            <<
+                \new Staff
+                \relative c''' {
+                    \set Staff.instrumentName = #"intro "
+                    \clef "treble^8"
+                    \key f \major
+                    \time 4/4
+                    r8 f16 f e d c c~ c bes8 c16~ c8 d |
+                    c8. bes16~ bes8 a g8. a16~ a8 bes |
+                    a8. bes16~ bes8  c d2 |
+                    c8. bes16~ bes8 a g2 | f8 e d2. \bar"|."
                 }
-            }
+                \new Staff
+                \relative c''' {
+                    \set Staff.instrumentName = #"strofa "
+                    \clef "treble^8"
+                    \key f \major
+                    \time 4/4
+                    R1 | R | f8 e d2. | R1 | \makePercent s1 |
+                }
+            >>
         }
 
         \score {
@@ -315,7 +353,7 @@ makePercent =
                 \tuplet 3/2 { fis4 e dis } \tuplet 3/2 { fis e dis } |
                 \tuplet 3/2 { b' ais gis } \tuplet 3/2 { b ais gis } |
                 \tuplet 3/2 { fis e dis } \tuplet 3/2 { fis e dis } |
-                gis2. ais8 b | dis1 \fermata \bar"|." 
+                gis2. ais8 b | dis1 \bar"|." 
             }
         }
 
@@ -376,7 +414,7 @@ makePercent =
                 \time 4/4
                 \partial 4 a8 b | c4 c c d8 c |
                 b a g4 a2 | e4 e8 g fis e d4 |
-                e1 \fermata \bar"|."
+                e1 \bar"|."
             }
         }
 
@@ -393,7 +431,7 @@ makePercent =
                     \time 4/4
                     r4 cis d e | r gis, a b |
                     r cis d e | r gis, a b |
-                    a1 \fermata \bar "|."
+                    a1 \bar "|."
                 }
                 \new Staff
                 \relative c {
@@ -415,7 +453,7 @@ makePercent =
                 \time 4/4
                 d2. f4 | e2. c4 |
                 d2. f4 | e2. c4 |
-                d1 \fermata \bar"|."
+                d1 \bar"|."
             }
         }
 
@@ -489,7 +527,7 @@ makePercent =
                 \key f \major
                 \time 4/4
                 f16 g a8~ a4 g8 f g4 | f16 g a8~ a c g4 g |
-                f8 g~ g f e r e16 d c8 | d1 \fermata \bar"|."
+                f8 g~ g f e r e16 d c8 | d1 \bar"|."
             }
         }
 
@@ -500,7 +538,7 @@ makePercent =
             \new Staff
             \relative c {
                 \clef treble
-                \key d \major
+                \key c \major
                 \time 4/4
                 R1 \bar"|."
             }
