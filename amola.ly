@@ -174,14 +174,28 @@ makePercent =
             \header {
                 piece = "Come il cervo va all'acqua viva - p. 53"
             }
-            \new Staff
-            \relative c'' {
-                \set Staff.instrumentName = #"intro "
-                \clef treble
-                \key c \major
-                \time 4/4
-                R1 \bar"|."
-            }
+            <<
+                \new Staff
+                \relative c'' {
+                    \set Staff.instrumentName = #"intro "
+                    \clef "treble^8"
+                    \key f \major
+                    \time 4/4
+                    d8 e f f a4. a8 | g f d4 c2 |
+                    f4 g8 a c4. d8 | c a g4 f4. a8 |
+                    g f c4 e d | f g e f |
+                    d e c d~ | d1 \bar"|."
+                } 
+                \new Staff
+                \relative c'' {
+                    \set Staff.instrumentName = #"strofa "
+                    \clef "treble^8"
+                    \key f \major
+                    \time 4/4
+                    R1 | R1 | r2 r4. \makePercent r8 |
+                    \repeat percent 5 { \makePercent s1 }
+                }
+            >>
         }
 
         \score {
