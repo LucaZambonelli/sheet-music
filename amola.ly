@@ -20,6 +20,35 @@ makePercent =
     \bookpart {
         \score {
             \header {
+                piece = "Salmo, tipo 1"
+                }
+        \new Staff
+        \relative c'' {
+            \clef "treble^8"
+            \key g \major
+            \time 4/4
+            c8 d e fis g a b4 |
+            d,8 e fis g a b d4 |
+            b1 \bar"|."
+            }
+        }
+
+        \score {
+            \header {
+                piece = "Salmo, tipo 2"
+                }
+        \new Staff
+        \relative c''' {
+            \clef "treble^8"
+            \key g \major
+            \time 4/4
+            g2 a4. g8 | fis4 e d2 |
+            g4 fis e d | e fis e2 \bar"|."
+            }
+        }
+
+        \score {
+            \header {
                 piece = "Alleluia"
             }
             \new Staff
@@ -93,39 +122,6 @@ makePercent =
     \bookpart {
         \score {
             \header {
-                piece = "tipo 1"
-                }
-        \new Staff
-        \relative c'' {
-            \set Staff.instrumentName = #"ou? "
-            \clef "treble^8"
-            \key g \major
-            \time 4/4
-            c8 d e fis g a b4 |
-            d,8 e fis g a b d4 |
-            b1 \bar"|."
-            }
-        }
-
-        \score {
-            \header {
-                piece = "tipo 2"
-                }
-        \new Staff
-        \relative c''' {
-            \set Staff.instrumentName = #"ou? "
-            \clef "treble^8"
-            \key g \major
-            \time 4/4
-            g2 a4. g8 | fis4 e d2 |
-            g4 fis e d | e fis e2 \bar"|."
-            }
-        }
-    }
-
-    \bookpart {
-        \score {
-            \header {
                 piece = "Alleluia (Dio ha visitato) - p. 61"
             }
             \new Staff
@@ -182,9 +178,9 @@ makePercent =
                     \key f \major
                     \time 4/4
                     d8 e f f a4. a8 | g f d4 c2 |
-                    f4 g8 a c4. d8 | c a g4 f4. a8 |
-                    g f c4 e d | f g e f |
-                    d e c d~ | d1 \bar"|."
+                    f4 g8 a c2 | r8 d c a g4 f |
+                    r8 a g f c4 e | d f g e |
+                    f d e c | d1 \bar"|."
                 } 
                 \new Staff
                 \relative c'' {
@@ -192,8 +188,9 @@ makePercent =
                     \clef "treble^8"
                     \key f \major
                     \time 4/4
-                    R1 | R1 | r2 r4. \makePercent r8 |
-                    \repeat percent 5 { \makePercent s1 }
+                    R1 | R1 | R1 |
+                    \repeat percent 4 { \makePercent s1 }
+                    d8 e f f a4. a8 |
                 }
             >>
         }
@@ -292,6 +289,32 @@ makePercent =
     }
 
     \bookpart {
+        \score {
+            \header {
+                piece = "Frutto della nostra terra - p. 64"
+            }
+            <<
+                \new Staff
+                \relative c'' {
+                    \set Staff.instrumentName = #"intro "
+                    \clef "treble^8"
+                    \key g \major
+                    \time 4/4
+                    \tuplet 3/2 {d8 d d} g8 fis16 e~ e8 e~ e4 |
+                    \tuplet 3/2 {d8 d d} g8 fis16 e~ e2 \bar"|."
+                }
+                \new Staff
+                \relative c'' {
+                    \set Staff.instrumentName = #"finale "
+                    \clef "treble^8"
+                    \key g \major
+                    \time 4/4
+                    \tuplet 3/2 {d8 d d} g8 fis16 e~ e2 |
+                    \tuplet 3/2 {d8 d d} e8 d16 d~ d2 |
+                }
+            >>
+        }
+
         \score {
             \header {
                 piece = "Il canto dell'amore - p. 53"
