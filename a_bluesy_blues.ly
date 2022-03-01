@@ -69,6 +69,29 @@ MidiBass = {
     \MidiBassD | \MidiBassGEnd \bar"|." \break
 }
 
+MidiDrumsA = {
+    \drummode {
+        bd4 r sn r
+    }
+}
+
+MidiDrumsB = {
+    \drummode {
+        r4 bd r trio
+    }
+}
+
+MidiDrums = {
+    R1 | R1 | R1 | \break
+    R1 \bar"||" R1 | R1 | \break
+    \MidiDrumsA | \MidiDrumsA \bar"||" R1 | \break
+    R1 | R1 | R1 \bar"|." \break
+    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \break
+    \MidiDrumsA \bar"||" \MidiDrumsA | \MidiDrumsA | \break
+    \MidiDrumsA | \MidiDrumsA \bar"||" \MidiDrumsB | \break
+    \MidiDrumsB | \MidiDrumsB | \MidiDrumsB \bar"|."
+}
+
 ScoreRythmG = {
     g1\6
 }
@@ -127,6 +150,27 @@ ScoreBass = {
     \ScoreBassA | \ScoreBassD | \ScoreBassGEnd \bar"|."
 }
 
+ScoreDrumsA = {
+    \drummode {
+        sn4 r bd r
+    }
+}
+
+ScoreDrumsB = {
+    \drummode {
+        r4 trio r trio
+    }
+}
+
+ScoreDrums = {
+    R1 | R1 | R1 | R1 \bar"||" \break
+    R1 | R1 | \ScoreDrumsA | R1 \bar"||" \break
+    R1 | R1 | R1 | R1 \bar"|." \break
+    R1 | R1 | R1 | R1 \bar"||" \break
+    R1 | R1 | R1 | R1 \bar"||" \break
+    \ScoreDrumsB | R1 | R1 | R1 \bar"|."
+}
+
 \book {
     \header{
         title = "a bluesy blues, but minor"
@@ -141,8 +185,9 @@ ScoreBass = {
             }
             \new StaffGroup <<
                 \new Staff {
+                    \set Staff.midiInstrument = "electric guitar (clean)"
+                    \set Staff.instrumentName = #"rythm "
                     \relative c {
-                        \set Staff.instrumentName = #"rythm "
                         \clef "treble_8"
                         \key bes \major
                         \time 4/4
@@ -151,12 +196,17 @@ ScoreBass = {
                     }
                 }
                 \new Staff {
+                    \set Staff.midiInstrument = "electric bass (finger)"
+                    \set Staff.instrumentName = #"bass "
                     \relative c, {
-                        \set Staff.instrumentName = #"bass "
                         \clef "bass_8"
                         \key bes \major
                         \MidiBass
                     }
+                }
+                \new DrumStaff {
+                    \set Staff.instrumentName = #"drums "
+                    \MidiDrums
                 }
             >>
         \layout { }
@@ -202,6 +252,10 @@ ScoreBass = {
                         }
                     }
                 >>
+                \new DrumStaff {
+                    \set Staff.instrumentName = #"drums "
+                    \ScoreDrums
+                }
             >>
         }
     }
