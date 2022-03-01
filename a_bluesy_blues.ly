@@ -8,23 +8,23 @@
 }
 
 MidiRythmG = {
-    g1
+    g4\sustainOn \tuplet 3/2 { bes4 f'8~ } \tuplet 3/2 { f4 g,8~ } g4\sustainOff 
 }
 
 MidiRythmGEnd= {
-    g,1~ | g1
+    R1 | R1
 }
 
 MidiRythmA = {
-    a1
+    a4\sustainOn~ \tuplet 3/2 { a4 cis8~ } cis4 r
 }
 
 MidiRythmC = {
-    c1
+    c4\sustainOn \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 c,8~ } c4\sustainOff 
 }
 
 MidiRythmD = {
-    d1
+    R1
 }
 
 MidiRythm = {
@@ -39,23 +39,23 @@ MidiRythm = {
 }
 
 MidiBassG = {
-    g1
+    R1
 }
 
 MidiBassGEnd= {
-    g,1~ | g1
+    R1 | R1
 }
 
 MidiBassA = {
-    a1
+    R1
 }
 
 MidiBassC = {
-    c1
+    R1
 }
 
 MidiBassD = {
-    d1
+    R1
 }
 
 MidiBass = {
@@ -71,13 +71,13 @@ MidiBass = {
 
 MidiDrumsA = {
     \drummode {
-        bd4 r sn r
+        R1
     }
 }
 
 MidiDrumsB = {
     \drummode {
-        r4 bd r trio
+        R1
     }
 }
 
@@ -93,23 +93,23 @@ MidiDrums = {
 }
 
 ScoreRythmG = {
-    g1\6
+    R1
 }
 
 ScoreRythmGEnd= {
-    g,1\6~ | g1\6
+    R1 | R1
 }
 
 ScoreRythmA = {
-    a1\6
+    R1
 }
 
 ScoreRythmC = {
-    c1\5
+    R1
 }
 
 ScoreRythmD = {
-    d1\5
+    R1
 }
 
 ScoreRythm = {
@@ -122,23 +122,23 @@ ScoreRythm = {
 }
 
 ScoreBassG = {
-    g1\4
+    R1
 }
 
 ScoreBassGEnd= {
-    g,1\4~ | g1\4
+    R1 | R1
 }
 
 ScoreBassA = {
-    a1\4
+    R1
 }
 
 ScoreBassC = {
-    c1\3
+    R1
 }
 
 ScoreBassD = {
-    d1\3
+    R1
 }
 
 ScoreBass = {
@@ -152,13 +152,13 @@ ScoreBass = {
 
 ScoreDrumsA = {
     \drummode {
-        sn4 r bd r
+        R1
     }
 }
 
 ScoreDrumsB = {
     \drummode {
-        r4 trio r trio
+        R1
     }
 }
 
@@ -191,7 +191,7 @@ ScoreDrums = {
                         \clef "treble_8"
                         \key bes \major
                         \time 4/4
-                        \tempo 4 = 144
+                        \tempo 4 = 128
                         \MidiRythm
                     }
                 }
