@@ -8,58 +8,127 @@
 }
 
 MidiRythmG = {
-    \tuplet 3/2 {g4\sustainOn f'8~} \tuplet 3/2 {f4 bes8~}
-    \tuplet 3/2 {bes4 << f8~ g,~ >>} << f'4 g,\sustainOff>>
+    g1
 }
 
-MidiRythmGlo = {
-    \tuplet 3/2 {g,4\sustainOn f'8~} \tuplet 3/2 {f4 bes8~}
-    \tuplet 3/2 {bes4 << f8~ g,~ >>} << f'4 g,\sustainOff>>
-}
-
-MidiRythmC = {
-    \tuplet 3/2 {c4\sustainOn bes'8~} \tuplet 3/2 {bes4 ees8~}
-    \tuplet 3/2 {ees4 << bes8~ c,~ >>} << bes'4 c,\sustainOff >>
+MidiRythmGEnd= {
+    g,1~ | g1
 }
 
 MidiRythmA = {
-    a4\sustainOn~ \tuplet 3/2 { a << cis'8~ g'~ a,,>> }
-    << cis'2 g' a,,\sustainOff>>
+    a1
+}
+
+MidiRythmC = {
+    c1
 }
 
 MidiRythmD = {
-    d4\sustainOn~ \tuplet 3/2 { d << f'8~ c'~ d,,>> }
-    << f'2 c' d,,\sustainOff>>
-}
-
-MidiRythmDhi = {
-    d'4\sustainOn~ \tuplet 3/2 { d << f'8~ c'~ d,,>> }
-    << f'2 c' d,,\sustainOff>>
+    d1
 }
 
 MidiRythm = {
     \MidiRythmG | \MidiRythmC | \MidiRythmG | \break
     \MidiRythmG \bar"||" \MidiRythmC | \MidiRythmC | \break
     \MidiRythmG | \MidiRythmG \bar"||" \MidiRythmA | \break
-    \MidiRythmD | \MidiRythmGlo | \MidiRythmDhi \bar"|." \break
-    \MidiRythmGlo | \MidiRythmC | \MidiRythmG | \break
+    \MidiRythmD | \MidiRythmGEnd \bar"|." \break
+    \MidiRythmG | \MidiRythmC | \MidiRythmG | \break
     \MidiRythmG \bar"||" \MidiRythmC | \MidiRythmC | \break
     \MidiRythmG | \MidiRythmG \bar"||" \MidiRythmA | \break
-    \MidiRythmD | \MidiRythmGlo | \MidiRythmDhi \bar"|." \break
+    \MidiRythmD | \MidiRythmGEnd \bar"|." \break
+}
+
+MidiBassG = {
+    g1
+}
+
+MidiBassGEnd= {
+    g,1~ | g1
+}
+
+MidiBassA = {
+    a1
+}
+
+MidiBassC = {
+    c1
+}
+
+MidiBassD = {
+    d1
+}
+
+MidiBass = {
+    R1 | R1 | R1 | \break
+    \MidiBassG \bar"||" \MidiBassC | \MidiBassC | \break
+    \MidiBassG | \MidiBassG \bar"||" R1 | \break
+    R1 | R1 | R1 \bar"|." \break
+    \MidiBassG | \MidiBassC | \MidiBassG | \break
+    \MidiBassG \bar"||" \MidiBassC | \MidiBassC | \break
+    \MidiBassG | \MidiBassG \bar"||" \MidiBassA | \break
+    \MidiBassD | \MidiBassGEnd \bar"|." \break
 }
 
 ScoreRythmG = {
-    g8\6 f'\4~ f\4 bes\3~ bes\3 << f\4~ g,\6 >> << f'4\4 g,\6 >>
+    g1\6
+}
+
+ScoreRythmGEnd= {
+    g,1\6~ | g1\6
+}
+
+ScoreRythmA = {
+    a1\6
 }
 
 ScoreRythmC = {
-    c8\6 bes'\4~ bes\4 ees\3~ ees\3 << bes\4~ c,\6 >> << bes'4\4 c,\6 >>
+    c1\5
+}
+
+ScoreRythmD = {
+    d1\5
 }
 
 ScoreRythm = {
-    \ScoreRythmG | \ScoreRythmC | \ScoreRythmG | \break
-    \ScoreRythmG \bar"||" \ScoreRythmC | \ScoreRythmC | \break
-    \ScoreRythmG | \ScoreRythmG | \bar"||"
+    \ScoreRythmG | \ScoreRythmC | R1 | \break
+    R1 \bar"||" R1 | R1 | \break
+    R1 | R1 | \bar"||" \ScoreRythmA | \break
+    \ScoreRythmD | \ScoreRythmGEnd \bar"|." \break
+    R1 | R1 | R1 | \break
+    R1 \bar"||" R1 | R1 | \break
+    R1 | R1 \bar"||" R1 | \break
+    R1 | R1 | R1 \bar"|."
+}
+
+ScoreBassG = {
+    g1\4
+}
+
+ScoreBassGEnd= {
+    g,1\4~ | g1\4
+}
+
+ScoreBassA = {
+    a1\6
+}
+
+ScoreBassC = {
+    c1\3
+}
+
+ScoreBassD = {
+    d1\3
+}
+
+ScoreBass = {
+    R1 | R1 | R1 | \break
+    \ScoreBassG \bar"||" \ScoreBassC | R1 | \break
+    R1 | R1 \bar"||" R1 | \break
+    R1 | R1 | R1 | \bar"|."
+    R1 | R1 | R1 | \break
+    R1 \bar"||" R1 | R1 | \break
+    R1 | R1 \bar"||" \ScoreBassA | \break
+    \ScoreBassD | \ScoreBassGEnd \bar"|."
 }
 
 \book {
@@ -74,15 +143,24 @@ ScoreRythm = {
             \header {
                 piece = "MIDI"
             }
-            \new Staff
-            \relative c {
-                \set Staff.instrumentName = #"rythm guitar "
-                \clef "treble_8"
-                \key bes \major
-                \time 4/4
-                \tempo 4 = 144
-                \MidiRythm
-            }
+            \new StaffGroup <<
+                \new Staff
+                \relative c {
+                    \set Staff.instrumentName = #"rythm "
+                    \clef "treble_8"
+                    \key bes \major
+                    \time 4/4
+                    \tempo 4 = 144
+                    \MidiRythm
+                }
+                \new Staff
+                \relative c, {
+                    \set Staff.instrumentName = #"bass "
+                    \clef "bass_8"
+                    \key bes \major
+                    \MidiBass
+                }
+            >>
         \layout { }
         \midi { }
         }
@@ -93,19 +171,37 @@ ScoreRythm = {
             \header {
                 piece = "Score"
             }
-            <<
-            \new Staff
-            \relative c' {
-                \set Staff.instrumentName = #"rythm guitar "
-                \clef treble
-                \key bes \major
-                \time 4/4
-                \ScoreRythm
-                }
-            \new TabStaff
-            \relative c {
-                \ScoreRythm
-                }
+            \new StaffGroup <<
+                \new GrandStaff <<
+                    \set GrandStaff.instrumentName = #"rythm "
+                    \new Staff
+                    \relative c' {
+                        \clef treble
+                        \key bes \major
+                        \time 4/4
+                        \ScoreRythm
+                        }
+                    \new TabStaff
+                    \relative c {
+                        \ScoreRythm
+                        }
+                >>
+                \new GrandStaff <<
+                    \set GrandStaff.instrumentName = #"bass "
+                    \new Staff
+                    \relative c {
+                        \clef bass
+                        \key bes \major
+                        \time 4/4
+                        \ScoreBass
+                        }
+                    \new TabStaff \with {
+                        stringTunings = #bass-tuning
+                        }
+                    \relative c, {
+                        \ScoreBass
+                        }
+                >>
             >>
         }
     }
