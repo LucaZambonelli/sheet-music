@@ -12,14 +12,40 @@ MidiRythmG = {
     \tuplet 3/2 {bes4 << f8~ g,~ >>} << f'4 g,\sustainOff>>
 }
 
+MidiRythmGlo = {
+    \tuplet 3/2 {g,4\sustainOn f'8~} \tuplet 3/2 {f4 bes8~}
+    \tuplet 3/2 {bes4 << f8~ g,~ >>} << f'4 g,\sustainOff>>
+}
+
 MidiRythmC = {
     \tuplet 3/2 {c4\sustainOn bes'8~} \tuplet 3/2 {bes4 ees8~}
     \tuplet 3/2 {ees4 << bes8~ c,~ >>} << bes'4 c,\sustainOff >>
 }
 
+MidiRythmA = {
+    a4\sustainOn~ \tuplet 3/2 { a << cis'8~ g'~ a,,>> }
+    << cis'2 g' a,,\sustainOff>>
+}
+
+MidiRythmD = {
+    d4\sustainOn~ \tuplet 3/2 { d << f'8~ c'~ d,,>> }
+    << f'2 c' d,,\sustainOff>>
+}
+
+MidiRythmDhi = {
+    d'4\sustainOn~ \tuplet 3/2 { d << f'8~ c'~ d,,>> }
+    << f'2 c' d,,\sustainOff>>
+}
+
 MidiRythm = {
-    \MidiRythmG | \MidiRythmC | \MidiRythmG | \MidiRythmG |
-    \MidiRythmC | \MidiRythmC | \MidiRythmG | \MidiRythmG |
+    \MidiRythmG | \MidiRythmC | \MidiRythmG | \break
+    \MidiRythmG \bar"||" \MidiRythmC | \MidiRythmC | \break
+    \MidiRythmG | \MidiRythmG \bar"||" \MidiRythmA | \break
+    \MidiRythmD | \MidiRythmGlo | \MidiRythmDhi \bar"|." \break
+    \MidiRythmGlo | \MidiRythmC | \MidiRythmG | \break
+    \MidiRythmG \bar"||" \MidiRythmC | \MidiRythmC | \break
+    \MidiRythmG | \MidiRythmG \bar"||" \MidiRythmA | \break
+    \MidiRythmD | \MidiRythmGlo | \MidiRythmDhi \bar"|." \break
 }
 
 ScoreRythmG = {
