@@ -47,6 +47,7 @@ ScoreRythmD = {
 }
 
 MidiRythm = {
+    R1 | R1 | R1 \bar".|" \break
     \MidiRythmG | \MidiRythmC | \MidiRythmG | \break
     \MidiRythmG \bar"||" \MidiRythmC | \MidiRythmC | \break
     \MidiRythmG | \MidiRythmG \bar"||" \MidiRythmA | \break
@@ -57,63 +58,66 @@ MidiRythm = {
     \MidiRythmD | \MidiRythmGEnd \bar"|." \break
 }
 ScoreRythm = {
-    \ScoreRythmG | \ScoreRythmC | R1 | R1 \bar"||" \break
-    R1 | R1 | R1 | R1 | \bar"||" \break
-    \ScoreRythmA | \ScoreRythmD | \ScoreRythmGEnd \bar"|." \break
-    R1 | R1 | R1 | R1 \bar"||" \break
-    R1 | R1 | R1 | R1 \bar"||" \break
+    R1 | R1 | R1 \bar".|" \break
+    \ScoreRythmG | \ScoreRythmC | R1 | R1 \bar"||" R1 | \break
+    R1 | R1 | R1 | \bar"||" \ScoreRythmA | \ScoreRythmD | \ScoreRythmGEnd \bar"|." \break
+    R1 | R1 | R1 | R1 \bar"||" R1 | R1 | R1 | R1 \bar"||" \break
     R1 | R1 | R1 | R1 \bar"|."
 }
 
 
 MidiBassG = {
-    R1
+    \tuplet 3/2 { g4 bes8~ } \tuplet 3/2 { bes4 c8~ }
+    \tuplet 3/2 { c4 f,8 \glissando } g4
 }
 ScoreBassG = {
-    R1
+    g8\4 bes4\4 c\3 f,8\4 \glissando ( g4\4 )
 }
 MidiBassGEnd= {
-    R1 | R1
+    \tuplet 3/2 { g4 g8~ } g2~ \tuplet 3/2 { g4 g8~ } |
+    \tuplet 3/2 { g4 g8~ } g2.
 }
 ScoreBassGEnd= {
-    R1 | R1
+    g8\4 g2.\4 g8~\4 |
+    g8\4 g2..\4
 }
 MidiBassA = {
-    R1
+    \tuplet 3/2 { a4 a8~ } a2~ \tuplet 3/2 { a4 a8~ }
 }
 ScoreBassA = {
-    R1
+    a8\4 a2.\4 a8~\4
 }
 MidiBassC = {
-    R1
+    \tuplet 3/2 { c4 ees8~ } \tuplet 3/2 { ees4 f8~ }
+    \tuplet 3/2 { f4 bes,8 \glissando } c4
 }
 ScoreBassC = {
-    R1
+    c8\3 ees4\3 f\2 bes,8\3 \glissando ( c4\3 )
 }
 MidiBassD = {
-    R1
+    \tuplet 3/2 { a4 a8~ } a2.
 }
 ScoreBassD = {
-    R1
+    a8\4 a2..\4
 }
 
 MidiBass = {
-    R1 | R1 | R1 | \break
-    \MidiBassG \bar"||" \MidiBassC | \MidiBassC | \break
-    \MidiBassG | \MidiBassG \bar"||" R1 | \break
-    R1 | R1 | R1 \bar"|." \break
-    \MidiBassG | \MidiBassC | \MidiBassG | \break
-    \MidiBassG \bar"||" \MidiBassC | \MidiBassC | \break
-    \MidiBassG | \MidiBassG \bar"||" \MidiBassA | \break
-    \MidiBassD | \MidiBassGEnd \bar"|." \break
+    R1 | R1 | R1 | R1 |
+    R1 | R1 | \MidiBassG | \MidiBassC |
+    \MidiBassC | \MidiBassG | \MidiBassG | R1 |
+    R1 | R1 | R1 | \MidiBassG |
+    \MidiBassC | \MidiBassG | \MidiBassG | \MidiBassC |
+    \MidiBassC | \MidiBassG | \MidiBassG | \MidiBassA |
+    \MidiBassD | \MidiBassGEnd |
 }
 ScoreBass = {
-    R1 | R1 | R1 | \ScoreBassG \bar"||" \break
-    \ScoreBassC | R1 | R1 | R1 \bar"||" \break
-    R1 | R1 | R1 | R1 | \bar"|." \break
-    R1 | R1 | R1 | R1 \bar"||" \break
-    R1 | R1 | R1 | R1 \bar"||" \break
-    \ScoreBassA | \ScoreBassD | \ScoreBassGEnd \bar"|."
+    R1 | R1 | R1 | R1 |
+    R1 | R1 | \ScoreBassG | \ScoreBassC |
+    R1 | R1 | R1 | R1 |
+    R1 | R1 | R1 | R1 |
+    R1 | R1 | R1 | R1 |
+    R1 | R1 | R1 | \ScoreBassA |
+    \ScoreBassD | \ScoreBassGEnd |
 }
 
 
@@ -139,23 +143,22 @@ ScoreDrumsB = {
 }
 
 MidiDrums = {
-    R1 | R1 | R1 | \break
-    R1 \bar"||" R1 | R1 | \break
-    \MidiDrumsA | \MidiDrumsA \bar"||" R1 | \break
-    R1 | R1 | R1 \bar"|." \break
-    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \break
-    \MidiDrumsA \bar"||" \MidiDrumsA | \MidiDrumsA | \break
-    \MidiDrumsA | \MidiDrumsA \bar"||" \MidiDrumsB | \break
-    \MidiDrumsB | \MidiDrumsB | \MidiDrumsB \bar"|."
+    R1 | \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
+    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
+    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | R1 |
+    R1 | R1 | R1 | \MidiDrumsA |
+    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
+    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \MidiDrumsB |
+    \MidiDrumsB | \MidiDrumsB | \MidiDrumsB |
 }
-
 ScoreDrums = {
-    R1 | R1 | R1 | R1 \bar"||" \break
-    R1 | R1 | \ScoreDrumsA | R1 \bar"||" \break
-    R1 | R1 | R1 | R1 \bar"|." \break
-    R1 | R1 | R1 | R1 \bar"||" \break
-    R1 | R1 | R1 | R1 \bar"||" \break
-    \ScoreDrumsB | R1 | R1 | R1 \bar"|."
+    R1 | \ScoreDrumsA | R1 | R1 |
+    R1 | R1 | R1 | R1 |
+    R1 | R1 | R1 | R1 |
+    R1 | R1 | R1 | R1 |
+    R1 | R1 | R1 | R1 |
+    R1 | R1 | R1 | \ScoreDrumsB |
+    R1 | R1 | R1 |
 }
 
 
@@ -222,6 +225,7 @@ ScoreDrums = {
                 
                     \new Staff {
                         \relative c' {
+                            \override StringNumber.visibility = ##f
                             \clef treble
                             \key bes \major
                             \time 4/4
@@ -230,6 +234,7 @@ ScoreDrums = {
                     }
                     
                     \new TabStaff {
+                        \set Staff.stringTunings = <e, a, d g c' f'>
                         \relative c {
                             \ScoreRythm
                         }
