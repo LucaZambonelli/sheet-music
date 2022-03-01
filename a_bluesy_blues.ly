@@ -90,14 +90,12 @@ ScoreRythmD = {
 }
 
 ScoreRythm = {
-    \ScoreRythmG | \ScoreRythmC | R1 | \break
-    R1 \bar"||" R1 | R1 | \break
-    R1 | R1 | \bar"||" \ScoreRythmA | \break
-    \ScoreRythmD | \ScoreRythmGEnd \bar"|." \break
-    R1 | R1 | R1 | \break
-    R1 \bar"||" R1 | R1 | \break
-    R1 | R1 \bar"||" R1 | \break
-    R1 | R1 | R1 \bar"|."
+    \ScoreRythmG | \ScoreRythmC | R1 | R1 \bar"||" \break
+    R1 | R1 | R1 | R1 | \bar"||" \break
+    \ScoreRythmA | \ScoreRythmD | \ScoreRythmGEnd \bar"|." \break
+    R1 | R1 | R1 | R1 \bar"||" \break
+    R1 | R1 | R1 | R1 \bar"||" \break
+    R1 | R1 | R1 | R1 \bar"|."
 }
 
 ScoreBassG = {
@@ -109,7 +107,7 @@ ScoreBassGEnd= {
 }
 
 ScoreBassA = {
-    a1\6
+    a1\4
 }
 
 ScoreBassC = {
@@ -121,14 +119,12 @@ ScoreBassD = {
 }
 
 ScoreBass = {
-    R1 | R1 | R1 | \break
-    \ScoreBassG \bar"||" \ScoreBassC | R1 | \break
-    R1 | R1 \bar"||" R1 | \break
-    R1 | R1 | R1 | \bar"|."
-    R1 | R1 | R1 | \break
-    R1 \bar"||" R1 | R1 | \break
-    R1 | R1 \bar"||" \ScoreBassA | \break
-    \ScoreBassD | \ScoreBassGEnd \bar"|."
+    R1 | R1 | R1 | \ScoreBassG \bar"||" \break
+    \ScoreBassC | R1 | R1 | R1 \bar"||" \break
+    R1 | R1 | R1 | R1 | \bar"|." \break
+    R1 | R1 | R1 | R1 \bar"||" \break
+    R1 | R1 | R1 | R1 \bar"||" \break
+    \ScoreBassA | \ScoreBassD | \ScoreBassGEnd \bar"|."
 }
 
 \book {
@@ -144,28 +140,29 @@ ScoreBass = {
                 piece = "MIDI"
             }
             \new StaffGroup <<
-                \new Staff
-                \relative c {
-                    \set Staff.instrumentName = #"rythm "
-                    \clef "treble_8"
-                    \key bes \major
-                    \time 4/4
-                    \tempo 4 = 144
-                    \MidiRythm
+                \new Staff {
+                    \relative c {
+                        \set Staff.instrumentName = #"rythm "
+                        \clef "treble_8"
+                        \key bes \major
+                        \time 4/4
+                        \tempo 4 = 144
+                        \MidiRythm
+                    }
                 }
-                \new Staff
-                \relative c, {
-                    \set Staff.instrumentName = #"bass "
-                    \clef "bass_8"
-                    \key bes \major
-                    \MidiBass
+                \new Staff {
+                    \relative c, {
+                        \set Staff.instrumentName = #"bass "
+                        \clef "bass_8"
+                        \key bes \major
+                        \MidiBass
+                    }
                 }
             >>
         \layout { }
         \midi { }
         }
     }
-
     \bookpart {
         \score {
             \header {
@@ -174,33 +171,36 @@ ScoreBass = {
             \new StaffGroup <<
                 \new GrandStaff <<
                     \set GrandStaff.instrumentName = #"rythm "
-                    \new Staff
-                    \relative c' {
-                        \clef treble
-                        \key bes \major
-                        \time 4/4
-                        \ScoreRythm
+                    \new Staff {
+                        \relative c' {
+                            \clef treble
+                            \key bes \major
+                            \time 4/4
+                            \ScoreRythm
                         }
-                    \new TabStaff
-                    \relative c {
-                        \ScoreRythm
+                    }
+                    \new TabStaff {
+                        \relative c {
+                            \ScoreRythm
                         }
+                    }
                 >>
                 \new GrandStaff <<
                     \set GrandStaff.instrumentName = #"bass "
-                    \new Staff
-                    \relative c {
-                        \clef bass
-                        \key bes \major
-                        \time 4/4
-                        \ScoreBass
+                    \new Staff {
+                        \relative c {
+                            \clef bass
+                            \key bes \major
+                            \time 4/4
+                            \ScoreBass
                         }
-                    \new TabStaff \with {
-                        stringTunings = #bass-tuning
+                    }
+                    \new TabStaff {
+                        \set Staff.stringTunings = #bass-tuning
+                        \relative c, {
+                            \ScoreBass
                         }
-                    \relative c, {
-                        \ScoreBass
-                        }
+                    }
                 >>
             >>
         }
