@@ -59,8 +59,9 @@ MidiRythm = {
 }
 ScoreRythm = {
     R1 | R1 | R1 \bar".|" \break
-    \ScoreRythmG | \ScoreRythmC | R1 | R1 \bar"||" R1 | \break
-    R1 | R1 | R1 | \bar"||" \ScoreRythmA | \ScoreRythmD | \ScoreRythmGEnd \bar"|." \break
+    \ScoreRythmG | \ScoreRythmC | R1 | R1 \bar"||" \break
+    R1 | R1 | R1 | R1 | \bar"||" \break
+    \ScoreRythmA | \ScoreRythmD | \ScoreRythmGEnd \bar"|." \break
     R1 | R1 | R1 | R1 \bar"||" R1 | R1 | R1 | R1 \bar"||" \break
     R1 | R1 | R1 | R1 \bar"|."
 }
@@ -103,7 +104,7 @@ ScoreBassD = {
 
 MidiBass = {
     R1 | R1 | R1 | R1 |
-    R1 | R1 | \MidiBassG | \MidiBassC |
+    R1 | R1 | R1 | \MidiBassC |
     \MidiBassC | \MidiBassG | \MidiBassG | R1 |
     R1 | R1 | R1 | \MidiBassG |
     \MidiBassC | \MidiBassG | \MidiBassG | \MidiBassC |
@@ -112,8 +113,8 @@ MidiBass = {
 }
 ScoreBass = {
     R1 | R1 | R1 | R1 |
-    R1 | R1 | \ScoreBassG | \ScoreBassC |
-    R1 | R1 | R1 | R1 |
+    R1 | R1 | R1 | \ScoreBassC |
+    R1 | \ScoreBassG | R1 | R1 |
     R1 | R1 | R1 | R1 |
     R1 | R1 | R1 | R1 |
     R1 | R1 | R1 | \ScoreBassA |
@@ -123,22 +124,22 @@ ScoreBass = {
 
 MidiDrumsA = {
     \drummode {
-        R1
+        bd4 bd bd bd
     }
 }
 ScoreDrumsA = {
     \drummode {
-        R1
+        bd4 bd bd bd
     }
 }
 MidiDrumsB = {
     \drummode {
-        R1
+        sn4 trio sn sn
     }
 }
 ScoreDrumsB = {
     \drummode {
-        R1
+        sn4 trio sn sn
     }
 }
 
@@ -225,7 +226,7 @@ ScoreDrums = {
                 
                     \new Staff {
                         \relative c' {
-                            \override StringNumber.visibility = ##f
+                            \override StringNumber.stencil = ##f
                             \clef treble
                             \key bes \major
                             \time 4/4
@@ -234,7 +235,7 @@ ScoreDrums = {
                     }
                     
                     \new TabStaff {
-                        \set Staff.stringTunings = <e, a, d g c' f'>
+                        \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
                         \relative c {
                             \ScoreRythm
                         }
@@ -246,6 +247,7 @@ ScoreDrums = {
                     
                     \new Staff {
                         \relative c {
+                            \override StringNumber.stencil = ##f
                             \clef bass
                             \key bes \major
                             \time 4/4
