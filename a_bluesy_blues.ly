@@ -124,7 +124,8 @@ ScoreBass = {
 
 MidiDrumsA = {
     \drummode {
-        bd4 bd bd bd
+        bd4 \tuplet 3/2 {sn4 bd8}
+        bd4 sn4
     }
 }
 ScoreDrumsA = {
@@ -134,12 +135,12 @@ ScoreDrumsA = {
 }
 MidiDrumsB = {
     \drummode {
-        sn4 trio sn sn
+        r2 \tuplet 3/2 { trio4 sn8 } sn4
     }
 }
 ScoreDrumsB = {
     \drummode {
-        sn4 trio sn sn
+        r2 trio8 sn sn4
     }
 }
 
