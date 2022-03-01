@@ -7,41 +7,80 @@
     bottom-margin = 20
 }
 
-gbar = {
-    \tuplet 3/2 {g4\6 f'8\4~} \tuplet 3/2 {f4\4 bes8\3~}
-    \tuplet 3/2 {bes4\3 << f8\4~ g,\6~ >>} << f'4\4 g,\6 >> |
+MidiRythmG = {
+    \tuplet 3/2 {g4\sustainOn f'8~} \tuplet 3/2 {f4 bes8~}
+    \tuplet 3/2 {bes4 << f8~ g,~ >>} << f'4 g,\sustainOff>>
 }
 
-cbar = {
-    \tuplet 3/2 {c4\6 bes'8\4~} \tuplet 3/2 {bes4\4 ees8\3~}
-    \tuplet 3/2 {ees4\3 << bes8\4~ c,\6~ >>} << bes'4\4 c,\6 >> |
+MidiRythmC = {
+    \tuplet 3/2 {c4\sustainOn bes'8~} \tuplet 3/2 {bes4 ees8~}
+    \tuplet 3/2 {ees4 << bes8~ c,~ >>} << bes'4 c,\sustainOff >>
 }
 
-bluesyblues = {
-    \gbar | \cbar | \repeat percent 2 { \gbar } \bar"||" \break
-    \repeat percent 2 { \cbar} | \repeat percent 2 { \gbar } \bar "||" \break
+MidiRythm = {
+    \MidiRythmG | \MidiRythmC | \MidiRythmG | \MidiRythmG |
+    \MidiRythmC | \MidiRythmC | \MidiRythmG | \MidiRythmG |
+}
+
+ScoreRythmG = {
+    g8\6 f'\4~ f\4 bes\3~ bes\3 << f\4~ g,\6 >> << f'4\4 g,\6 >>
+}
+
+ScoreRythmC = {
+    c8\6 bes'\4~ bes\4 ees\3~ ees\3 << bes\4~ c,\6 >> << bes'4\4 c,\6 >>
+}
+
+ScoreRythm = {
+    \ScoreRythmG | \ScoreRythmC | \ScoreRythmG | \break
+    \ScoreRythmG \bar"||" \ScoreRythmC | \ScoreRythmC | \break
+    \ScoreRythmG | \ScoreRythmG | \bar"||"
 }
 
 \book {
     \header{
-        piece = "a bluesy blues"
+        title = "a bluesy blues, but minor"
         composer = "Luca Zambonelli"
         tagline = ##f
     }
 
-    \score {
-        <<
-        \new Staff
-        \relative c' {
-            \clef treble
-            \key bes \major
-            \time 4/4
-            \bluesyblues
+    \bookpart {
+        \score {
+            \header {
+                piece = "MIDI"
             }
-        \new TabStaff
-        \relative c {
-            \bluesyblues
+            \new Staff
+            \relative c {
+                \set Staff.instrumentName = #"rythm guitar "
+                \clef "treble_8"
+                \key bes \major
+                \time 4/4
+                \tempo 4 = 144
+                \MidiRythm
             }
-        >>
+        \layout { }
+        \midi { }
+        }
+    }
+
+    \bookpart {
+        \score {
+            \header {
+                piece = "Score"
+            }
+            <<
+            \new Staff
+            \relative c' {
+                \set Staff.instrumentName = #"rythm guitar "
+                \clef treble
+                \key bes \major
+                \time 4/4
+                \ScoreRythm
+                }
+            \new TabStaff
+            \relative c {
+                \ScoreRythm
+                }
+            >>
+        }
     }
 }
