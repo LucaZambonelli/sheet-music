@@ -1,6 +1,17 @@
 \version "2.22.1"
+\paper {
+  #(set-paper-size "a4" 'landscape)
+}
+
 \defineBarLine "[" #'("" "[" "")
 \defineBarLine "]" #'("]" "" "")
+
+
+makePercent =
+  #(define-music-function (note) (ly:music?)
+  "Make a percent repeat the same length as NOTE."
+  (make-music 'PercentEvent 'length (ly:music-length note)))
+
 
 MidiRythmG = {
   g4\sustainOn \tuplet 3/2 { bes4 f'8~ }
@@ -61,12 +72,23 @@ MidiRythm = {
   \MidiRythmG | \MidiRythmC | \MidiRythmG | \MidiRythmG |
   \MidiRythmC | \MidiRythmC | \MidiRythmG | \MidiRythmG |
   \MidiRythmA | \MidiRythmD | \MidiRythmGEnd |
+  << g1 c e >>
 }
 ScoreRythm = {
-  \bar "[" \ScoreRythmG | \ScoreRythmC | R1 | \break
-  R1 \bar"||" R1 | R1 | \break
-  R1 | R1 | \bar"||" \ScoreRythmA | \break
+  \bar "[" \ScoreRythmG | \ScoreRythmC | \makePercent s1 |
+  \makePercent s1 \bar"||" \makePercent s1 | \makePercent s1 | \break
+  \makePercent s1 | \makePercent s1 | \bar"||" \ScoreRythmA |
   \ScoreRythmD | \ScoreRythmGEnd \bar"]"
+  << g\6 c\5 e\4 \fermata >> \bar "|."
+}
+ScoreChords = {
+  \set chordChanges = ##t
+  \chordmode {
+    g1:m7 c:m7 g:m7 g:m7
+    c:m7 c:m7 g:m7 g:m7
+    a:7.5- d:m7 g:m7 g:m7
+    c
+  }
 }
 
 
@@ -123,9 +145,10 @@ MidiBass = {
 }
 ScoreBass = {
   R1 | R1 | R1 |
-  R1 | \ScoreBassC | R1 |
-  \ScoreBassG | R1 | \ScoreBassA |
+  R1 | \ScoreBassC | \makePercent s1 |
+  \ScoreBassG | \makePercent s1 | \ScoreBassA |
   \ScoreBassD | \ScoreBassGEnd |
+  R1
 }
 
 
@@ -168,9 +191,10 @@ MidiDrums = {
 }
 ScoreDrums = {
   R1 | R1 | \ScoreDrumsAIn |
-  \ScoreDrumsAOut | R1 | R1 |
-  R1 | R1 | R1 |
-  R1 | R1 | R1 |
+  \ScoreDrumsAOut | \makePercent s1 | \makePercent s1 |
+  \makePercent s1 | \makePercent s1 | \makePercent s1 |
+  \makePercent s1 | \makePercent s1 | \makePercent s1 |
+  R1
 }
 
 
@@ -179,6 +203,65 @@ ScoreDrums = {
     title = "a bluesy blues, but minor"
     composer = "Luca Zambonelli"
     tagline = ##f
+  }
+
+  \score {
+    <<
+      \new GrandStaff <<
+        \set GrandStaff.instrumentName = #"Guitar "
+        \set GrandStaff.shortInstrumentName = #"Gt "
+        \new Staff {
+          <<
+            \relative c' {
+              \override StringNumber.stencil = ##f
+              \clef treble
+              \key bes \major
+              \time 4/4
+              \ScoreRythm
+            }
+            \new ChordNames {
+              \ScoreChords
+            }
+          >>
+        }
+        \new TabStaff {
+          \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
+          \relative c {
+            \ScoreRythm
+          }
+        }
+      >>
+      \new GrandStaff <<
+        \set GrandStaff.instrumentName = #"Bass "
+        \set GrandStaff.shortInstrumentName = #"Bs "
+        \new Staff {
+          \relative c {
+            \override StringNumber.stencil = ##f
+            \clef bass
+            \key bes \major
+            \time 4/4
+            \ScoreBass
+          }
+        }
+        \new TabStaff {
+          \set Staff.stringTunings = #bass-tuning
+          \relative c, {
+            \ScoreBass
+          }
+        }
+      >>
+      \new DrumStaff \with {
+        instrumentName = #"Drums "
+        shortInstrumentName = #"Dr "
+        \override StaffSymbol.line-count = #2
+        \override StaffSymbol.staff-space = #2
+        \override VerticalAxisGroup.minimum-Y-extent = #'(-3.0 . 4.0)
+        \override Stem.length = #4
+        \override Stem.direction = #-1
+        drumStyleTable = #timbales-style
+      } \ScoreDrums
+    >>
+    \layout { }
   }
 
   \score {
@@ -202,56 +285,5 @@ ScoreDrums = {
       }
     >>
     \midi { }
-  }
-
-  \score {
-    <<
-      \new GrandStaff <<
-        \set GrandStaff.instrumentName = #"rythm "
-        \new Staff {
-          \relative c' {
-            \override StringNumber.stencil = ##f
-            \clef treble
-            \key bes \major
-            \time 4/4
-            \ScoreRythm
-          }
-        }
-        \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
-          \relative c {
-            \ScoreRythm
-          }
-        }
-      >>
-      \new GrandStaff <<
-        \set GrandStaff.instrumentName = #"bass "
-        \new Staff {
-          \relative c {
-            \override StringNumber.stencil = ##f
-            \clef bass
-            \key bes \major
-            \time 4/4
-            \ScoreBass
-          }
-        }
-        \new TabStaff {
-          \set Staff.stringTunings = #bass-tuning
-          \relative c, {
-            \ScoreBass
-          }
-        }
-      >>
-      \new DrumStaff \with {
-        instrumentName = #"drums "
-        \override StaffSymbol.line-count = #2
-        \override StaffSymbol.staff-space = #2
-        \override VerticalAxisGroup.minimum-Y-extent = #'(-3.0 . 4.0)
-        \override Stem.length = #4
-        \override Stem.direction = #-1
-        drumStyleTable = #timbales-style
-      } \ScoreDrums
-    >>
-    \layout { }
   }
 }
