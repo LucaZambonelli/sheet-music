@@ -1,4 +1,3 @@
-\version "2.22.1"
 \paper {
     top-margin = 25
     left-margin = 25
@@ -12,24 +11,32 @@ MidiRythmG = {
     \tuplet 3/2 { f4 g,8~ } g4\sustainOff 
 }
 ScoreRythmG = {
-    g4\6 bes8\5 f'4\4 g,4.\6 
+    g4\6 bes8\5 f'4\4 g,4.\6
 }
 MidiRythmGEnd= {
-    g4~ \tuplet 3/2 { g4 bes8~ } 
-    \tuplet 3/2 { bes4 d8~ } \tuplet 3/2 { d4 bes8~ } |
-    \tuplet 3/2 { bes4 g8~ } \tuplet 3/2 { g4 f8~ }
-    f2
+    << g4~ d'~ g~ >>
+    \tuplet 3/2 { << g4 d g, >> << bes8~ f'~ bes~ >> } 
+    \tuplet 3/2 { << bes4 f bes, >> << d8~ a'~ d~ >> }
+    \tuplet 3/2 { << d4 a d, >> << bes8~ f'~ bes~ >> } |
+    \tuplet 3/2 { << bes4 f bes, >> << g8~ d'~ g~ >> }
+    \tuplet 3/2 { << g4 d g, >> << f8~ c'~ f~ >> }
+    << f2 c2 f,2 >>
 }
 ScoreRythmGEnd= {
-    g4.\6 bes4\6 d\6 bes8\6~ |
-    bes\6 g4\6 f8\6~ f2\6
+    << g4.\6 d'\5 g\4 >> << bes4\4 f\5 bes,\6 >>
+    << d4\6 a'\5 d\4 >> << bes8\4~ f\5~ bes,\6~ >> |
+    << bes8\6 f'\5 bes\4 >> << g4\4 d\5 g,\6 >>
+    << f8\6~ c'\5~ f\4~ >> << f2\4 c\5 f,\6 >>
 }
 MidiRythmA = {
-    a4~ \tuplet 3/2 { a4 cis8~ }
-    \tuplet 3/2 { cis4 ees8~ } \tuplet 3/2 { ees4 d8~ }
+    << a4~ ees'~ a~ >>
+    \tuplet 3/2 { << a4 ees a, >> << cis8~ g'~ cis~ >> }
+    \tuplet 3/2 { << cis4 g cis, >> << ees8~ bes'~ ees~ >> }
+    \tuplet 3/2 { << ees4 bes ees, >> << d8~ a'~ d~ >> }
 }
 ScoreRythmA = {
-    a4.\5 cis4\5 ees4\5 d8\5~
+    << a4.\6 ees'\5 a\4 >> << cis4\4 g\5 cis,\6 >>
+    << ees4\6 bes'\5 ees\4 >> <<d8\4~ a\5~ d,\6~ >>
 }
 MidiRythmC = {
     c4\sustainOn \tuplet 3/2 { ees4 bes'8~ }
@@ -39,11 +46,13 @@ ScoreRythmC = {
     c4\5 ees8\4 bes'4\3 c,4.\5
 }
 MidiRythmD = {
-    \tuplet 3/2 { d4 c8~ } \tuplet 3/2 { c4 a8~ }
-    a2
+    \tuplet 3/2 { << d4 a d, >>  << c8~ g'~ c~ >> }
+    \tuplet 3/2 { << c4 g c, >>  << a8~ ees'~ a~ >> }
+    << a2 ees a, >>
 }
 ScoreRythmD = {
-    d8\5 c4\5 a8\5~ a2\5
+    << d8\6 a'\5 d\4 >> << c4\4 g\5 c,\6 >>
+    << a8\6~ ees'\5~ a\4~ >> << a2\4 ees\5 a,\6 >>
 }
 
 MidiRythm = {
@@ -72,34 +81,33 @@ MidiBassG = {
     \tuplet 3/2 { c4 f,8 \glissando } g4
 }
 ScoreBassG = {
-    g8\4 bes4\4 c\3 f,8\4 \glissando ( g4\4 )
+    R1
 }
 MidiBassGEnd= {
     \tuplet 3/2 { g4 g8~ } g2~ \tuplet 3/2 { g4 g8~ } |
     \tuplet 3/2 { g4 g8~ } g2.
 }
 ScoreBassGEnd= {
-    g8\4 g2.\4 g8~\4 |
-    g8\4 g2..\4
+    R1 | R1
 }
 MidiBassA = {
     \tuplet 3/2 { a4 a8~ } a2~ \tuplet 3/2 { a4 a8~ }
 }
 ScoreBassA = {
-    a8\4 a2.\4 a8~\4
+    R1
 }
 MidiBassC = {
     \tuplet 3/2 { c4 ees8~ } \tuplet 3/2 { ees4 f8~ }
     \tuplet 3/2 { f4 bes,8 \glissando } c4
 }
 ScoreBassC = {
-    c8\3 ees4\3 f\2 bes,8\3 \glissando ( c4\3 )
+    R1
 }
 MidiBassD = {
     \tuplet 3/2 { a4 a8~ } a2.
 }
 ScoreBassD = {
-    a8\4 a2..\4
+    R1
 }
 
 MidiBass = {
@@ -124,34 +132,24 @@ ScoreBass = {
 
 MidiDrumsA = {
     \drummode {
-        bd4 \tuplet 3/2 {sn4 bd8}
-        bd4 sn4
+        \tuplet 3/2 { bd4 trio8 } \tuplet 3/2 {sn4 bd8}
+        bd4 \tuplet 3/2 { sn trio8 }
     }
 }
 ScoreDrumsA = {
     \drummode {
-        bd4 bd bd bd
-    }
-}
-MidiDrumsB = {
-    \drummode {
-        r2 \tuplet 3/2 { trio4 sn8 } sn4
-    }
-}
-ScoreDrumsB = {
-    \drummode {
-        r2 trio8 sn sn4
+        timl8 cb timh timl timl4 timh8 cb
     }
 }
 
 MidiDrums = {
     R1 | \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
     \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | R1 |
-    R1 | R1 | R1 | \MidiDrumsA |
     \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \MidiDrumsB |
-    \MidiDrumsB | \MidiDrumsB | \MidiDrumsB |
+    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
+    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
+    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
+    \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
 }
 ScoreDrums = {
     R1 | \ScoreDrumsA | R1 | R1 |
@@ -159,7 +157,7 @@ ScoreDrums = {
     R1 | R1 | R1 | R1 |
     R1 | R1 | R1 | R1 |
     R1 | R1 | R1 | R1 |
-    R1 | R1 | R1 | \ScoreDrumsB |
+    R1 | R1 | R1 | R1 |
     R1 | R1 | R1 |
 }
 
@@ -171,47 +169,47 @@ ScoreDrums = {
         tagline = ##f
     }
 
-    \bookpart {
-        
-        \score {
-            \header {
-                piece = "MIDI"
-            }
-            
-            \new StaffGroup <<
-            
-                \new Staff {
-                    \set Staff.midiInstrument = "electric guitar (clean)"
-                    \set Staff.instrumentName = #"rythm "
-                    \relative c {
-                        \clef "treble_8"
-                        \key bes \major
-                        \time 4/4
-                        \tempo 4 = 128
-                        \MidiRythm
-                    }
-                }
-                
-                \new Staff {
-                    \set Staff.midiInstrument = "electric bass (finger)"
-                    \set Staff.instrumentName = #"bass "
-                    \relative c, {
-                        \clef "bass_8"
-                        \key bes \major
-                        \MidiBass
-                    }
-                }
-                
-                \new DrumStaff {
-                    \set Staff.instrumentName = #"drums "
-                    \MidiDrums
-                }
-            >>
-        
-        \layout { }
-        \midi { }
-        }
-    }
+%    \bookpart {
+%        
+%        \score {
+%            \header {
+%                piece = "MIDI"
+%            }
+%            
+%            \new StaffGroup <<
+%            
+%                \new Staff {
+%                    \set Staff.midiInstrument = "electric guitar (clean)"
+%                    \set Staff.instrumentName = #"rythm "
+%                    \relative c {
+%                        \clef "treble_8"
+%                        \key bes \major
+%                        \time 4/4
+%                        \tempo 4 = 128
+%                        \MidiRythm
+%                    }
+%                }
+%                
+%                \new Staff {
+%                    \set Staff.midiInstrument = "electric bass (finger)"
+%                    \set Staff.instrumentName = #"bass "
+%                    \relative c, {
+%                        \clef "bass_8"
+%                        \key bes \major
+%                        \MidiBass
+%                    }
+%                }
+%                
+%                \new DrumStaff {
+%                    \set Staff.instrumentName = #"drums "
+%                    \MidiDrums
+%                }
+%            >>
+%        
+%        \layout { }
+%        \midi { }
+%        }
+%    }
 
     \bookpart {
 
@@ -264,10 +262,15 @@ ScoreDrums = {
                     }
                 >>
                 
-                \new DrumStaff {
-                    \set Staff.instrumentName = #"drums "
-                    \ScoreDrums
-                }
+                \new DrumStaff \with {
+                    instrumentName = #"drums "
+                    \override StaffSymbol.line-count = #2
+                    \override StaffSymbol.staff-space = #2
+                    \override VerticalAxisGroup.minimum-Y-extent = #'(-3.0 . 4.0)
+                    \override Stem.length = #4
+                    \override Stem.direction = #-1
+                    drumStyleTable = #timbales-style
+                } \ScoreDrums
             >>
         }
     }
