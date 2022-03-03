@@ -282,7 +282,6 @@ makePercent = #(define-music-function (note) (ly:music?)
           \clef "treble^8"
           \key d \major
           \time 4/4
-          \tempo 4 = 144
           d4 a8 a4 d4 b8~ | b a g4 g2 |
           fis4 d8 d4 fis e8~ | e fis16 e d4 d2 |
           b'8 b4 b b cis8~ | cis4 cis d2 |
@@ -291,8 +290,6 @@ makePercent = #(define-music-function (note) (ly:music?)
           e fis g4 a8 g4 fis8 | e4 fis2 e8 d | e1 \bar "|."
         }
       }
-      \layout { }
-      \midi { }
     }
 
         \score {
