@@ -1,53 +1,46 @@
 \version "2.22.1"
 
-\paper {
-    top-margin = 25
-    left-margin = 25
-    right-margin = 20
-    bottom-margin = 20
-}
-
-makePercent =
-    #(define-music-function (note) (ly:music?)
-    "Make a percent repeat the same length as NOTE."
-    (make-music 'PercentEvent 'length (ly:music-length note)))
+makePercent = #(define-music-function (note) (ly:music?)
+  (make-music 'PercentEvent 'length (ly:music-length note)))
 
 \book {
-    \header{
-        tagline = ##f
+  \header{
+    tagline = ##f
+  }
+
+  \bookpart {
+    \score {
+      \header {
+        piece = "Salmo, tipo 1"
+      }
+      \new Staff {
+        \relative c'' {
+          \clef "treble^8"
+          \key g \major
+          \time 4/4
+          c8 d e fis g a b4 |
+          d,8 e fis g a b d4 |
+          b1 \bar"|."
+        }
+      }
     }
 
-    \bookpart {
-        \score {
-            \header {
-                piece = "Salmo, tipo 1"
-                }
-        \new Staff
-        \relative c'' {
-            \clef "treble^8"
-            \key g \major
-            \time 4/4
-            c8 d e fis g a b4 |
-            d,8 e fis g a b d4 |
-            b1 \bar"|."
-            }
-        }
-
-        \score {
-            \header {
-                piece = "Salmo, tipo 2"
-                }
-        \new Staff
+    \score {
+      \header {
+        piece = "Salmo, tipo 2"
+      }
+      \new Staff {
         \relative c''' {
-            \clef "treble^8"
-            \key g \major
-            \time 4/4
-            g2 a4. g8 | fis4 e d2 |
-            g4 fis e d | e fis e2 \bar"|."
-            }
+          \clef "treble^8"
+          \key g \major
+          \time 4/4
+          g2 a4. g8 | fis4 e d2 |
+          g4 fis e d | e fis e2 \bar"|."
         }
+      }
+    }
 
-        \score {
+\score {
             \header {
                 piece = "Alleluia"
             }
