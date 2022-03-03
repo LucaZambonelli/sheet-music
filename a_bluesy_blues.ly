@@ -7,11 +7,8 @@
 \defineBarLine "]" #'("]" "" "")
 
 
-makePercent =
-  #(define-music-function (note) (ly:music?)
-  "Make a percent repeat the same length as NOTE."
+makePercent = #(define-music-function (note) (ly:music?)
   (make-music 'PercentEvent 'length (ly:music-length note)))
-
 
 MidiRythmG = {
   g4\sustainOn \tuplet 3/2 { bes4 f'8~ }
