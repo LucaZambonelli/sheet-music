@@ -190,6 +190,7 @@ makePercent = #(define-music-function (note) (ly:music?)
     }
   }
 
+
   \bookpart {
 
     \score {
@@ -292,63 +293,67 @@ makePercent = #(define-music-function (note) (ly:music?)
       }
     }
 
-        \score {
-            \header {
-                piece = "Cristo è risorto veramente - p. 41"
-            }
-            << 
-                \new Staff
-                \relative c'' {
-                    \set Staff.instrumentName = #"intro "
-                    \clef treble
-                    \key f \major
-                    \time 4/4
-                    a4-. f-. g-. c8 bes | a4-. a8 bes g f g4 |
-                    a-. f g c8 bes | a4-. a8 bes g2 \bar"|."
-                }
-                \new Staff
-                \relative c'' {
-                    \set Staff.instrumentName = #"controcanto "
-                    \clef treble
-                    \key f \major
-                    \time 4/4
-                    g4 f8. bes16 a4. r8 | d4 bes8. g16 a4. r16 bes |
-                    g8. f16 g8. a16 f2 | a1 \bar"|."
-                }
-            >>
+    \score {
+      \header {
+        piece = "Cristo è risorto veramente - p. 41"
+      }
+      << 
+        \new Staff {
+          \set Staff.instrumentName = #"intro "
+          \relative c'' {
+            \clef treble
+            \key f \major
+            \time 4/4
+            a4-. f-. g-. c8 bes | a4-. a8 bes g f g4 |
+            a-. f g c8 bes | a4-. a8 bes g2 \bar"|."
+          }
         }
+        \new Staff {
+          \set Staff.instrumentName = #"controcanto "
+          \relative c'' {
+            \clef treble
+            \key f \major
+            \time 4/4
+            g4 f8. bes16 a4. r8 | d4 bes8. g16 a4. r16 bes |
+            g8. f16 g8. a16 f2 | a1 \bar"|."
+          }
+        }
+      >>
+    }
 
-        \score {
-            \header {
-                piece = "Dall'aurora al tramonto - p. 63"
-            }
-            \new Staff
-            \relative c''' {
-                \set Staff.instrumentName = #"intro "
-                \clef "treble^8"
-                \key e \major
-                \time 4/4
-                gis2 cis~ | cis \tuplet 3/2 {cis4 b gis} |
-                e2 gis~ | gis \tuplet 3/2 {gis4 fis e} |
-                cis2 e | a, \tuplet 3/2 {e'4 dis b} |
-                cis1 \bar "|."
-            }
+    \score {
+      \header {
+        piece = "Dall'aurora al tramonto - p. 63"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c''' {
+          \clef "treble^8"
+          \key e \major
+          \time 4/4
+          gis2 cis~ | cis \tuplet 3/2 {cis4 b gis} |
+          e2 gis~ | gis \tuplet 3/2 {gis4 fis e} |
+          cis2 e | a, \tuplet 3/2 {e'4 dis b} |
+          cis1 \bar "|."
         }
+      }
+    }
 
-        \score {
-            \header {
-                piece = "Del tuo spirito, Signore - p. 48"
-            }
-            \new Staff
-            \relative c''' {
-                \set Staff.instrumentName = #"intro "
-                \clef "treble^8"
-                \key d \major
-                \time 4/4
-                \partial 4 a4 | d8 cis cis a a b b4 |
-                d, fis e8 d e4 | d1 \bar"|."
-            }
+    \score {
+      \header {
+        piece = "Del tuo spirito, Signore - p. 48"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c''' {
+          \clef "treble^8"
+          \key d \major
+          \time 4/4
+          \partial 4 a4 | d8 cis cis a a b b4 |
+          d, fis e8 d e4 | d1 \bar"|."
         }
+      }
+    }
 
         \score {
             \header {
