@@ -114,132 +114,186 @@ makePercent = #(define-music-function (note) (ly:music?)
         piece = "Santo"
       }
       \new Staff {
+        \set Staff.instrumentName = #"intro "
         \relative c'' {
-          \set Staff.instrumentName = #"intro "
           \clef treble
           \key g \major
           \time 4/4
           d4 d e g |
-          g fis8 e fis2 \bar"|."
+          g fis8 e fis2 \bar "|."
         }
       }
     }
 
-        \score {
-            \header {
-                piece = "Agnello di Dio"
+    \score {
+      \header {
+        piece = "Agnello di Dio, tipo 1"
+      }
+      <<
+        \new Staff {
+          \set Staff.instrumentName = #"intro "
+          \relative c'' {
+            \clef "treble^8"
+            \key g \major
+            \time 6/8
+            \repeat volta 2 {
+              e4.~ e8 fis g | a4.~ a8 g a |
+              b2. | b4 a g
             }
-            <<
-                \new Staff
-                \relative c'' {
-                    \set Staff.instrumentName = #"intro "
-                    \clef "treble^8"
-                    \key g \major
-                    \time 6/8
-                    \repeat volta 2 {
-                        e4.~ e8 fis g | a4.~ a8 g a |
-                        b2. | b4 a g
-                    }
-                    e2. \bar"|."
-                }
-                \new Staff
-                \relative c {
-                    \set Staff.instrumentName = #"tra strofe "
-                    \repeat percent 5 { \makePercent s2. }
-                }
-            >>
+            e2. \bar "|."
+          }
         }
+        \new Staff {
+          \set Staff.instrumentName = #"tra strofe "
+          \relative c {
+            \repeat percent 5 { \makePercent s2. }
+          }
+        }
+      >>
     }
 
-    \bookpart {
-        \score {
-            \header {
-                piece = "Alleluia (Dio ha visitato) - p. 61"
-            }
-            \new Staff
-            \relative c'' {
-                \set Staff.instrumentName = #"intro "
-                \clef "treble^8"
-                \key g \major
-                \time 4/4
-                d2 fis4 d | a'1 |
-                b2 fis4 d | g1 |
-                b2 fis4 d | fis1 | e \bar "|."
-            }
+    \score {
+      \header {
+        piece = "Agnello di Dio, tipo 2"
+      }
+      <<
+        \new Staff {
+          \set Staff.instrumentName = #"intro "
+          \relative c'' {
+            \clef "treble^8"
+            \key f \major
+            \time 2/4
+            f4 g8 g | a4 f |
+            e2 | d \bar "|.|"
+            R2 | R2 |
+            R2 | R2 |
+            R2 | R2 |
+            R2 | R2 |
+            R2 | R2 \bar "|."
+          }
         }
+        \new Staff {
+          \set Staff.instrumentName = #"terza "
+          \relative c'' {
+            \clef "treble^8"
+            \key f \major
+            R2 | R2 |
+            R2 | R2 |
+            r4. f8 | g4 g8 g |
+            a a4 f8 | d'4 c8 c |
+            c4 bes8 bes | a a4. |
+            R2 | r4. g8 |
+            bes4 a | f2 |
+          }
+        }
+      >>
+    }
+  }
 
-        \score {
-            \header {
-                piece = "Benedetto tu, Signore - p. 42"
-            }
-            \new Staff
-            \relative c' {
-                \set Staff.instrumentName = #"intro "
-                \clef treble
-                \key c \major
-                \time 4/4
-                f2 g | a1 |
-                f2 e | d1 |
-                r8 g c e r g, f' e | r g, c e r a, f'16 e c8 \bar "|."
-            }
-        }
+  \bookpart {
 
-        \score {
-            \header {
-                piece = "Cantate al Signore un canto nuovo - p. 63"
-            }
-            \new Staff
-            \relative c'' {
-                \set Staff.instrumentName = #"intro "
-                \clef "treble^8"
-                \key f \major
-                \time 4/4
-                d8 e f c r f a c | bes4-. a-. g-. f8 f \bar"|."
-            }
+    \score {
+      \header {
+        piece = "Alleluia (Dio ha visitato) - p. 61"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c'' {
+          \clef "treble^8"
+          \key g \major
+          \time 4/4
+          d2 fis4 d | a'1 |
+          b2 fis4 d | g1 |
+          b2 fis4 d | fis1 | e \bar "|."
         }
+      }
+    }
 
-        \score {
-            \header {
-                piece = "Come il cervo va all'acqua viva - p. 53"
-            }
-            <<
-                \new Staff
-                \relative c'' {
-                    \set Staff.instrumentName = #"intro "
-                    \clef "treble^8"
-                    \key f \major
-                    \time 4/4
-                    d8 e f f a4. a8 | g f d4 c2 |
-                    f4 g8 a c2 | r8 d c a g4 f |
-                    r8 a g f c4 e | d f g e |
-                    f d e c | d1 \bar"|."
-                } 
-                \new Staff
-                \relative c'' {
-                    \set Staff.instrumentName = #"strofa "
-                    \clef "treble^8"
-                    \key f \major
-                    \time 4/4
-                    R1 | R1 | R1 |
-                    \repeat percent 4 { \makePercent s1 }
-                    d8 e f f a4. a8 |
-                }
-            >>
+    \score {
+      \header {
+        piece = "Benedetto tu, Signore - p. 42"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c' {
+          \clef treble
+          \key c \major
+          \time 4/4
+          f2 g | a1 |
+          f2 e | d1 |
+          r8 g c e r g, f' e | r g, c e r a, f'16 e c8 \bar "|."
         }
+      }
+    }
 
-        \score {
-            \header {
-                piece = "Come terra buona - p. 60"
-            }
-            \new Staff
-            \relative c {
-                \set Staff.instrumentName = #"intro "
-                \clef treble
-                \key c \major
-                \time 4/4
-                R1 \bar"|."
-            }
+    \score {
+      \header {
+        piece = "Cantate al Signore un canto nuovo - p. 63"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c'' {
+          \clef "treble^8"
+          \key f \major
+          \time 4/4
+          d8 e f c r f a c | bes4-. a-. g-. f8 f \bar"|."
         }
+      }
+    }
+
+    \score {
+      \header {
+        piece = "Come il cervo va all'acqua viva - p. 53"
+      }
+      <<
+        \new Staff {
+          \set Staff.instrumentName = #"intro "
+          \relative c'' {
+            \clef "treble^8"
+            \key f \major
+            \time 4/4
+            d8 e f f a4. a8 | g f d4 c2 |
+            f4 g8 a c2 | r8 d c a g4 f |
+            r8 a g f c4 e | d f g e |
+            f d e c | d1 \bar"|."
+          }
+        }
+        \new Staff {
+          \set Staff.instrumentName = #"strofa "
+          \relative c''' {
+            \clef "treble^8"
+            \key f \major
+            R1 | R1 |
+            R1 | r8 d c a g4 f |
+            r8 a g f c4 e | d f g e |
+            f d e c | \makePercent s1 |
+          }
+        }
+      >>
+    }
+
+    \score {
+      \header {
+        piece = "Come terra buona - p. 60"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c''' {
+          \clef "treble^8"
+          \key d \major
+          \time 4/4
+          \tempo 4 = 144
+          d4 a8 a4 d4 b8~ | b a g4 g2 |
+          fis4 d8 d4 fis e8~ | e fis16 e d4 d2 |
+          b'8 b4 b b cis8~ | cis4 cis d2 |
+          b8 a b2. | b8 a b a4 b a8~ |
+          a8 b4 a b d8 | d2. r8 d,8 |
+          e fis g4 a8 g4 fis8 | e4 fis2 e8 d | e1 \bar "|."
+        }
+      }
+      \layout { }
+      \midi { }
+    }
 
         \score {
             \header {
@@ -318,9 +372,7 @@ makePercent = #(define-music-function (note) (ly:music?)
                 }
             }
         }
-    }
 
-    \bookpart {
         \score {
             \header {
                 piece = "Frutto della nostra terra - p. 64"
@@ -468,9 +520,6 @@ makePercent = #(define-music-function (note) (ly:music?)
             >>
         }
 
-    }
-
-    \bookpart {
         \score {
             \header {
                 piece = "Perché tu sei con me - p. 35"
