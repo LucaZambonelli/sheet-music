@@ -3,12 +3,15 @@
 makePercent = #(define-music-function (note) (ly:music?)
   (make-music 'PercentEvent 'length (ly:music-length note)))
 
+
 \book {
   \header{
     tagline = ##f
   }
 
+
   \bookpart {
+
     \score {
       \header {
         piece = "Salmo, tipo 1"
@@ -20,7 +23,7 @@ makePercent = #(define-music-function (note) (ly:music?)
           \time 4/4
           c8 d e fis g a b4 |
           d,8 e fis g a b d4 |
-          b1 \bar"|."
+          b1 \bar "|."
         }
       }
     }
@@ -35,56 +38,92 @@ makePercent = #(define-music-function (note) (ly:music?)
           \key g \major
           \time 4/4
           g2 a4. g8 | fis4 e d2 |
-          g4 fis e d | e fis e2 \bar"|."
+          g4 fis e d | e fis e2 \bar "|."
         }
       }
     }
 
-\score {
-            \header {
-                piece = "Alleluia"
-            }
-            \new Staff
-            \relative c'' {
-                \set Staff.instrumentName = #"intro "
-                \clef treble
-                \key a \major
-                \time 4/4
-                \partial 4 e8 fis |
-                gis4 gis \tuplet 3/2 { fis e cis } |
-                e1 \bar "|."
-            }
+    \score {
+      \header {
+        piece = "Alleluia"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c'' {
+          \clef treble
+          \key a \major
+          \time 4/4
+          \partial 4 e8 fis |
+          gis4 gis \tuplet 3/2 { fis e cis } |
+          e1 \bar "|."
         }
+      }
+    }
 
-        \score {
-            \header {
-                piece = "Alleluia - Cantate al Signore"
-            }
-            \new Staff
-            \relative c'' {
-                \set Staff.instrumentName = #"intro "
-                \clef treble
-                \key c \major
-                \time 4/4
-                g8 a b c d c d4 |
-                c1 \bar "|."
-            }
+    \score {
+      \header {
+        piece = "Alleluia - Cantate al Signore"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c'' {
+          \clef treble
+          \key c \major
+          \time 4/4
+          g8 a b c d c d4 |
+          c1 \bar "|."
         }
+      }
+    }
 
-        \score {
-            \header {
-                piece = "Santo"
-            }
-            \new Staff
-            \relative c'' {
-                \set Staff.instrumentName = #"intro "
-                \clef treble
-                \key g \major
-                \time 4/4
-                d4 d e g |
-                g fis8 e fis2 \bar"|."
-            }
+    \score {
+      \header {
+        piece = "Lode a te, o Cristo"
+      }
+      <<
+        \new Staff {
+          \set Staff.instrumentName = #"intro "
+          \relative c''' {
+            \clef "treble^8"
+            \key a \major
+            \time 6/8
+            b8. cis16 b8 a8. fis16 e8 |
+            fis4 e8 fis4. \bar "|."
+          }
         }
+        \new Staff {
+          \set Staff.instrumentName = #"al versetto "
+          \relative c {
+            \clef "treble^8"
+            \key a \major
+            R2. |
+            R2. |
+          }
+        }
+        \new Staff {
+          \set Staff.instrumentName = #"finale "
+          \relative c {
+            \repeat percent 2 { \makePercent s2. }
+          }
+        }
+      >>
+    }
+
+    \score {
+      \header {
+        piece = "Santo"
+      }
+      \new Staff {
+        \relative c'' {
+          \set Staff.instrumentName = #"intro "
+          \clef treble
+          \key g \major
+          \time 4/4
+          d4 d e g |
+          g fis8 e fis2 \bar"|."
+        }
+      }
+    }
 
         \score {
             \header {
