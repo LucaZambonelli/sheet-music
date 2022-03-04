@@ -214,6 +214,7 @@ ScoreDrums = {
               \clef treble
               \key bes \major
               \time 4/4
+              \tempo 4 = 96
               \ScoreRythm
             }
             \new ChordNames {
