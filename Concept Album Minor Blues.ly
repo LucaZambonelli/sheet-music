@@ -214,6 +214,7 @@ ScoreDrums = {
               \override StringNumber.stencil = ##f
               \clef treble
               \key bes \major
+              \numericTimeSignature
               \time 4/4
               \tempo 4 = 96
               \ScoreRythm
@@ -238,7 +239,7 @@ ScoreDrums = {
             \override StringNumber.stencil = ##f
             \clef bass
             \key bes \major
-            \time 4/4
+            \numericTimeSignature
             \ScoreBass
           }
         }
@@ -258,7 +259,10 @@ ScoreDrums = {
         \override Stem.length = #4
         \override Stem.direction = #-1
         drumStyleTable = #timbales-style
-      } \ScoreDrums
+      } {
+        \numericTimeSignature
+        \ScoreDrums
+      }
     >>
     \layout { }
   }
