@@ -55,7 +55,7 @@ makePercent = #(define-music-function (note) (ly:music?)
         \clef "treble^8"
         \key f \major
         \time 4/4
-        d8 e f c r f a c | bes4-. a-. g-. f8 f \bar"|."
+        d8 e f c r f a c | bes4-. a-. g-. f8 f \bar "|."
       }
     }
   }
@@ -74,7 +74,7 @@ makePercent = #(define-music-function (note) (ly:music?)
           d8 e f f a4. a8 | g f d4 c2 |
           f4 g8 a c2 | r8 d c a g4 f |
           r8 a g f c4 e | d f g e |
-          f d e c | d1 \bar"|."
+          f d e c | d1 \bar "|."
         }
       }
       \new Staff {
@@ -123,7 +123,7 @@ makePercent = #(define-music-function (note) (ly:music?)
           \key f \major
           \time 4/4
           a4-. f-. g-. c8 bes | a4-. a8 bes g f g4 |
-          a-. f g c8 bes | a4-. a8 bes g2 \bar"|."
+          a-. f g c8 bes | a4-. a8 bes g2 \bar "|."
         }
       }
       \new Staff {
@@ -133,7 +133,7 @@ makePercent = #(define-music-function (note) (ly:music?)
           \key f \major
           \time 4/4
           g4 f8. bes16 a4. r8 | d4 bes8. g16 a4. r16 bes |
-          g8. f16 g8. a16 f2 | a1 \bar"|."
+          g8. f16 g8. a16 f2 | a1 \bar "|."
         }
       }
     >>
@@ -168,7 +168,7 @@ makePercent = #(define-music-function (note) (ly:music?)
         \key d \major
         \time 4/4
         \partial 4 a4 | d8 cis cis a a b b4 |
-        d, fis e8 d e4 | d1 \bar"|."
+        d, fis e8 d e4 | d1 \bar "|."
       }
     }
   }
