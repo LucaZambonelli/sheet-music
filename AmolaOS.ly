@@ -6,6 +6,8 @@ makePercent = #(define-music-function (note) (ly:music?)
 
 \book {
   \header{
+    title = "Canti O-S"
+    composer = "coro di Amola"
     tagline = ##f
   }
 
