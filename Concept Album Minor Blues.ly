@@ -197,7 +197,8 @@ ScoreDrums = {
 
 \book {
   \header{
-    title = "a bluesy blues, but minor"
+    title = "Minor Blues"
+    piece = "Concept Album
     composer = "Luca Zambonelli"
     tagline = ##f
   }
