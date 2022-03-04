@@ -3,15 +3,14 @@
 \book {
   \header{
   title = "Stairway to Heaven"
-  composer = "alto recorderer"
-  piece = "Led Zeppelin"
+  composer = "Led Zeppelin"
   tagline = ##f
   }
 
   \score {
     \new Staff {
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \set Staff.instrumentName = #"intro "
+      \set Staff.instrumentName = #"alto "
       \relative c'' {
         \clef treble
         \key d \major
