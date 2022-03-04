@@ -82,7 +82,6 @@ makePercent = #(define-music-function (note) (ly:music?)
       \clef treble
       \key d \major
       \time 4/4
-      \tempo 4 = 128
       fis4 fis fis fis | a4 a a fis8 e~ |
       e4 e e fis8 e~ | e4 d b d8 d~ |
       d8 b2.. | r4 cis d e | \tuplet 3/2 { e fis d } a2 |
