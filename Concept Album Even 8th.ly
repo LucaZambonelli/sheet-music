@@ -149,21 +149,14 @@ ScoreBass = {
 }
 
 
-MidiDrumsAHalf = {
-  \drummode {
-    r2
-    bd4 \tuplet 3/2 { sn trio8 }
-  }
-}
 MidiDrumsA = {
   \drummode {
-    \tuplet 3/2 { bd4 trio8 } \tuplet 3/2 {sn4 bd8}
-    bd4 \tuplet 3/2 { sn trio8 }
+    bd8 bd sn sn bd bd sn sn
   }
 }
-ScoreDrumsAIn = {
+ScoreDrumsA = {
   \drummode {
-    r2 timl4 timh8 cb
+    timl8 timl timh timh timl timl timh timh
   }
 }
 ScoreDrumsAOut = {
@@ -173,31 +166,20 @@ ScoreDrumsAOut = {
 }
 
 MidiDrums = {
-  R1 | R1 | \MidiDrumsAHalf |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
-  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |
+  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |  \MidiDrumsA |
+  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |  \MidiDrumsA |
+  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |  \MidiDrumsA |
+  \MidiDrumsA | \MidiDrumsA | \MidiDrumsA |  \MidiDrumsA |
 }
 ScoreDrums = {
-  R1 | R1 | \ScoreDrumsAIn |
-  \ScoreDrumsAOut | \makePercent s1 | \makePercent s1 |
-  \makePercent s1 | \makePercent s1 | \makePercent s1 |
-  \makePercent s1 | \makePercent s1 | \makePercent s1 |
-  R1
+  \ScoreDrumsA | \makePercent s1 | \makePercent s1 | \makePercent s1 |
+  \makePercent s1 | \makePercent s1 | \makePercent s1 | \makePercent s1 |
 }
 
 
 \book {
   \header{
-    title = "Minor Blues"
+    title = "Even 8th"
     piece = "Concept Album"
     composer = "Luca Zambonelli"
     tagline = ##f
@@ -216,17 +198,17 @@ ScoreDrums = {
               \key bes \major
               \time 4/4
               \tempo 4 = 96
-              \ScoreRythm
+              R1
             }
             \new ChordNames {
-              \ScoreChords
+              R1
             }
           >>
         }
         \new TabStaff {
           \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
           \relative c {
-            \ScoreRythm
+            R1
           }
         }
       >>
@@ -239,13 +221,13 @@ ScoreDrums = {
             \clef bass
             \key bes \major
             \time 4/4
-            \ScoreBass
+            R1
           }
         }
         \new TabStaff {
           \set Staff.stringTunings = #bass-tuning
           \relative c, {
-            \ScoreBass
+            R1
           }
         }
       >>
@@ -269,14 +251,14 @@ ScoreDrums = {
         \set Staff.midiInstrument = "electric guitar (clean)"
         \relative c {
           \time 4/4
-          \tempo 4 = 96
-          \MidiRythm
+          \tempo 4 = 128
+          R1
         }
       }
       \new Staff {
         \set Staff.midiInstrument = "electric bass (finger)"
         \relative c, {
-          \MidiBass
+          R1
         }
       }
       \new DrumStaff {
