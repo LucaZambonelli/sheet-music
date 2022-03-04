@@ -618,81 +618,106 @@ makePercent = #(define-music-function (note) (ly:music?)
         }
       >>
     }
-%
-%        \score {
-%            \header {
-%                piece = "Questo io credo - p. "
-%            }
-%            \new Staff
-%            \relative c'' {
-%                \set Staff.instrumentName = #"intro "
-%                \clef treble
-%                \key c \major
-%                \time 4/4
-%                d2. f4 | e2. c4 |
-%                d2. f4 | e2. c4 |
-%                d1 \bar"|."
-%            }
-%        }
-%
-%        \score {
-%            \header {
-%                piece = "Svegliati, Sion - p. 26"
-%            }
-%            <<
-%                \new Staff
-%                \relative c'' {
-%                    \set Staff.instrumentName = #"intro "
-%                    \clef "treble^8"
-%                    \key c \major
-%                    \time 6/8
-%                    f8. e16 d8 f e d | g8. f16 e8 g f e |
-%                    a4. g | fis2. \bar"|."
-%                }
-%                \new Staff
-%                \relative c'' {
-%                    \set Staff.instrumentName = #"al rit. "
-%                    \clef treble
-%                    \key g \major
-%                    \time 6/8
-%                    r8 r c b c4 | b2. | R2. | R |
-%                }
-%            >>
-%        }
-%
-%        \score {
-%            \header {
-%                piece = "Tu scendi dalle stelle - p. 57"
-%            }
-%            \new Staff
-%            \relative c'' {
-%                \set Staff.instrumentName = #"soprano "
-%                \clef "treble^8"
-%                \key d \major
-%                \time 6/8
-%                fis8. g16 a8 g a b |
-%                e,8. fis16 g8 fis g a |
-%                d,8. e16 fis8 e fis g |
-%                cis, d e fis4. |
-%                d fis \bar "|."
-%            }
-%        }
-%
-%        \score {
-%            \header {
-%                piece = "Tu sei - p. 40"
-%            }
-%            \new Staff
-%            \relative c''' {
-%                \set Staff.instrumentName = #"intro "
-%                \clef "treble^8"
-%                \key c \major
-%                \time 4/4
-%                \partial 8 c8 |
-%                c4. b8 b4. a8 | a4. g8 a4. c8 |
-%                c4. b8 b4. a8 | a4. g8 a2 \bar "|."
-%            }
-%        }
+
+    \score {
+      \header {
+        piece = "Questo io credo - p. 1"
+      }
+      <<
+        \new Staff {
+          \set Staff.instrumentName = #"intro "
+          \relative c'' {
+            \clef treble
+            \key c \major
+            \time 4/4
+            d2. f4 | e2. c4 |
+            d2. f4 | e2. c4 |
+            d1 \bar"|."
+          }
+        }
+        \new Staff {
+          \set Staff.instrumentName = #"dopo primo rit "
+          \relative c'' {
+            \clef treble
+            \key c \major
+            R1 | R1 | R1 | R1 | R1 |
+          }
+        }
+        \new Staff {
+          \set Staff.instrumentName = #"finale "
+          \relative c'' {
+            \clef treble
+            \key c \major
+            R1 | R1 | R1 | R1 | R1 |
+          }
+        }
+      >>
+    \layout { }
+    \midi { }
+    }
+
+    \score {
+      \header {
+        piece = "Svegliati, Sion - p. 26"
+      }
+      <<
+        \new Staff {
+          \set Staff.instrumentName = #"intro "
+          \relative c'' {
+            \clef "treble^8"
+            \key c \major
+            \time 6/8
+            f8. e16 d8 f e d | g8. f16 e8 g f e |
+            a4. g | fis2. \bar"|."
+          }
+        }
+        \new Staff {
+          \set Staff.instrumentName = #"al rit. "
+          \relative c'' {
+            \clef treble
+            \key g \major
+            r8 r c b c4 | b2. | R2. | R |
+          }
+        }
+      >>
+    }
+
+    \score {
+      \header {
+        piece = "Tu scendi dalle stelle - p. 57"
+        composer = "soprano"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c'' {
+          \clef "treble^8"
+          \key d \major
+          \time 6/8
+          fis8. g16 a8 g a b |
+          e,8. fis16 g8 fis g a |
+          d,8. e16 fis8 e fis g |
+          cis, d e fis4. |
+          d fis \bar "|."
+        }
+      }
+    }
+
+    \score {
+      \header {
+        piece = "Tu sei - p. 40"
+      }
+      \new Staff {
+        \set Staff.instrumentName = #"intro "
+        \relative c''' {
+          \clef "treble^8"
+          \key c \major
+          \time 4/4
+          \partial 8 c8 |
+          c4. b8 b4. a8 | a4. g8 a4. c8 |
+          c4. b8 b4. a8 | a4. g8 a2 \bar "|."
+        }
+      }
+    }
 %
 %        \score {
 %            \header {
