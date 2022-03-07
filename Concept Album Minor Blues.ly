@@ -9,27 +9,35 @@ makePercent = #(define-music-function (note) (ly:music?)
 
 
 MidiTheme = {
-  R1 | R1 | R1 | R1 |
-  R1 | R1 | R1 | R1 |
-  R1 | R1 | R1 | R1 |
   r4 \tuplet 3/2 { r4 g8 } \tuplet 3/2 { f g bes~ } bes4 |
   r4 \tuplet 3/2 { r4 c8 } \tuplet 3/2 { bes c ees~ } ees4 |
   r4 \tuplet 3/2 { r4 g,8 } \tuplet 3/2 { f g f } \tuplet 3/2 { g4 bes8 } |
   \tuplet 3/2 { g4 f8 } \tuplet 3/2 { g bes g~ } g4 r |
+  r4 \tuplet 3/2 { r4 c8 } \tuplet 3/2 { bes c ees~ } ees4 |
+  r4 \tuplet 3/2 { r4 c8 } \tuplet 3/2 { bes c bes~ } bes4 |
+  r4 \tuplet 3/2 { r4 g8 } \tuplet 3/2 { f g f } \tuplet 3/2 { g4 bes8 } |
+  \tuplet 3/2 { g4 bes8 } \tuplet 3/2 { c d f~ } f4 r |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
 }
 ScoreTheme = {
   r4. g8\4 \tuplet 3/2 { f\4 g\4 bes\3~ } bes4\3 |
   r4. c8\3 \tuplet 3/2 { bes\3 c\3 ees\2~ } ees4\2 |
   r4. g,8\4 \tuplet 3/2 { f\4 g\4 f\4 } g\4 bes\3 |
   g\4 f\4 \tuplet 3/2 { g\4 bes\3 g\4~ } g4\4 r |
-  R1 | R1 | R1 | R1 |
+  r4. c8\3 \tuplet 3/2 { bes\3 c\3 ees\2~ } ees4\2 |
+  r4. c8\3 \tuplet 3/2 { bes\3 c\3 bes\3~ } bes4\3 |
+  r4. g8\4 \tuplet 3/2 { f\4 g\4 f\4 } g\4 bes\3 |
+  g\4 bes\4 \tuplet 3/2 { c\3 d\3 f\2~ } f4\2 r |
   R1 | R1 | R1 | R1 |
   R1
 }
 
 MidiRythmG = {
   g4\sustainOn \tuplet 3/2 { bes4 f'8~ }
-  \tuplet 3/2 { f4 g,8~ } g4\sustainOff 
+  \tuplet 3/2 { f4 g,8~ } \tuplet 3/2 { g4~ g16 r\sustainOff } 
 }
 ScoreRythmG = {
   g4\6 bes8\5 f'4\4 g,4.\6
@@ -61,7 +69,7 @@ ScoreRythmA = {
 }
 MidiRythmC = {
   c4\sustainOn \tuplet 3/2 { ees4 bes'8~ }
-  \tuplet 3/2 { bes4 c,8~ } c4\sustainOff 
+  \tuplet 3/2 { bes4 c,8~ } \tuplet 3/2 { c4~ c16 r\sustainOff } 
 }
 ScoreRythmC = {
   c4\5 ees8\4 bes'4\3 c,4.\5
@@ -321,7 +329,13 @@ ScoreDrums = {
         \set Staff.midiMinimumVolume = #1.0
         \set Staff.midiMaximumVolume = #1.0
         \relative c {
+          R1 | R1 | R1 | R1 |
+          R1 | R1 | R1 | R1 |
+          R1 | R1 | R1 | R1 |
           \MidiTheme
+          R1 | R1 | R1 | R1 |
+          R1 | R1 | R1 | R1 |
+          R1 | R1 | R1 | R1 |
         }
       }
       \new Staff {
