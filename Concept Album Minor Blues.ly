@@ -1,7 +1,4 @@
 \version "2.22.1"
-\paper {
-  #(set-paper-size "a4" 'landscape)
-}
 
 \defineBarLine "[" #'("" "[" "")
 \defineBarLine "]" #'("]" "" "")
@@ -9,6 +6,24 @@
 
 makePercent = #(define-music-function (note) (ly:music?)
   (make-music 'PercentEvent 'length (ly:music-length note)))
+
+
+MidiTheme = {
+  R1 | R1 | R1 | R1 |
+  R1 | R1 | R1 | R1 |
+  R1 | R1 | R1 | R1 |
+  r4 \tuplet 3/2 { r4 g8 } \tuplet 3/2 { f g bes ~ } bes4
+  r4 \tuplet 3/2 { r4 c8 } \tuplet 3/2 { bes c ees ~ } ees4
+}
+ScoreTheme = {
+  r4. g8\4 \tuplet 3/2 { f\4 g\4 bes\3~ } bes4\3 |
+  r4. c8\3 \tuplet 3/2 { bes\3 c\3 ees\2~ } ees4\2 |
+  r4. f,8\4 g\4 f\4 g\4 bes\3 |
+  g\4 f\4 r2. |
+  R1 | R1 | R1 | R1 |
+  R1 | R1 | R1 | R1 |
+  R1
+}
 
 MidiRythmG = {
   g4\sustainOn \tuplet 3/2 { bes4 f'8~ }
@@ -72,10 +87,11 @@ MidiRythm = {
   << g1 c e >>
 }
 ScoreRythm = {
-  \bar "[" \ScoreRythmG | \ScoreRythmC | \makePercent s1 |
-  \makePercent s1 \bar"||" \makePercent s1 | \makePercent s1 | \break
-  \makePercent s1 | \makePercent s1 | \bar"||" \ScoreRythmA |
-  \ScoreRythmD | \ScoreRythmGEnd \bar"]"
+  \bar "[" \ScoreRythmG | \ScoreRythmC |
+  \makePercent s1 | \makePercent s1 \bar"||" \break
+  \makePercent s1 | \makePercent s1 |
+  \makePercent s1 | \makePercent s1 | \bar"||" \break
+  \ScoreRythmA | \ScoreRythmD | \ScoreRythmGEnd \bar"]"
   << g\6 c\5 e\4 \fermata >> \bar "|."
 }
 ScoreChords = {
@@ -206,8 +222,8 @@ ScoreDrums = {
   \score {
     <<
       \new GrandStaff <<
-        \set GrandStaff.instrumentName = #"Guitar "
-        \set GrandStaff.shortInstrumentName = #"Gt "
+        \set GrandStaff.instrumentName = #"Rythm "
+        \set GrandStaff.shortInstrumentName = #"Rt "
         \new Staff {
           <<
             \relative c' {
@@ -225,9 +241,28 @@ ScoreDrums = {
           >>
         }
         \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
+          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
           \relative c {
             \ScoreRythm
+          }
+        }
+      >>
+      \new GrandStaff <<
+        \set GrandStaff.instrumentName = #"Lead "
+        \set GrandStaff.shortInstrumentName = #"Ld "
+        \new Staff {
+          \relative c'' {
+            \override StringNumber.stencil = ##f
+            \clef treble
+            \key bes \major
+            \numericTimeSignature
+            \ScoreTheme
+          }
+        }
+        \new TabStaff {
+          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
+          \relative c' {
+            \ScoreTheme
           }
         }
       >>
@@ -275,6 +310,12 @@ ScoreDrums = {
           \time 4/4
           \tempo 4 = 96
           \MidiRythm
+        }
+      }
+      \new Staff {
+        \set Staff.midiInstrument = "electric guitar (clean)"
+        \relative c {
+          \MidiTheme
         }
       }
       \new Staff {
