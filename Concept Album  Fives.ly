@@ -40,6 +40,7 @@ midiPianoBass = {
   << a2 a' >> << g g, >> | << a1 a' >> |
 }
 
+
 % rythm section
 scoreRythm = {
   R1 | R1 | R1 | R1 |
@@ -86,7 +87,18 @@ midiRythm = {
 
 % theme section
 scoreTheme = {
-  R1
+  R1 | R1 | R1 | R1 |
+  R1 | R1 | R1 | R1 |
+  R1 | R1 | R1 | r2.. c8 |
+  \key bes \major
+  d2~ d8 c \tuplet 3/2 { d ees d } \tuplet 3/2 { c d c } |
+  a4. bes8 r2 r8 c |
+  d2~ d8 c \tuplet 3/2 { d ees d } \tuplet 3/2 { ees f ees } |
+  f4. d8 r2 r8 c |
+  d2~ d8 c \tuplet 3/2 { d ees d } \tuplet 3/2 { c d c } |
+  a4. bes8 r2 r8 c |
+  d2~ d8 c \tuplet 3/2 { d ees d } \tuplet 3/2 { ees f ees } |
+  d2 r2. |
 }
 midiTheme = {
   R1
@@ -303,7 +315,7 @@ midiDrums = {
           >>
         }
         \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
+          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
           \relative c {
             \scoreRythm
           }
@@ -322,7 +334,7 @@ midiDrums = {
             }
           }
         \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
+          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
           \relative c {
             \scoreTheme
           }
