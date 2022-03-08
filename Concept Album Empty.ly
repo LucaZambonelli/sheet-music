@@ -45,12 +45,12 @@ midiBass = {
 % drums section
 scoreDrums = {
   \drummode {
-    R1 |
+    R1
   }
 }
 midiDrums = {
   \drummode {
-    R1 |
+    R1
   }
 }
 
