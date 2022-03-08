@@ -6,7 +6,8 @@
 makePercent = #(define-music-function (note) (ly:music?)
   (make-music 'PercentEvent 'length (ly:music-length note)))
 
-execute = 144
+song = "Empty"
+execute = 120
 
 
 % rythm section
@@ -58,7 +59,7 @@ midiDrums = {
 % writing down
 \book {
   \header{
-    title = "Empty"
+    title = #song
     piece = "Concept Album"
     composer = "Luca Zambonelli"
     tagline = ##f
