@@ -12,7 +12,8 @@ execute = 128
 
 % rythm section
 scoreRythm = {
-  R1
+  R1 | R1 |
+  R1 | R1 |
 }
 chordsRythm = {
   \set chordChanges = ##t
@@ -36,10 +37,16 @@ midiTheme = {
 
 % bass section
 scoreBass = {
-  R1
+  R1 | r2. a8\4 a\4 |
+  b\4 b\4 c\4 c\4 b4\4 c8\4 d\3 | e\3 e\3 d\3 c\4 b4\4 \makePercent s4 |
+  \makePercent s1 | \makePercent s1 |
+  \makePercent s1 | \makePercent s1 |
 }
 midiBass = {
-  R1
+  R1 | r2. a8 a |
+  b b c c b4 c8 d | e e d c b4 a8 a |
+  b b c c b4 c8 d | e e d c b4 a8 a |
+  b b c c b4 c8 d | e e d c b4 a8 a |
 }
 
 
@@ -90,7 +97,7 @@ midiDrums = {
             \relative c' {
               \override StringNumber.stencil = ##f
               \clef treble
-              \key c \major
+              \key g \major
               \numericTimeSignature
               \time 4/4
               \tempo 4 = #execute
@@ -102,7 +109,7 @@ midiDrums = {
           >>
         }
         \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
+          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
           \relative c {
             \scoreRythm
           }
@@ -115,13 +122,13 @@ midiDrums = {
           \relative c'' {
               \override StringNumber.stencil = ##f
               \clef treble
-              \key c \major
+              \key g \major
               \numericTimeSignature
               \scoreTheme
             }
           }
         \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
+          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
           \relative c {
             \scoreTheme
           }
@@ -134,7 +141,7 @@ midiDrums = {
           \relative c {
             \override StringNumber.stencil = ##f
             \clef bass
-            \key c \major
+            \key g \major
             \numericTimeSignature
             \time 4/4
             \scoreBass
