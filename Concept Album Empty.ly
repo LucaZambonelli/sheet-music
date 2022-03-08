@@ -90,7 +90,7 @@ midiDrums = {
           >>
         }
         \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
+          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
           \relative c {
             \scoreRythm
           }
@@ -109,7 +109,7 @@ midiDrums = {
             }
           }
         \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c f'>
+          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
           \relative c {
             \scoreTheme
           }
