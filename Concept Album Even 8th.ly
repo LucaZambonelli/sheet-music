@@ -40,15 +40,15 @@ midiTheme = {
 % bass section
 scoreBass = {
   R1 | r2. a8\4 a\4 |
-  b\4 b\4 c\4 c\4 b4\4 c8\4 d\3 | e\3 e\3 d\3 c\4 b4\4 \makePercent s4 |
+  b\4 b\4 c\4 c\4 b4\4 c8\4 c\4 | d\3 d\3 c\4 c\4 b4\4 \makePercent s4 |
   \makePercent s1 | \makePercent s1 |
   \makePercent s1 | \makePercent s1 |
 }
 midiBass = {
-  R1 | r2. a8 a |
-  b b c c b4 c8 d | e e d c b4 a8 a |
-  b b c c b4 c8 d | e e d c b4 a8 a |
-  b b c c b4 c8 d | e e d c b4 a8 a |
+  R1 | r2. a8\mf a |
+  b b c c b4 c8 c | d d c c b4 a8 a |
+  b b c c b4 c8 c | d d c c b4 a8 a |
+  b b c c b4 c8 c | d d c c b4 a8 a |
 }
 
 
@@ -67,7 +67,7 @@ scoreDrums = {
 }
 midiDrums = {
   \drummode {
-    bd8 bd sn sn bd bd sn sn |
+    bd8\mf bd sn sn bd bd sn sn |
     bd8 bd sn sn bd bd sn sn |
     bd8 bd sn sn bd bd sn sn |
     bd8 bd sn sn bd bd sn sn |
