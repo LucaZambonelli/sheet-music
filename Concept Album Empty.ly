@@ -62,12 +62,12 @@ midiDrums = {
 \book {
   \header{
     title = #song
-    piece = #album
+    subtutle = #album
     composer = #author
     tagline = ##f
   }
 
-  %readable
+  % body
   \score {
     <<
       \new GrandStaff <<
@@ -152,7 +152,7 @@ midiDrums = {
     \layout { }
   }
 
-  %playable
+  % midi
   \score {
     <<
       \new Staff {
