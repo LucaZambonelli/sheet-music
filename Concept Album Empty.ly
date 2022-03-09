@@ -62,94 +62,96 @@ midiDrums = {
 \book {
   \header{
     title = #song
-    subtutle = #album
+    subtitle = #album
     composer = #author
     tagline = ##f
   }
 
   % body
-  \score {
-    <<
-      \new GrandStaff <<
-        \set GrandStaff.instrumentName = #"Rythm "
-        \set GrandStaff.shortInstrumentName = #"Rt "
-        \new Staff {
-          <<
-            \relative c' {
-              \override StringNumber.stencil = ##f
-              \clef treble
-              \key c \major
-              \numericTimeSignature
-              \time 4/4
-              \tempo 4 = #execute
+  \bookpart {
+    \score {
+      <<
+        \new GrandStaff <<
+          \set GrandStaff.instrumentName = #"Rythm "
+          \set GrandStaff.shortInstrumentName = #"Rt "
+          \new Staff {
+            <<
+              \relative c' {
+                \override StringNumber.stencil = ##f
+                \clef treble
+                \key c \major
+                \numericTimeSignature
+                \time 4/4
+                \tempo 4 = #execute
+                \scoreRythm
+              }
+              \new ChordNames {
+                \chordsRythm
+              }
+            >>
+          }
+          \new TabStaff {
+            \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
+            \relative c {
               \scoreRythm
             }
-            \new ChordNames {
-              \chordsRythm
-            }
-          >>
-        }
-        \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
-          \relative c {
-            \scoreRythm
           }
-        }
-      >>
-      \new GrandStaff <<
-        \set GrandStaff.instrumentName = #"Lead "
-        \set GrandStaff.shortInstrumentName = #"Ld "
-        \new Staff {
-          \relative c'' {
-              \override StringNumber.stencil = ##f
-              \clef treble
-              \key c \major
-              \numericTimeSignature
+        >>
+        \new GrandStaff <<
+          \set GrandStaff.instrumentName = #"Lead "
+          \set GrandStaff.shortInstrumentName = #"Ld "
+          \new Staff {
+            \relative c'' {
+                \override StringNumber.stencil = ##f
+                \clef treble
+                \key c \major
+                \numericTimeSignature
+                \scoreTheme
+              }
+            }
+          \new TabStaff {
+            \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
+            \relative c {
               \scoreTheme
             }
           }
-        \new TabStaff {
-          \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
-          \relative c {
-            \scoreTheme
+        >>
+        \new GrandStaff <<
+          \set GrandStaff.instrumentName = #"Bass "
+          \set GrandStaff.shortInstrumentName = #"Bs "
+          \new Staff {
+            \relative c {
+              \override StringNumber.stencil = ##f
+              \clef bass
+              \key c \major
+              \numericTimeSignature
+              \time 4/4
+              \scoreBass
+            }
           }
+          \new TabStaff {
+            \set Staff.stringTunings = #bass-tuning
+            \relative c, {
+              \scoreBass
+            }
+          }
+        >>
+        \new DrumStaff \with {
+          instrumentName = #"Drums "
+          shortInstrumentName = #"Dr "
+          \override StaffSymbol.line-count = #2
+          \override StaffSymbol.staff-space = #2
+          \override VerticalAxisGroup.minimum-Y-extent = #'(-3.0 . 4.0)
+          \override Stem.length = #4
+          \override Stem.direction = #-1
+          drumStyleTable = #timbales-style
+        } {
+          \numericTimeSignature
+          \scoreDrums
         }
       >>
-      \new GrandStaff <<
-        \set GrandStaff.instrumentName = #"Bass "
-        \set GrandStaff.shortInstrumentName = #"Bs "
-        \new Staff {
-          \relative c {
-            \override StringNumber.stencil = ##f
-            \clef bass
-            \key c \major
-            \numericTimeSignature
-            \time 4/4
-            \scoreBass
-          }
-        }
-        \new TabStaff {
-          \set Staff.stringTunings = #bass-tuning
-          \relative c, {
-            \scoreBass
-          }
-        }
-      >>
-      \new DrumStaff \with {
-        instrumentName = #"Drums "
-        shortInstrumentName = #"Dr "
-        \override StaffSymbol.line-count = #2
-        \override StaffSymbol.staff-space = #2
-        \override VerticalAxisGroup.minimum-Y-extent = #'(-3.0 . 4.0)
-        \override Stem.length = #4
-        \override Stem.direction = #-1
-        drumStyleTable = #timbales-style
-      } {
-        \numericTimeSignature
-        \scoreDrums
-      }
-    >>
-    \layout { }
+      \layout { }
+    }
   }
 
   % midi
