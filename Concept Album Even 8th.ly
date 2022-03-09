@@ -9,7 +9,7 @@ makePercent = #(define-music-function (note) (ly:music?)
 song = "Even 8th"
 album = "Concept Album"
 author = "Luca Zambonelli"
-execute = 128
+execute = 144
 
 
 % rythm section
@@ -18,9 +18,12 @@ scoreRythm = {
   R1 | R1 |
 }
 chordsRythm = {
-  \set chordChanges = ##t
+  \set chordChanges = ##f
   \chordmode {
-    R1
+    s1 | s1 |
+    b:m7.5-.11- | b:m7.5-.11- |
+    b:m7.5-.11- | b:m7.5-.11- |
+    b:m7.5-.11- | b:m7.5-.11- |
   }
 }
 midiRythm = {
@@ -39,23 +42,23 @@ midiTheme = {
 
 % bass section
 scoreBass = {
-  R1 | r2. a8\4 a\4 |
-  b\4 b\4 c\4 c\4 b4\4 c8\4 c\4 | d\3 d\3 c\4 c\4 b4\4 \makePercent s4 |
+  R1 | R1 |
+  a8\4 a\4 b\4 b\4 c\3 c\3 b4\4 | c8\3 c\3 d\3 d\3 c\3 c\3 b4\4 |
   \makePercent s1 | \makePercent s1 |
   \makePercent s1 | \makePercent s1 |
 }
 midiBass = {
-  R1 | r2. a8\mf a |
-  b b c c b4 c8 c | d d c c b4 a8 a |
-  b b c c b4 c8 c | d d c c b4 a8 a |
-  b b c c b4 c8 c | d d c c b4 a8 a |
+  R1 | R1 |
+  a8 a b b c c b4 | c8 c d d c c b4 |
+  a8 a b b c c b4 | c8 c d d c c b4 |
+  a8 a b b c c b4 | c8 c d d c c b4 |
 }
 
 
 % drums section
 scoreDrums = {
   \drummode {
-    timl8 timl timh timh timl timl timh timh |
+    timl8 timl timh timh timl timl timh4 |
     \makePercent s1 |
     \makePercent s1 |
     \makePercent s1 |
@@ -67,14 +70,14 @@ scoreDrums = {
 }
 midiDrums = {
   \drummode {
-    bd8\mf bd sn sn bd bd sn sn |
-    bd8 bd sn sn bd bd sn sn |
-    bd8 bd sn sn bd bd sn sn |
-    bd8 bd sn sn bd bd sn sn |
-    bd8 bd sn sn bd bd sn sn |
-    bd8 bd sn sn bd bd sn sn |
-    bd8 bd sn sn bd bd sn sn |
-    bd8 bd sn sn bd bd sn sn |
+    bd8\mf bd sn sn bd bd sn4 |
+    bd8 bd sn sn bd bd sn4 |
+    bd8 bd sn sn bd bd sn4 |
+    bd8 bd sn sn bd bd sn4 |
+    bd8 bd sn sn bd bd sn4 |
+    bd8 bd sn sn bd bd sn4 |
+    bd8 bd sn sn bd bd sn4 |
+    bd8 bd sn sn bd bd sn4 |
   }
 }
 
@@ -100,7 +103,7 @@ midiDrums = {
               \relative c' {
                 \override StringNumber.stencil = ##f
                 \clef treble
-                \key g \major
+                \key ees \major
                 \numericTimeSignature
                 \time 4/4
                 \tempo 4 = #execute
@@ -125,7 +128,7 @@ midiDrums = {
             \relative c'' {
                 \override StringNumber.stencil = ##f
                 \clef treble
-                \key g \major
+                \key ees \major
                 \numericTimeSignature
                 \scoreTheme
               }
@@ -144,7 +147,7 @@ midiDrums = {
             \relative c {
               \override StringNumber.stencil = ##f
               \clef bass
-              \key g \major
+              \key ees \major
               \numericTimeSignature
               \time 4/4
               \scoreBass
