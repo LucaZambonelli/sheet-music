@@ -38,7 +38,7 @@ chordsRythm = {
   }
 }
 midiRythm = {
-  g4\sustainOn \tuplet 3/2 { bes4 f'8~ }
+  g4\sustainOn\mf \tuplet 3/2 { bes4 f'8~ }
     \tuplet 3/2 { f4 g,8~ } \tuplet 3/2 { g4~ g16 r\sustainOff } |
   c4\sustainOn \tuplet 3/2 { ees4 bes'8~ }
     \tuplet 3/2 { bes4 c,8~ } \tuplet 3/2 { c4~ c16 r\sustainOff } |
@@ -122,7 +122,7 @@ midiTheme = {
   R1 | R1 | R1 | R1 |
   R1 | R1 | R1 | R1 |
   R1 | R1 | R1 | R1 |
-  r4 \tuplet 3/2 { r4 g8 } \tuplet 3/2 { f g bes~ } bes4 |
+  r4 \tuplet 3/2 { r4 g8\mf } \tuplet 3/2 { f g bes~ } bes4 |
   r4 \tuplet 3/2 { r4 c8 } \tuplet 3/2 { bes c ees~ } ees4 |
   r4 \tuplet 3/2 { r4 g,8 } \tuplet 3/2 { f g f } \tuplet 3/2 { g4 bes8 } |
   \tuplet 3/2 { g4 f8 } \tuplet 3/2 { g bes g~ } g4 r |
@@ -148,7 +148,7 @@ scoreBass = {
 }
 midiBass = {
   R1 | R1 | R1 | R1 |
-  \tuplet 3/2 { c4 ees8~ } \tuplet 3/2 { ees4 f8~ } \tuplet 3/2 { f4 bes,8 } c4 |
+  \tuplet 3/2 { c4\mf ees8~ } \tuplet 3/2 { ees4 f8~ } \tuplet 3/2 { f4 bes,8 } c4 |
   \tuplet 3/2 { c4 ees8~ } \tuplet 3/2 { ees4 f8~ } \tuplet 3/2 { f4 bes,8 } c4 |
   \tuplet 3/2 { g4 bes8~ } \tuplet 3/2 { bes4 c8~ } \tuplet 3/2 { c4 f,8 } g4 |
   \tuplet 3/2 { g4 bes8~ } \tuplet 3/2 { bes4 c8~ } \tuplet 3/2 { c4 f,8 } g4 |
@@ -178,7 +178,7 @@ scoreDrums = {
 midiDrums = {
   \drummode {
     R1 | R1 |
-    r2 bd4 \tuplet 3/2 { sn trio8 } |
+    r2 bd4\mf \tuplet 3/2 { sn trio8 } |
     \tuplet 3/2 { bd4 trio8 } \tuplet 3/2 {sn4 bd8} bd4 \tuplet 3/2 { sn trio8 } |
     \tuplet 3/2 { bd4 trio8 } \tuplet 3/2 {sn4 bd8} bd4 \tuplet 3/2 { sn trio8 } |
     \tuplet 3/2 { bd4 trio8 } \tuplet 3/2 {sn4 bd8} bd4 \tuplet 3/2 { sn trio8 } |
