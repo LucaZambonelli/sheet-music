@@ -9,7 +9,7 @@ makePercent = #(define-music-function (note) (ly:music?)
 song = "Fives"
 album = "Concept Album"
 author = "Luca Zambonelli"
-execute = 124
+execute = 120
 
 
 % piano section
@@ -85,18 +85,30 @@ midiRythm = {
 
 % theme section
 scoreTheme = {
-  \partial 4 s8 c8 |
-  d2~ d8 c \tuplet 3/2 { d ees d } \tuplet 3/2 { c d c } |
-  a4. bes8 r2 r8 c |
-  d2~ d8 c \tuplet 3/2 { d ees d } \tuplet 3/2 { ees f ees } |
-  f4. d8 r2 r8 c |
-  d2~ d8 c \tuplet 3/2 { d ees d } \tuplet 3/2 { c d c } |
-  a4. bes8 r2 r8 c |
-  d2~ d8 c \tuplet 3/2 { d ees d } \tuplet 3/2 { ees f ees } |
-  d2 r2. |
+  \partial 4 s8 c8\3 |
+  d2\3~ d8\3 c\3 \tuplet 3/2 { d\3 ees\3 d\3 } \tuplet 3/2 { c\3 d\3 c\3 } |
+  a4.\4 bes8\4 r2 r8 c\3 |
+  d2\3~ d8\3 c\3 \tuplet 3/2 { d\3 ees\3 d\3 } \tuplet 3/2 { ees\3 f\2 ees\3 } |
+  f4.\2 d8\3 r2 r8 c\3 |
+  d2\3~ d8\3 c\3 \tuplet 3/2 { d\3 ees\3 d\3 } \tuplet 3/2 { c\3 d\3 c\3 } |
+  a4.\4 bes8\4 r2 r8 c\3 |
+  d2\3~ d8\3 c\3 \tuplet 3/2 { d\3 ees\3 d\3 } \tuplet 3/2 { ees\3 f\2 ees\3 } |
+  d2\3 r2. |
 }
 midiTheme = {
-  R1
+  R1 | R1 | R1 | R1 |
+  R1 | R1 | R1 | R1 |
+  R1 | R1 | R1 | R1 |
+  r1 r4 | r1 r4 | r1 r4 | r1 r4 |
+  r1 r4 | r1 r4 | r1 r4 | r1 \tuplet 3/2 { r4 c8 } |
+  d2~ \tuplet 3/2 { d4 c8 } \tuplet 3/2 { d ees d } \tuplet 3/2 { c d c } |
+  a4~ \tuplet 3/2 { a4 bes8 } r2 \tuplet 3/2 { r4 c8 } |
+  d2~ \tuplet 3/2 { d4 c8 } \tuplet 3/2 { d ees d } \tuplet 3/2 { ees f ees } |
+  f4~ \tuplet 3/2 { f4 d8 } r2 \tuplet 3/2 { r4 c8 } |
+  d2~ \tuplet 3/2 { d4 c8 } \tuplet 3/2 { d ees d } \tuplet 3/2 { c d c } |
+  a4~ \tuplet 3/2 { a4 bes8 } r2 \tuplet 3/2 { r4 c8 } |
+  d2~ \tuplet 3/2 { d4 c8 } \tuplet 3/2 { d ees d } \tuplet 3/2 { ees f ees } |
+  d2 r2. |
 }
 
 
@@ -352,7 +364,7 @@ midiDrums = {
             }
           \new TabStaff {
             \set Staff.stringTunings = \stringTuning <e, a, d g c' f'>
-            \relative c {
+            \relative c' {
               \scoreTheme
             }
           }
