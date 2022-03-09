@@ -24,24 +24,24 @@ scorePianoBass = {
   a2 g | a1 | \makePercent s1 | \makePercent s1 |
 }
 midiPianoTreb = {
-  R1 | << c4 c, >> << d d' >> << e e, >> << f f' >> |
+  R1 | << c4\mf c, >> << d d' >> << e e, >> << f f' >> |
   R1 | << g4 g, >> << f f' >> << e e, >> << d d' >> |
   R1 | << c4 c, >> << e e' >> << d d, >> << c c' >> |
   R1 | << g'4 g, >> << e e' >> << d d, >> << c c' >> |
   R1 | << c4 c, >> << e e' >> << d d, >> << c c' >> |
 }
 midiPianoBass = {
-  << a2 a, >> << g' g, >> | << a'1 a, >> |
+  << a2\mf a, >> << g' g, >> | << a'1 a, >> |
   << a'2 a, >> << g' g, >> | << a'1 a, >> |
   << a'2 a, >> << g' g, >> | << a'1 a, >> |
   << a'2 a, >> << g' g, >> | << a'1 a, >> |
   << a'2 a, >> << g' g, >> | << a'1 a, >> |
 }
 midiPianoTrebEcho = {
-  r1 << c4 c, >> << e e' >> << d d, >> << c c' >>
+  r1 << c4\mf c, >> << e e' >> << d d, >> << c c' >>
 }
 midiPianoBassEcho = {
-  << a'2 a, >> << g' g, >> << a'1 a, >>
+  << a'2\mf a, >> << g' g, >> << a'1 a, >>
 }
 
 
@@ -68,7 +68,7 @@ midiRythm = {
   R1 | R1 | R1 | R1 |
   R1 | R1 | R1 | R1 |
   r1 r4 | r1 r4 | r1 r4 | r1 r4 |
-  \tuplet 3/2 { r4 << d8 f' >> } << f4 d, >> r2. |
+  \tuplet 3/2 { r4 << d8\mf f' >> } << f4 d, >> r2. |
   r2 << c4 ees' >> << g ees, >> r |
   \tuplet 3/2 { r4 << d8 f' >> } << f4 d, >> r2. |
   r2 << c4 ees' >> << g ees, >> r |
@@ -100,7 +100,7 @@ midiTheme = {
   R1 | R1 | R1 | R1 |
   R1 | R1 | R1 | R1 |
   r1 r4 | r1 r4 | r1 r4 | r1 r4 |
-  r1 r4 | r1 r4 | r1 r4 | r1 \tuplet 3/2 { r4 c8 } |
+  r1 r4 | r1 r4 | r1 r4 | r1 \tuplet 3/2 { r4 c8\mf } |
   d2~ \tuplet 3/2 { d4 c8 } \tuplet 3/2 { d ees d } \tuplet 3/2 { c d c } |
   a4~ \tuplet 3/2 { a4 bes8 } r2 \tuplet 3/2 { r4 c8 } |
   d2~ \tuplet 3/2 { d4 c8 } \tuplet 3/2 { d ees d } \tuplet 3/2 { ees f ees } |
@@ -127,7 +127,7 @@ scoreBass = {
 midiBass = {
   R1 | R1 | R1 | R1 |
   R1 | R1 | R1 | R1 |
-  R1 | R1 | R1 | r2. \tuplet 3/2 { g8 f e } |
+  R1 | R1 | R1 | r2. \tuplet 3/2 { g8\mf f e } |
   \time 5/4
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
     \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
@@ -186,7 +186,7 @@ midiDrums = {
     R1 | R1 | R1 | R1 |
     R1 | R1 | R1 | R1 |
     R1 | R1 |
-    r2 \tuplet 3/2 { r4 trio8 } \tuplet 3/2 { trio4 trio8 } |
+    r2 \tuplet 3/2 { r4 trio8\mf } \tuplet 3/2 { trio4 trio8 } |
     \tuplet 3/2 { trio4 trio8 } \tuplet 3/2 { trio4 trio8 }
       \tuplet 3/2 { trio4 trio8 } \tuplet 3/2 { trio4 trio8 } |
     \tuplet 3/2 { trio4 trio8 } \tuplet 3/2 { trio4 trio8 }
