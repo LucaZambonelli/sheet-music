@@ -114,7 +114,7 @@ midiTheme = {
 
 % bass section
 scoreBass = {
-  \partial 4 \tuplet 3/2 { g8\2 f\3 e\3 } |
+  \partial 4 \tuplet 3/2 { g8\2 f\3 ees\3 } |
   d8\3 d4.\3 d8\3_^ a'\2 \tuplet 3/2 { c\1 a\2 g\2 } \makePercent s4 |
   s8 \makePercent s1 s8 |
   s8 \makePercent s1 s8 |
@@ -127,40 +127,40 @@ scoreBass = {
 midiBass = {
   R1 | R1 | R1 | R1 |
   R1 | R1 | R1 | R1 |
-  R1 | R1 | R1 | r2. \tuplet 3/2 { g8\mf f e } |
+  R1 | R1 | R1 | r2. \tuplet 3/2 { g8\mf f ees } |
   \time 5/4
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
   \tuplet 3/2 { d4 d8~ } d4 \tuplet 3/2 { d8 r a' }
-    \tuplet 3/2 { c a g } \tuplet 3/2 { g f e } |
+    \tuplet 3/2 { c a g } \tuplet 3/2 { g f ees } |
 }
 
 
