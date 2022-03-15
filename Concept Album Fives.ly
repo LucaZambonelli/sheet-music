@@ -93,7 +93,7 @@ scoreTheme = {
   d2\3~ d8\3 c\3 \tuplet 3/2 { d\3 ees\3 d\3 } \tuplet 3/2 { c\3 d\3 c\3 } |
   a4.\4 bes8\4 r2 r8 c\3 |
   d2\3~ d8\3 c\3 \tuplet 3/2 { d\3 ees\3 d\3 } \tuplet 3/2 { ees\3 f\2 ees\3 } |
-  d2\3 r2. |
+  d1\3 r4 |
 }
 midiTheme = {
   R1 | R1 | R1 | R1 |
@@ -108,7 +108,7 @@ midiTheme = {
   d2~ \tuplet 3/2 { d4 c8 } \tuplet 3/2 { d ees d } \tuplet 3/2 { c d c } |
   a4~ \tuplet 3/2 { a4 bes8 } r2 \tuplet 3/2 { r4 c8 } |
   d2~ \tuplet 3/2 { d4 c8 } \tuplet 3/2 { d ees d } \tuplet 3/2 { ees f ees } |
-  d2 r2. |
+  d1 r4 |
 }
 
 
