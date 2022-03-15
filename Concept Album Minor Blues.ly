@@ -112,9 +112,9 @@ scoreTheme = {
   r4. c8\3 \tuplet 3/2 { bes\3 c\3 bes\3~ } bes4\3 |
   r4. g8\4 \tuplet 3/2 { f\4 g\4 f\4 } g\4 bes\3 |
   g\4 bes\4 \tuplet 3/2 { c\3 d\3 f\2~ } f4\2 r |
-  cis\3 \tuplet 3/2 { a8\4 g\4 a\4~ } a4\4 c\3 |
-  d\3 \tuplet 3/2 { c8\3 a\4 c\3~ } c4\3 a\4 |
-  g\4 \tuplet 3/2 { f8\4 g\4 bes\3~ } bes4\3 g\4 |
+  cis\3 \tuplet 3/2 { a8\4 g\4 a\4~ } a4\4 cis8\3 d\3~ |
+  d4\3 \tuplet 3/2 { c8\3 a\4 c\3~ } c4\3 a8\4 g\4~ |
+  g4\4 \tuplet 3/2 { f8\4 g\4 bes\3~ } bes4\3 g8\4 f\4~ |
   f1\4 |
   R1 | 
 }
@@ -130,9 +130,9 @@ midiTheme = {
   r4 \tuplet 3/2 { r4 c8 } \tuplet 3/2 { bes c bes~ } bes4 |
   r4 \tuplet 3/2 { r4 g8 } \tuplet 3/2 { f g f } \tuplet 3/2 { g4 bes8 } |
   \tuplet 3/2 { g4 bes8 } \tuplet 3/2 { c d f~ } f4 r |
-  cis \tuplet 3/2 { a8 g a~ } a4 c |
-  d \tuplet 3/2 { c8 a c~ } c4 a |
-  g \tuplet 3/2 { f8 g bes~ } bes4 g |
+  cis \tuplet 3/2 { a8 g a~ } a4 \tuplet 3/2 { cis d8~ } |
+  d4 \tuplet 3/2 { c8 a c~ } c4 \tuplet 3/2 { a g8~ } |
+  g4 \tuplet 3/2 { f8 g bes~ } bes4 \tuplet 3/2 { g f8~ } |
   f1 |
   R1 |
 }
