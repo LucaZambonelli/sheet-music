@@ -9,9 +9,9 @@ execute = 136
 % elec section
 scoreElec = {
   r4 << e e' gis d' >> r << cis g cis, a >> |
-  r << e e' gis d' >> r << d gis, e e, >> |
-  r << a cis g' cis >> r << cis g cis, ais >> | | \break
-  r << e e' gis d' >> r << d gis, e cis >> |
+  r << e e' gis d' >> r << d gis, e e, >> | \break
+  r << a cis g' cis >> r << cis g cis, ais >> |
+  r << e e' gis d' >> r << d gis, e cis >> | \break
   r << b dis a' dis >> r << cis g cis, a >> |
   r << e e' gis d' >> r << d gis, e e, >> | \bar "||" \break 
   }
@@ -45,6 +45,21 @@ scoreDrums = {
       << sn4 hho >> hho |
   }
 }
+
+
+% disturbance section
+scoreDist = {
+  \drummode {
+    R1 |
+    r4 \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 }
+      r4 \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 } |
+    R1 |
+    r4 \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 }
+      r4 \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 } |
+    r2. \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 } |
+    r2. \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 } |
+  }
+} 
 
 
 % writing down
@@ -88,6 +103,12 @@ scoreDrums = {
         \numericTimeSignature
         \scoreDrums
         \scoreDrums
+      }
+      \new DrumStaff {
+        \set Staff.instrumentName = #"Drums "
+        \numericTimeSignature
+        \scoreDist
+        \scoreDist
       }
     >>
   \layout { }
