@@ -47,21 +47,6 @@ scoreDrums = {
 }
 
 
-% disturbance section
-scoreDist = {
-  \drummode {
-    R1 |
-    r4 \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 }
-      r4 \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 } |
-    R1 |
-    r4 \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 }
-      r4 \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 } |
-    r2. \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 } |
-    r2. \tuplet 3/2 { \tuplet 3/2 { r16 rb rb } \tuplet 3/2 { rb rb rb} rb8 } |
-  }
-} 
-
-
 % writing down
 \book {
   \header {
@@ -103,12 +88,6 @@ scoreDist = {
         \numericTimeSignature
         \scoreDrums
         \scoreDrums
-      }
-      \new DrumStaff {
-        \set Staff.instrumentName = #"Drums "
-        \numericTimeSignature
-        \scoreDist
-        \scoreDist
       }
     >>
   \layout { }
