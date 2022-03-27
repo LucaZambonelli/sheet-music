@@ -30,6 +30,21 @@ makePercent = #(define-music-function (note) (ly:music?)
 
   \score {
     \header {
+      piece = "Apri le tue braccia - p. 2"
+    }
+    \new Staff {
+      \set Staff.instrumentName = #"intro "
+      \relative c''' {
+        \clef "treble^8"
+        \key f \major
+        \time 4/4
+        a4 a2 a8 a | bes4 a g g8 d8 | f2 g4 g | f1 \bar "|."
+      }
+    }
+  }
+
+  \score {
+    \header {
       piece = "Benedetto tu, Signore - p. 42"
     }
     \new Staff {
