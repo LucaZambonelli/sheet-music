@@ -137,4 +137,39 @@
       >>
     }
   }
+
+  \bookpart {
+    \header {
+      title = "Blue Monk"
+      composer = "Thelonious Monk"
+      tagline = ##f
+    }
+    \score {
+      <<
+        \new ChordNames {
+          \chordmode {
+            \set minorChordModifier = \markup { "-" }
+            c1 | f:7 | c2 g:7 | c c:7 |
+            f1 | f:m7-.5- | c2 g:7 | c1 |
+            g:7 | s | c | s2 \parenthesize g:7 |
+          }
+        }
+        \new Staff {
+          \set Staff.instrumentName = #"Tenor "
+          \relative c'' {
+            \clef treble
+            \key c \major
+            \time 4/4
+            \numericTimeSignature
+            e8 f fis g~ g2 | a8 ais b c~ c2 |
+            g8 a g ges f g, dis' e~ | e ees4 d8~ d2 | \break
+            a'8 ais b c~ c2 | c8 cis d dis~ dis2 |
+            g,8 a g ges f g, dis' e~ | e2. \tuplet 3/2 {g8 g g } | \break
+            g g,4.~ g2 | g'8 a g ges f g, dis' e~ |
+            e4 g8 a g ges f g, dis' e4.~ e2 \bar "|."
+          }
+        }
+      >>
+    }
+  }
 }
