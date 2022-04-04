@@ -172,4 +172,56 @@
       >>
     }
   }
+
+  \bookpart {
+    \header {
+      title = "Autumn Leaves"
+      composer = "Joseph Kosma"
+      tagline = ##f
+    }
+    \score {
+      <<
+        \new ChordNames {
+          \chordmode {
+            \set minorChordModifier = \markup { "-" }
+            s2. |
+            d1:m | g:7 | c:7+ | f:7+.4+ |
+            b:m7.5- | e:7.9+ | a:m | s |
+            d1:m | g:7 | c:7+ | f:7+.4+ |
+            b:m7.5- | e:7.4+ | a:m | s |
+            b:m7.5- | e:7.9+ | a:m | s |
+            d:m | g:7 | c:7+ | f:7+.4+ |
+            b:m7.5- | e:7.9+ | a2:m d:7 | g:m c:7 |
+            f1:7+ | b2:m7.5- e:7.9+ | a1:m | a:7.9+ |
+          }
+        }
+        \new Staff {
+          \set Staff.instrumentName = #"Tenor "
+          \relative c'' {
+            \clef treble
+            \key c \major
+            \time 4/4
+            \numericTimeSignature
+            \partial 2. a4 b c \bar "||"
+            f1~ | f4 g, a b |
+            e2 e~ | e4 f, g a | \break
+            d1~ | d4 e, fis gis |
+            c1 | r4 a b c \bar "||" \break
+            f1~ | f4 g, a b |
+            e2 e~ | e4 f, g a | \break
+            d1~ | d4 b d c |
+            a1 | r2 gis4 a \bar "||" \break
+            b e, b'2~ | b4 b a b |
+            c1~ | c4 c b c | \break
+            d1~ | d4 g,4 g' f |
+            e1~ | e2 dis4 e \bar "||" \break
+            f f d d | b2. f'4 |
+            e2 e~ | e a, | \break
+            d2. c4 | b2 c4 e, |
+            a1 | R \bar "|."
+          }
+        }
+      >>
+    }
+  }
 }
