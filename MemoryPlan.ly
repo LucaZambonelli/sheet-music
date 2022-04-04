@@ -35,7 +35,7 @@
 %            \key c \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 4  b8.( g16 | b1 | b8) r a8.( g16 a8. b16 g4 | e2 b~ | b4) r b'( g | \break
+%            \partial 4  b8.( g16 \bar ".|" b1 | b8) r a8.( g16 a8. b16 g4 | e2 b~ | b4) r b'( g | \break
 %            a8 a~ a2.) | r4 g8.( e16 g8. e16 g4 | fis1~ | fis2) r8 b4( g8 \bar "||" \break
 %            b8 b~ b2.) | r4 a8.( g16 a8. b16 g4 | e2 b~ | b) r4 b( | \break
 %            d b8 d e g~ g4) | b8( a~ a4 g2 | e1~ | e4) r4 r2 \bar "|."
@@ -105,7 +105,7 @@
 %            \key bes \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 8 c8 | ees f~ f2 r8 c8 | ees f4 c8 ees f4 bes,8 |
+%            \partial 8 c8 \bar ".|" ees f~ f2 r8 c8 | ees f4 c8 ees f4 bes,8 |
 %            d f~ f2 r8 bes, | d f4 bes,8 d f4 c8 | \break
 %            ees8 f~ f2 r8 c | \tuplet 3/2 { ees4 f d' } c4. f,8 |
 %            g bes~ bes2. | r2 r4 r8 c, \bar "||" \break
@@ -187,7 +187,7 @@
 %            \key c \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 2. a4 b c \bar "||" f1~ | f4 g, a b | e2 e~ | e4 f, g a | \break
+%            \partial 2. a4 b c \bar ".|" f1~ | f4 g, a b | e2 e~ | e4 f, g a | \break
 %            d1~ | d4 e, fis gis | c1 | r4 a b c \bar "||" \break
 %            f1~ | f4 g, a b | e2 e~ | e4 f, g a | \break
 %            d1~ | d4 b d c | a1 | r2 gis4 a \bar "||" \break
@@ -242,10 +242,102 @@
 %    }
 %  }
 
+%  \bookpart {
+%    \header {
+%      title = "Summer Samba"
+%      composer = "Marcos Valle & Sergio Valle"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            f1:7+ | s | b:m7.5- | e:7.9+ |
+%            bes:7+ | s | ees:7 | s |
+%            a:m | d:7.9- | g:m | e2:m7.5- a:7.9+ |
+%            d1:m | g:7 | g:m | des4:7 c2.:7 |
+%            f1:7+ | s | b:m7.5- | e:7.9+ |
+%            bes:7+ | s | ees:7 | s |
+%            a:m | d:7.9- | g:m | c:7.9- |
+%            f:7+ | bes:7 | f:7+ | g:m/c |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Flute "
+%          \relative c' {
+%            \clef treble
+%            \key f \major
+%            \time 4/4
+%            \numericTimeSignature
+%            a8 c d4 e8 ees d4 | a8 c d e~ e ees d4 |
+%            a8 c d4 e8 ees d4 | gis,8 c d e~ e ees d4 | \break
+%            d8 f g4 a8 aes g4 | d8 f g a~ a aes g4 |
+%            des8 f g4 a8 aes g4 | des8 f g a~ a aes g4 \bar "||" \break
+%            r c c,2~ | c ees'8 d c bes |
+%            a1~ | a2 c8 b bes a | \break
+%            g1~ | g2 a8 aes g ges |
+%            f d f d f d f aes~ | aes f g4 r2 \bar "||" \break
+%            a,8 c d4 e8 ees d4 | a8 c d e~ e ees d4 |
+%            a8 c d4 e8 ees d4 | gis,8 c d e~ e ees d4 | \break
+%            d8 f g4 a8 aes g4 | d8 f g a~ a aes g4 |
+%            des8 f g4 a8 aes g4 | des8 f g a~ a aes g4 \bar "||" \break
+%            r c c,2~ | c ees'8 d c bes |
+%            a1~ | a | \break
+%            g8 ges f4 f8 fis g4 | g8 ges f4 f8 fis g4 |
+%            f1 | R \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
+%  \bookpart {
+%    \header {
+%      title = "There will never be another you"
+%      composer = "Harry Warren"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            s4 | ees1 | s | d:m7.5- | g:7.9+ |
+%            c:m | s | bes:m | ees:7 |
+%            aes | des:7.4+ | ees | c:m |
+%            f:7.4+ | s | f:m | bes:7 |
+%            ees1 | s | d:m7.5- | g:7.9+ |
+%            c:m | s | bes:m | ees:7 |
+%            aes | des:7.4+ | ees | a2:m d:7 |
+%            ees aes:7 | g:m c:7.9+ | f:m bes:7 | ees \parenthesize bes:7 |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Flute "
+%          \relative c' {
+%            \clef treble
+%            \key ees \major
+%            \time 4/4
+%            \numericTimeSignature
+%            \partial 4 bes4 \bar ".|" c d ees f | g bes f4. ees8 | f1~ | f2. g4 | \break
+%            ees f g bes | c ees c4. bes8 | c1~ | c2. bes4 \bar"||" \break
+%            ees c bes aes | g f g4. aes8 | bes4 g f ees f ees f4. ees8 | \break
+%            d'4 c bes a | g f g f | aes1~ | aes2. bes,4 \bar "||" \break
+%            c d ees f | g bes f4. ees8 | f1~ | f2. g4 | \break
+%            ees f g bes | c ees c4. bes8 | c1~ | c2. bes4 \bar "||" \break
+%            ees c bes aes | g f g4. aes8 | bes4 g f ees d'2. c4 | \break
+%            bes ees d c | bes ees, bes' aes | f2 g | ees1 \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
   \bookpart {
     \header {
-      title = "Summer Samba"
-      composer = "Marcos Valle & Sergio Valle"
+      title = "Comin' Home Baby"
+      composer = "Earl Hagen"
       tagline = ##f
     }
     \score {
@@ -253,39 +345,21 @@
         \new ChordNames {
           \chordmode {
             \set minorChordModifier = \markup { "-" }
-            f1:7+ | s | b:m7.5- | e:7.9+ |
-            bes:7+ | s | ees:7 | s |
-            a:m | d:7.9- | g:m | e2:m7.5- a:7.9+ |
-            d1:m | g:7 | g:m | des4:7 c2.:7 |
-            f1:7+ | s | b:m7.5- | e:7.9+ |
-            bes:7+ | s | ees:7 | s |
-            a:m | d:7.9- | g:m | c:7.9- |
-            f:7+ | bes:7 | f:7+ | g:m/c |
+            s4. | a1:m | s | s | s |
+            d:m | s | a:m | s |
+            c:7 | b2:7 bes:7 | a1:m | s |
           }
         }
         \new Staff {
-          \set Staff.instrumentName = #"Flute "
-          \relative c' {
+          \set Staff.instrumentName = #"Tenor "
+          \relative c'' {
             \clef treble
-            \key f \major
+            \key g \major
             \time 4/4
             \numericTimeSignature
-            a8 c d4 e8 ees d4 | a8 c d e~ e ees d4 |
-            a8 c d4 e8 ees d4 | gis,8 c d e~ e ees d4 | \break
-            d8 f g4 a8 aes g4 | d8 f g a~ a aes g4 |
-            des8 f g4 a8 aes g4 | des8 f g a~ a aes g4 \bar "||" \break
-            r c c,2~ | c ees'8 d c bes |
-            a1~ | a2 c8 b bes a | \break
-            g1~ | g2 a8 aes g ges |
-            f d f d f d f aes~ | aes f g4 r2 \bar "||" \break
-            a,8 c d4 e8 ees d4 | a8 c d e~ e ees d4 |
-            a8 c d4 e8 ees d4 | gis,8 c d e~ e ees d4 | \break
-            d8 f g4 a8 aes g4 | d8 f g a~ a aes g4 |
-            des8 f g4 a8 aes g4 | des8 f g a~ a aes g4 \bar "||" \break
-            r c c,2~ | c ees'8 d c bes |
-            a1~ | a | \break
-            g8 ges f4 f8 fis g4 | g8 ges f4 f8 fis g4 |
-            f1 | R \bar "|."
+            \partial 4. a8 c e-^ \bar ".|" R1 | r8 a, c e d c a g | a4-^ r r2 | r r8 a c e | \break
+            d d r4 r2 | r8 a c e d c a g | a4-^ r r2 | r r8 a c4-^ | \break
+            e1 | dis2 d | c8 a-^ r4 r2 | e8-^ r e4 r2 \bar "|." 
           }
         }
       >>
