@@ -22,7 +22,8 @@
 %        \new ChordNames {
 %          \chordmode {
 %            \set minorChordModifier = \markup { "-" }
-%            s4 | e1:m | s | e:m | s2 \parenthesize e:7.9+ |
+%            s4 |
+%            e1:m | s | e:m | s2 \parenthesize e:7.9+ |
 %            a1:m | s | fis:m7.5- | b:7.9+ |
 %            e:m | s | e:m | a2:m d:7 |
 %            g1:7+ | fis2:m7.5- b:7.9+ | e1:m |b:7.9+ |
@@ -35,7 +36,8 @@
 %            \key c \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 4  b8.( g16 \bar ".|" b1 | b8) r a8.( g16 a8. b16 g4 | e2 b~ | b4) r b'( g | \break
+%            \partial 4  b8.( g16 \bar ".|"
+%            b1 | b8) r a8.( g16 a8. b16 g4 | e2 b~ | b4) r b'( g | \break
 %            a8 a~ a2.) | r4 g8.( e16 g8. e16 g4 | fis1~ | fis2) r8 b4( g8 \bar "||" \break
 %            b8 b~ b2.) | r4 a8.( g16 a8. b16 g4 | e2 b~ | b) r4 b( | \break
 %            d b8 d e g~ g4) | b8( a~ a4 g2 | e1~ | e4) r4 r2 \bar "|."
@@ -88,7 +90,8 @@
 %        \new ChordNames {
 %          \chordmode {
 %            \set minorChordModifier = \markup { "-" }
-%            s8 | c1:m | f:7 | bes4 ees2.:7 | d2:m  g:7+ |
+%            s8 |
+%            c1:m | f:7 | bes4 ees2.:7 | d2:m  g:7+ |
 %            c1:m | c2:m f:7 | bes2. ees4:7 | d2:m g:7+ |
 %            c1:m | f:7 | bes4 ees2.:7 | d2:m  g:7+ |
 %            c1:m | c2:m f:7 | bes1 | s1 |
@@ -105,7 +108,8 @@
 %            \key bes \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 8 c8 \bar ".|" ees f~ f2 r8 c8 | ees f4 c8 ees f4 bes,8 |
+%            \partial 8 c8 \bar ".|"
+%            ees f~ f2 r8 c8 | ees f4 c8 ees f4 bes,8 |
 %            d f~ f2 r8 bes, | d f4 bes,8 d f4 c8 | \break
 %            ees8 f~ f2 r8 c | \tuplet 3/2 { ees4 f d' } c4. f,8 |
 %            g bes~ bes2. | r2 r4 r8 c, \bar "||" \break
@@ -170,7 +174,8 @@
 %        \new ChordNames {
 %          \chordmode {
 %            \set minorChordModifier = \markup { "-" }
-%            s2. | d1:m | g:7 | c:7+ | f:7+.4+ |
+%            s2. |
+%            d1:m | g:7 | c:7+ | f:7+.4+ |
 %            b:m7.5- | e:7.9+ | a:m | s |
 %            d1:m | g:7 | c:7+ | f:7+.4+ |
 %            b:m7.5- | e:7.4+ | a:m | s |
@@ -187,7 +192,8 @@
 %            \key c \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 2. a4 b c \bar ".|" f1~ | f4 g, a b | e2 e~ | e4 f, g a | \break
+%            \partial 2. a4 b c \bar ".|"
+%            f1~ | f4 g, a b | e2 e~ | e4 f, g a | \break
 %            d1~ | d4 e, fis gis | c1 | r4 a b c \bar "||" \break
 %            f1~ | f4 g, a b | e2 e~ | e4 f, g a | \break
 %            d1~ | d4 b d c | a1 | r2 gis4 a \bar "||" \break
@@ -303,7 +309,8 @@
 %        \new ChordNames {
 %          \chordmode {
 %            \set minorChordModifier = \markup { "-" }
-%            s4 | ees1 | s | d:m7.5- | g:7.9+ |
+%            s4 |
+%            ees1 | s | d:m7.5- | g:7.9+ |
 %            c:m | s | bes:m | ees:7 |
 %            aes | des:7.4+ | ees | c:m |
 %            f:7.4+ | s | f:m | bes:7 |
@@ -320,7 +327,8 @@
 %            \key ees \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 4 bes4 \bar ".|" c d ees f | g bes f4. ees8 | f1~ | f2. g4 | \break
+%            \partial 4 bes4 \bar ".|"
+%            c d ees f | g bes f4. ees8 | f1~ | f2. g4 | \break
 %            ees f g bes | c ees c4. bes8 | c1~ | c2. bes4 \bar"||" \break
 %            ees c bes aes | g f g4. aes8 | bes4 g f ees f ees f4. ees8 | \break
 %            d'4 c bes a | g f g f | aes1~ | aes2. bes,4 \bar "||" \break
@@ -345,7 +353,8 @@
 %        \new ChordNames {
 %          \chordmode {
 %            \set minorChordModifier = \markup { "-" }
-%            s4. | a1:m | s | s | s |
+%            s4. |
+%            a1:m | s | s | s |
 %            d:m | s | a:m | s |
 %            c:7 | b2:7 bes:7 | a1:m | s |
 %          }
@@ -357,7 +366,8 @@
 %            \key g \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 4. a8 c e-^ \bar ".|" R1 | r8 a, c e d c a g | a4-^ r r2 | r r8 a c e | \break
+%            \partial 4. a8 c e-^ \bar ".|"
+%            R1 | r8 a, c e d c a g | a4-^ r r2 | r r8 a c e | \break
 %            d d r4 r2 | r8 a c e d c a g | a4-^ r r2 | r r8 a c4-^ | \break
 %            e1 | dis2 d | c8 a-^ r4 r2 | e8-^ r e4 r2 \bar "|." 
 %          }
@@ -377,7 +387,8 @@
 %        \new ChordNames {
 %          \chordmode {
 %            \set minorChordModifier = \markup { "-" }
-%            s8 | f1:7 | bes:7 | f:7 | s |
+%            s8 |
+%            f1:7 | bes:7 | f:7 | s |
 %            bes:7 | s | f:7 | a2:m7 d:7 |
 %            g1:m7 | c:7 | f:7 | s |
 %          }
@@ -389,7 +400,8 @@
 %            \key f \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 8 c8 \bar ".|" f g gis a~ a c, f g | gis a bes aes~ aes4. c,8 |
+%            \partial 8 c8 \bar ".|"
+%            f g gis a~ a c, f g | gis a bes aes~ aes4. c,8 |
 %            f g gis a~ a c, f g | gis a  bes c, f g aes4 | \break
 %            r8 c, f g gis a bes aes~ | aes1 |
 %            r8 c, f g gis a4 c,8 | f g gis a~ a c, f g | \break
@@ -584,7 +596,8 @@
 %        \new ChordNames {
 %          \chordmode {
 %            \set minorChordModifier = \markup { "-" }
-%            s4 | d1:m | s | g:m | s |
+%            s4 |
+%            d1:m | s | g:m | s |
 %            e:m7.5- | a:7.9+ | d:m | s |
 %            f:m | bes:7 | ees:7+ | s |
 %            e:m7.5- | a:7.9+ | d:m | e2:m7.5- a:7.9+ |
@@ -597,7 +610,8 @@
 %            \key f \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 4 a4-^ \bar ".|" a'4.( g8 f e4-. d8~ | d2~ d8) c r bes~ | bes2~ bes8 a' r g~ | g1 | \break
+%            \partial 4 a4-^ \bar ".|"
+%            a'4.( g8 f e4-. d8~ | d2~ d8) c r bes~ | bes2~ bes8 a' r g~ | g1 | \break
 %            g4.( f8 e d4-. c8~ | c2~ c8) bes r a~ | a2~  a8 g' r f~ | f1 \bar "||" \break
 %            f4.( ees8 d c4-. bes8~ | bes2~ bes8) aes r aes~ | aes4. g8 c4. bes8 | bes2. r4 | \break
 %            bes-^ a8( c c4.) bes8 | bes4-^ a8( c c4.) bes8( | a1~ | a2) r2 \bar "|."
@@ -618,7 +632,8 @@
 %        \new ChordNames {
 %          \chordmode {
 %            \set minorChordModifier = \markup { "-" }
-%            s8 | g1 | c | g | g:7 |
+%            s8 |
+%            g1 | c | g | g:7 |
 %            c:7 | s | g:7 | s2 b:m7-.5- |
 %            a1:m | d:7 | g:7 | d:7 | 
 %          }
@@ -630,7 +645,8 @@
 %            \key c \major
 %            \time 4/4
 %            \numericTimeSignature
-%            \partial 8 d8 \bar ".|" g g a d, g4 r8 d | g g a d, g4 r8 d |
+%            \partial 8 d8 \bar ".|"
+%            g g a d, g4 r8 d | g g a d, g4 r8 d |
 %            g g a d, g g a d, | g g a d, g4 r8 d | \break
 %            g g a d, g c,~ c4 | g'8 g a d, g cis,~ cis4 |
 %            g'8 g a d, g g a d, | g g a d, g4 r8 bes~ | \break
@@ -684,10 +700,212 @@
 %    }
 %  }
 
+%  \bookpart {
+%    \header {
+%      title = "Maiden Voyage"
+%      composer = "Herbie Hancock"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            s4 |
+%            a1:m/d | s | s | s | c:m/f | s | s | s |
+%            a:m/d | s | s | s | c:m/f | s | s | s |
+%            bes:m/ees | s | s | s | des:m | s | s | s |
+%            a:m/d | s | s | s | c:m/f | s | s | s |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Flute "
+%          \relative c'' {
+%            \clef treble
+%            \key c \major
+%            \time 4/4
+%            \numericTimeSignature
+%            \partial 4 a8( d \bar ".|"
+%            d1~ | d~ | d2) r | r r4 c8( d | \break
+%            ees f c2.~ | c1~ c2) r | r r4 a8( d \bar "||" \break
+%            d1~ | d~ | d2) r | r r4 c8( d | \break
+%            ees f c2.~ | c1~ c2) r | r r4 c8( f \bar "||" \break
+%            f1~ | f | f2) r | r r4 ees8( e | \break
+%            e fis cis2.~ | cis1~ | cis2) r | r r4 a8( d | \bar "||" \break
+%            d1~ | d~ | d2) r | r r4 c8( d | \break
+%            ees f c2.~ | c1~ c2) r | R1 \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
+%  \bookpart {
+%    \header {
+%      title = "You And The Night An The Music"
+%      composer = "Arthur Schwartz"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            c1:m6.9 | d2:m7.5- g:7.9+ | g:m7.5- c:7.9- | f1:m |
+%            d:m7.5- | g:7 | c:7+ | d2:m g:7.9+ |
+%            c1:m6.9 | d2:m7.5- g:7.9+ | g:m7.5- c:7.9- | f1:m |
+%            d:m7.5- | g:7 | c:7+ | s |
+%            aes:7 | s | g:7 | d2:m g:7 |
+%            aes1:7 | a2:m d:7 | g:7 d:m7.5- | g:7 g:7.9+ |
+%            c1:m | d2:m7.5- g:7.9+ | g:m7.5- c:7.9- | f1:m |
+%            d2:m7.5- g:7.9- | c:m7+ a:m7.5- | d:7.9+ g:7.9- | c:m g:7.9+ |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Flute "
+%          \relative c'' {
+%            \clef treble
+%            \key ees \major
+%            \time 4/4
+%            \numericTimeSignature
+%            \tuplet 3/2 { g4 aes fis } \tuplet 3/2 { g aes fis } | g g2. |
+%            \tuplet 3/2 { g4 aes fis } g8 c4 g8 | f1 | \break
+%            \tuplet 3/2 { f4 g e } \tuplet 3/2 { f g e } | f f2 g4 |
+%            e1 | R \bar "||" \break
+%            \tuplet 3/2 { g4 aes fis } \tuplet 3/2 { g aes fis } | g g2. |
+%            \tuplet 3/2 { g4 aes fis } g8 c4 g8 | f1 | \break
+%            \tuplet 3/2 { f4 g e } \tuplet 3/2 { f g e } | f f2 g4 |
+%            e1 | r4 g a c \bar "||" \break
+%            \tuplet 3/2 { ees f d } \tuplet 3/2 { ees f d } | ees ees2 c4 |
+%            \tuplet 3/2 { d ees cis } \tuplet 3/2 { d ees cis } | d1 | \break
+%            \tuplet 3/2 { c4 d b } \tuplet 3/2 { c d b } | c c2 d4 |
+%            b4. g8 aes4. f8 | g1 \bar "||" \break
+%            \tuplet 3/2 { g4 aes fis } \tuplet 3/2 { g aes fis } | g g2. |
+%            \tuplet 3/2 { g4 aes fis } g8 c4 g8 | f1 | \break
+%            \tuplet 3/2 { f4 g e } \tuplet 3/2 { f g aes } | f a b c |
+%            ees2 d | c2. r4 \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
+%  \bookpart {
+%    \header {
+%      title = "Song For My Father"
+%      composer = "Horace Silver"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            s4. |
+%            f1:m | s | ees:7 | s | des:7 | c:7 | f:m | s |
+%            f1:m | s | ees:7 | s | des:7 | c:7 | f:m | s |
+%            ees:7 | s | f:m | s | ees2:7 des:7 | c1:7 | f:m | s |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Flute "
+%          \relative c'' {
+%            \clef treble
+%            \key aes \major
+%            \time 4/4
+%            \numericTimeSignature
+%            \partial 4. c8-. f-. aes-. \bar ".|"
+%            c-> bes aes bes->~ bes aes f aes->~ | aes f-. ees f->~ f ees c ees->~ |
+%            ees1~ | ees2. g,8 ges | \break
+%            f des'~ des2. | r2 f4. g8~ |
+%            g1~ | g2 r8 c,-. f-. aes-. \bar "||" \break
+%            c-> bes aes bes->~ bes aes f aes->~ | aes f-. ees f->~ f ees c ees->~ |
+%            ees1~ | ees2. g,8 ges | \break
+%            f des'~ des2. | r2 f4. g8~ |
+%            g1~ | g2 r8 ees4.-> \bar "||" \break
+%            ees8 des-^ r f~ f2~ | f r8 f4.-> |
+%            f8 ees-^ r g~ g2~ | g r8 ees4.-> | \break
+%            ees8 des-^ r f~ f2~ | f8 r r4 aes4. bes8~ |
+%            bes1~ | bes2 r \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
+%  \bookpart {
+%    \header {
+%      title = "One For Daddy-O"
+%      composer = "Nat Adderley"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            s2. |
+%            c1:m | d2:m7.5-  g:7.9+ | c1:m | c:7.9+ |
+%            f:m | s2 \parenthesize g:7.9+ | c1:m | s |
+%            d:m7.5- | g:7.9+ | c:m | d2:m7.5- g:7.9+ |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Tenor "
+%          \relative c' {
+%            \clef treble
+%            \key c \major
+%            \time 4/4
+%            \numericTimeSignature
+%            \partial 2. c4-. ees8.--( g16 a4-.) \bar ".|"
+%            c-. r r2 | r4 c,-. ees8.--( g16 a4-.) |
+%            c-. bes-. g8--( f-.) r ees | r4 c-. ees8.--( g16 a4-.) | \break
+%            c-. r r2 | r4 c,-. ees8.--( g16 a4-.) |
+%            c-. bes-. g8--( f-.) r ees | r4 c-. ees8.--( g16 a4-.) | \break
+%            bes8.( g16 bes8. g16~ g4 bes8. g16 | bes8. g16~ g4 bes8. g16 b8 c) |
+%            R1 | R \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
+%  \bookpart {
+%    \header {
+%      title = "Watermelon Man"
+%      composer = "Herbie Hancock"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            g1:7 | s | s | s | c:7 | s | g:7 | s |
+%            d:7 | c:7 | d:7 | c:7 | d:7 | c:7 | g:7 | s |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Tenor "
+%          \relative c'' {
+%            \clef treble
+%            \key c \major
+%            \time 4/4
+%            \numericTimeSignature
+%            f1~ | f4 g,8 g d'( e4-.) g,8~ | g1~ | g2 r | \break
+%            g'1~ | g4 g,8 g d'( e4-.) g,8~ | g1~ | g2 r \bar "||" \break
+%            r4 d8( d a'4 b | bes8 a g e g4 a-.) | r d,8( d a'4 b | bes8 a g e d4 e-.) | \break
+%            r d8( d a'4 bes | g-.) g8 g d'( e4-.) g,8~ | g1 | R \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
   \bookpart {
     \header {
-      title = "Maiden Voyage"
-      composer = "Herbie Hancock"
+      title = "Have You Met Miss Jones"
+      composer = "Lorenz Hart & Richard Rodgers"
       tagline = ##f
     }
     \score {
@@ -695,27 +913,31 @@
         \new ChordNames {
           \chordmode {
             \set minorChordModifier = \markup { "-" }
-            s4 | a1:m/d | s | s | s | c:m/f | s | s | s |
-            a:m/d | s | s | s | c:m/f | s | s | s |
-            bes:m/ees | s | s | s | des:m | s | s | s |
-            a:m/d | s | s | s | c:m/f | s | s | s |
+            f1:7+ | d:7.9- | g:m | c:7 |
+            a:m | d:m | g:m | c:7 |
+            f:7+ | d:7.9- | g:m | c:7 |
+            a:m | d:m | c:m | f:7 |
+            bes:7+ | aes2:m des:7 | ges1:7+ | e2:m a:7 |
+            d1:7+ | aes2:m des:7 | ges1:7+ | g2:m c:7 |
+            f1:7+ | d:7.9- | g:m | c:7 |
+            a2:m d:7 | g:m c:7 | f1:7+ | g2:m c:7 |
           }
         }
         \new Staff {
           \set Staff.instrumentName = #"Flute "
           \relative c'' {
             \clef treble
-            \key c \major
+            \key f \major
             \time 4/4
             \numericTimeSignature
-            \partial 4 a8( d \bar ".|" d1~ | d~ | d2) r | r r4 c8( d | \break
-            ees f c2.~ | c1~ c2) r | r r4 a8( d \bar "||" \break
-            d1~ | d~ | d2) r | r r4 c8( d | \break
-            ees f c2.~ | c1~ c2) r | r r4 c8( f \bar "||" \break
-            f1~ | f | f2) r | r r4 ees8( e | \break
-            e fis cis2.~ | cis1~ | cis2) r | r r4 a8( d | \bar "||" \break
-            d1~ | d~ | d2) r | r r4 c8( d | \break
-            ees f c2.~ | c1~ c2) r | R1 \bar "|."
+            a4 d, c d | c2. r4 | d e f g | a bes c2 | \break
+            d4 g, f g | f2. a4 | bes1~ bes2. r4 \bar "||" \break
+            a d, c d | c2. r4 | d e f g | a bes c2 | \break
+            d4 g, f g | f2. a4 | c1~ | c4 d d d \bar "||" \break
+            c bes f g | aes aes aes aes | aes ges des ees | e! e e e | \break
+            e d fis a |  des2 des | bes1~ | bes2. r4 \bar "||" \break
+            a d, c d c2. r4 | d e f g | a bes c d | e1~ | \break
+            e4 d a g | f1 | R \bar "|."
           }
         }
       >>
