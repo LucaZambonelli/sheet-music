@@ -531,10 +531,163 @@
 %    }
 %  }
 
+%  \bookpart {
+%    \header {
+%      title = "Satin Doll"
+%      composer = "Billy Strayhorn, Duke Ellington & Johnny Mercer"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            d2:m g:7 | d:m g:7 | e:m a:7 | e:m a:7 |
+%            a:m d:7 | aes:m des:7 | c:7 b:7 | bes:7 a:7 |
+%            d2:m g:7 | d:m g:7 | e:m a:7 | e:m a:7 |
+%            a:m d:7 | aes:m des:7 | c1 | s |
+%            g:m | c:7 | f | s |
+%            a:m | d:7 | g:7 | s |
+%            d2:m g:7 | d:m g:7 | e:m a:7 | e:m a:7 |
+%            a:m d:7 | aes:m des:7 | c1 | a:7 |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Flute "
+%          \relative c'' {
+%            \clef treble
+%            \key c \major
+%            \time 4/4
+%            \numericTimeSignature
+%            a8. g16 a8 g~ g a4. | r8 a4. g8 a4. | b8. a16 b8 a~ a b4. | r8 b4. a8 b4. | \break
+%            r8 d4. c8 d4. | r8 bes4. aes4 bes8 g~ | g1~ | g4 r r2 \bar"||" \break
+%            a8. g16 a8 g~ g a4. | r8 a4. g8 a4. | b8. a16 b8 a~ a b4. | r8 b4. a8 b4. | \break
+%            r8 d4. c8 d4. | r8 bes4. aes4 bes8 g~ | g1 | r2 r4 r8 g \bar"||" \break
+%            c4 bes8. a16 g8. a16 bes4 | c4 bes8. a16 g8. a16 bes8 c~ | c1~ | c2. r8 c | \break
+%            d8. c16 b8 a~ a8. b16 c4 | d8. c16 b8 a~ a8. b16 c8 d~ | d1~ | d8 r r4 r2 \bar"||" \break
+%            a8. g16 a8 g~ g a4. | r8 a4. g8 a4. | b8. a16 b8 a~ a b4. | r8 b4. a8 b4. | \break
+%            r8 d4. c8 d4. | r8 bes4. aes4 bes8 g~ | g1~ | g4 r r2 \bar"|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
+%  \bookpart {
+%    \header {
+%      title = "Blue Bossa"
+%      composer = "Kenny Dorham"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            s4 | d1:m | s | g:m | s |
+%            e:m7.5- | a:7.9+ | d:m | s |
+%            f:m | bes:7 | ees:7+ | s |
+%            e:m7.5- | a:7.9+ | d:m | e2:m7.5- a:7.9+ |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Tenor "
+%          \relative c'' {
+%            \clef treble
+%            \key f \major
+%            \time 4/4
+%            \numericTimeSignature
+%            \partial 4 a4-^ \bar ".|" a'4.( g8 f e4-. d8~ | d2~ d8) c r bes~ | bes2~ bes8 a' r g~ | g1 | \break
+%            g4.( f8 e d4-. c8~ | c2~ c8) bes r a~ | a2~  a8 g' r f~ | f1 \bar "||" \break
+%            f4.( ees8 d c4-. bes8~ | bes2~ bes8) aes r aes~ | aes4. g8 c4. bes8 | bes2. r4 | \break
+%            bes-^ a8( c c4.) bes8 | bes4-^ a8( c c4.) bes8( | a1~ | a2) r2 \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
+%  \bookpart {
+%    \header {
+%      title = "Now's The Time"
+%      composer = "Charlie Parker"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            s8 | g1 | c | g | g:7 |
+%            c:7 | s | g:7 | s2 b:m7-.5- |
+%            a1:m | d:7 | g:7 | d:7 | 
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Tenor "
+%          \relative c' {
+%            \clef treble
+%            \key c \major
+%            \time 4/4
+%            \numericTimeSignature
+%            \partial 8 d8 \bar ".|" g g a d, g4 r8 d | g g a d, g4 r8 d |
+%            g g a d, g g a d, | g g a d, g4 r8 d | \break
+%            g g a d, g c,~ c4 | g'8 g a d, g cis,~ cis4 |
+%            g'8 g a d, g g a d, | g g a d, g4 r8 bes~ | \break
+%            \tuplet 3/2 { bes16 c bes } g8 e dis e4 r | r8 a~ a4 g8 a g f |
+%            r d r4 d r | R1 \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
+%  \bookpart {
+%    \header {
+%      title = "I Got Rythm"
+%      composer = "Ira Gershwin & George Gershwin"
+%      tagline = ##f
+%    }
+%    \score {
+%      <<
+%        \new ChordNames {
+%          \chordmode {
+%            \set minorChordModifier = \markup { "-" }
+%            c2:7+ a:m | d:m g:7 | e:m a:7 | d:m g:7 |
+%            g:m c:7 | f:7+ bes:7 | d:m/g g:7 | c:7+ g:7.9+ |
+%            c:7+ a:m | d:m g:7 | e:m a:7 | d:m g:7 |
+%            g:m c:7 | f:7+ bes:7 | d:m/g g:7 | c1:7+ |
+%            e:7 | s | a:7 | s |
+%            d:7 | s | g:7 | s |
+%            c2:7+ a:m | d:m g:7 | e:m a:7 | d:m g:7 |
+%            g:m c:7 | f:7+ bes:7 | d:m/g g:7 | c:7+ g:7.9+ |
+%          }
+%        }
+%        \new Staff {
+%          \set Staff.instrumentName = #"Tenor "
+%          \relative c'' {
+%            \clef treble
+%            \key c \major
+%            \time 4/4
+%            \numericTimeSignature
+%            r4 g~ g8 a4. | c d8~ d2 | r4 d~ d8 c4. | a g8~ g2 | \break
+%            r4 g~ g8 a4. | c4. d8~ d f4 d8 | e4 e d8 e d4 | c2. r4 \bar "||" \break
+%            r g~ g8 a4. | c d8~ d2 | r4 d~ d8 c4. | a g8~ g2 | \break
+%            r4 g~ g8 a4. | c d8~ d f4 d8 | e4 e d8 e d4 | c1 \bar "||" \break
+%            r4 e~ e8 e4. | e fis8~ fis2 | r4 e~ e8 e4. | e a,8~ a2 | \break
+%            r4 d~ d8 d4. | d e8~ e2 | r4 d~ d8 d4. | d1 \bar "||" \break
+%            r4 g,~ g8 a4. | c d8~ d2 | r4 d~ d8 c4. | a g8~ g2 | \break
+%            r4 g~ g8 a4. | c4. d8~ d f4 d8 | e4 e d8 e d4 | c2. r4 \bar "|."
+%          }
+%        }
+%      >>
+%    }
+%  }
+
   \bookpart {
     \header {
-      title = "Satin Doll"
-      composer = "Billy Strayhorn, Duke Ellington & Johnny Mercer"
+      title = "Maiden Voyage"
+      composer = "Herbie Hancock"
       tagline = ##f
     }
     \score {
@@ -542,31 +695,27 @@
         \new ChordNames {
           \chordmode {
             \set minorChordModifier = \markup { "-" }
-            d2:m g:7 | d:m g:7 | e:m a:7 | e:m a:7 |
-            a:m d:7 | aes:m des:7 | c:7 b:7 | bes:7 a:7 |
-            d2:m g:7 | d:m g:7 | e:m a:7 | e:m a:7 |
-            a:m d:7 | aes:m des:7 | c1 | s |
-            g:m | c:7 | f | s |
-            a:m | d:7 | g:7 | s |
-            d2:m g:7 | d:m g:7 | e:m a:7 | e:m a:7 |
-            a:m d:7 | aes:m des:7 | c1 | a:7 |
+            s4 | a1:m/d | s | s | s | c:m/f | s | s | s |
+            a:m/d | s | s | s | c:m/f | s | s | s |
+            bes:m/ees | s | s | s | des:m | s | s | s |
+            a:m/d | s | s | s | c:m/f | s | s | s |
           }
         }
         \new Staff {
-          \set Staff.instrumentName = #"Tenor "
+          \set Staff.instrumentName = #"Flute "
           \relative c'' {
             \clef treble
             \key c \major
             \time 4/4
             \numericTimeSignature
-            a8. g16 a8 g~ g a4. | r8 a4. g8 a4. | b8. a16 b8 a~ a b4. | r8 b4. a8 b4. | \break
-            r8 d4. c8 d4. | r8 bes4. aes4 bes8 g~ | g1~ | g4 r r2 \bar"||" \break
-            a8. g16 a8 g~ g a4. | r8 a4. g8 a4. | b8. a16 b8 a~ a b4. | r8 b4. a8 b4. | \break
-            r8 d4. c8 d4. | r8 bes4. aes4 bes8 g~ | g1 | r2 r4 r8 g \bar"||" \break
-            c4 bes8. a16 g8. a16 bes4 | c4 bes8. a16 g8. a16 bes8 c~ | c1~ | c2. r8 c | \break
-            d8. c16 b8 a~ a8. b16 c4 | d8. c16 b8 a~ a8. b16 c8 d~ | d1~ | d8 r r4 r2 \bar"||" \break
-            a8. g16 a8 g~ g a4. | r8 a4. g8 a4. | b8. a16 b8 a~ a b4. | r8 b4. a8 b4. | \break
-            r8 d4. c8 d4. | r8 bes4. aes4 bes8 g~ | g1~ | g4 r r2 \bar"|."
+            \partial 4 a8( d \bar ".|" d1~ | d~ | d2) r | r r4 c8( d | \break
+            ees f c2.~ | c1~ c2) r | r r4 a8( d \bar "||" \break
+            d1~ | d~ | d2) r | r r4 c8( d | \break
+            ees f c2.~ | c1~ c2) r | r r4 c8( f \bar "||" \break
+            f1~ | f | f2) r | r r4 ees8( e | \break
+            e fis cis2.~ | cis1~ | cis2) r | r r4 a8( d | \bar "||" \break
+            d1~ | d~ | d2) r | r r4 c8( d | \break
+            ees f c2.~ | c1~ c2) r | R1 \bar "|."
           }
         }
       >>
