@@ -68,7 +68,7 @@
             \time 4/4
             c8 c d d ees ees f f | g4. f8 ees c r bes | c2 bes4. c8~ | c4 r r2 | \break
             f8 f g g aes aes bes bes | c4. bes8 g f r ees | c2 bes4. c8~ | c4 r ees8 c ees ges | \break
-            r f4.~ f4. ges8 | r f4-- ees8 f4( ees-.) | c2 bes4. c8~ | c4 r r2 \bar "|."
+            r f4.~ f4. ges8 | r f4^- ees8 f4( ees^.) | c2 bes4. c8~ | c4 r r2 \bar "|."
           }
         }
       >>
@@ -221,12 +221,12 @@
             f4. c'8 r aes r f |
             \tuplet 3/2 { bes4 c8 } \tuplet 3/2 { r g ees } f4 r8 aes |
             g f bes aes des c aes f |
-            des f \tuplet 3/2 { g ees f } r4 f'--~ | \break
+            des f \tuplet 3/2 { g ees f } r4 f'^-~ | \break
             f4. c8 bes4 des8 f |
             c bes \tuplet 3/2 { r ees f } bes,4 r8 des |
             ees f c des \tuplet 3/2 { bes4 ees8 } \tuplet 3/2 { c aes f'~ } |
-            \tuplet 3/2 { f des bes } \tuplet 3/2 { c aes f } r4 c'--~ | \break
-            c bes--~ \tuplet 3/2 { bes g8 } c4--~ |
+            \tuplet 3/2 { f des bes } \tuplet 3/2 { c aes f } r4 c'^-~ | \break
+            c bes^-~ \tuplet 3/2 { bes g8 } c4^-~ |
             \tuplet 3/2 { c des8~ } \tuplet 3/2 { des bes g } c4 r8 des~ |
             des c \tuplet 3/2 { aes f c } \tuplet 3/2 { des f aes } \tuplet 3/2 { c g f } |
             \tuplet 3/2 { bes aes f } \tuplet 3/2 { g aes f } r2 \bar "|."
@@ -348,10 +348,10 @@
             \clef treble
             \key g \major
             \time 4/4
-            \partial 4. a8 c e-^ \bar ".|"
-            R1 | r8 a, c e d c a g | a4-^ r r2 | r r8 a c e | \break
-            d d r4 r2 | r8 a c e d c a g | a4-^ r r2 | r r8 a c4-^ | \break
-            e1 | dis2 d | c8 a-^ r4 r2 | e8-^ r e4 r2 \bar "|." 
+            \partial 4. a8 c e^^ \bar ".|"
+            R1 | r8 a, c e d c a g | a4^^ r r2 | r r8 a c e | \break
+            d d r4 r2 | r8 a c e d c a g | a4^^ r r2 | r r8 a c4^^ | \break
+            e1 | dis2 d | c8 a^^ r4 r2 | e8^^ r e4 r2 \bar "|." 
           }
         }
       >>
@@ -470,10 +470,10 @@
             \clef treble
             \key c \major
             \time 4/4
-            R1 | R | R | r2 r4 g8-- g-. \bar ".|" \break
-            r2 bes8( c-.) c4->~ | c4. bes8( c d-.) f,( g-.) | R1 | r2 r4 g8-- g-. \bar "||"  \break
-            r2 bes8( c-.) c4->~ | c4. bes8( c d-.) f,( g-.) | R1 | r2 d'8( f-.) d( f-.) \bar "||" \break
-            g,4.-^ g8->~ g2 | r2 d'8( f-.) d( f-.) | g,4.-^ g8->~ g2 | R1 \bar "||" \break
+            R1 | R | R | r2 r4 g8^- g^. \bar ".|" \break
+            r2 bes8( c^.) c4^>~ | c4. bes8( c d^.) f,( g^.) | R1 | r2 r4 g8^- g^. \bar "||"  \break
+            r2 bes8( c^.) c4^>~ | c4. bes8( c d^.) f,( g^.) | R1 | r2 d'8( f^.) d( f^.) \bar "||" \break
+            g,4.^^ g8^>~ g2 | r2 d'8( f^.) d( f^.) | g,4.^^ g8^>~ g2 | R1 \bar "||" \break
             R1 | R | R | R \bar "|."
           }
         }
@@ -503,13 +503,13 @@
             \clef treble
             \key aes \major
             \time 4/4
-            r8 c4-. f,8 c'4. f,8 | c' c bes bes aes f4 ees8 |
+            r8 c4^. f,8 c'4. f,8 | c' c bes bes aes f4 ees8 |
             f4 f8 f aes aes4 c8~ | c1 | \break
-            r8 c4-. f,8 c'4. f,8 | c' c bes bes aes f4 ees8 |
+            r8 c4^. f,8 c'4. f,8 | c' c bes bes aes f4 ees8 |
             f4 f8 f aes f ees f~ | f1 \bar "||" \break
-            r8 f'4-^ r8 bes,2 | r8 ees4-^ r8 aes,2 |
+            r8 f'4^^ r8 bes,2 | r8 ees4^^ r8 aes,2 |
             r8 des4 r8 g,2 | g8 aes bes c~ c2 | \break
-            r8 f4-^ r8 bes,2 | r8 ees4-^ r8 aes,2 |
+            r8 f4^^ r8 bes,2 | r8 ees4^^ r8 aes,2 |
             r8 des4 r8 g,2 | g8 aes g f~ f2 \bar "|."
           }
         }
@@ -580,11 +580,11 @@
             \clef treble
             \key f \major
             \time 4/4
-            \partial 4 a4-^ \bar ".|"
-            a'4.( g8 f e4-. d8~ | d2~ d8) c r bes~ | bes2~ bes8 a' r g~ | g1 | \break
-            g4.( f8 e d4-. c8~ | c2~ c8) bes r a~ | a2~  a8 g' r f~ | f1 \bar "||" \break
-            f4.( ees8 d c4-. bes8~ | bes2~ bes8) aes r aes~ | aes4. g8 c4. bes8 | bes2. r4 | \break
-            bes-^ a8( c c4.) bes8 | bes4-^ a8( c c4.) bes8( | a1~ | a2) r2 \bar "|."
+            \partial 4 a4^^ \bar ".|"
+            a'4.( g8 f e4^. d8~ | d2~ d8) c r bes~ | bes2~ bes8 a' r g~ | g1 | \break
+            g4.( f8 e d4^. c8~ | c2~ c8) bes r a~ | a2~  a8 g' r f~ | f1 \bar "||" \break
+            f4.( ees8 d c4^. bes8~ | bes2~ bes8) aes r aes~ | aes4. g8 c4. bes8 | bes2. r4 | \break
+            bes^^ a8( c c4.) bes8 | bes4^^ a8( c c4.) bes8( | a1~ | a2) r2 \bar "|."
           }
         }
       >>
@@ -774,18 +774,18 @@
             \clef treble
             \key aes \major
             \time 4/4
-            \partial 4. c8-. f-. aes-. \bar ".|"
-            c-> bes aes bes->~ bes aes f aes->~ | aes f-. ees f->~ f ees c ees->~ |
+            \partial 4. c8^. f^. aes^. \bar ".|"
+            c^> bes aes bes^>~ bes aes f aes^>~ | aes f^. ees f^>~ f ees c ees^>~ |
             ees1~ | ees2. g,8 ges | \break
             f des'~ des2. | r2 f4. g8~ |
-            g1~ | g2 r8 c,-. f-. aes-. \bar "||" \break
-            c-> bes aes bes->~ bes aes f aes->~ | aes f-. ees f->~ f ees c ees->~ |
+            g1~ | g2 r8 c,^. f^. aes^. \bar "||" \break
+            c^> bes aes bes^>~ bes aes f aes^>~ | aes f^. ees f^>~ f ees c ees^>~ |
             ees1~ | ees2. g,8 ges | \break
             f des'~ des2. | r2 f4. g8~ |
-            g1~ | g2 r8 ees4.-> \bar "||" \break
-            ees8 des-^ r f~ f2~ | f r8 f4.-> |
-            f8 ees-^ r g~ g2~ | g r8 ees4.-> | \break
-            ees8 des-^ r f~ f2~ | f8 r r4 aes4. bes8~ |
+            g1~ | g2 r8 ees4.^> \bar "||" \break
+            ees8 des^^ r f~ f2~ | f r8 f4.^> |
+            f8 ees^^ r g~ g2~ | g r8 ees4.^> | \break
+            ees8 des^^ r f~ f2~ | f8 r r4 aes4. bes8~ |
             bes1~ | bes2 r \bar "|."
           }
         }
@@ -815,11 +815,11 @@
             \clef treble
             \key c \major
             \time 4/4
-            \partial 2. c4-. ees8.--( g16 a4-.) \bar ".|"
-            c-. r r2 | r4 c,-. ees8.--( g16 a4-.) |
-            c-. bes-. g8--( f-.) r ees | r4 c-. ees8.--( g16 a4-.) | \break
-            c-. r r2 | r4 c,-. ees8.--( g16 a4-.) |
-            c-. bes-. g8--( f-.) r ees | r4 c-. ees8.--( g16 a4-.) | \break
+            \partial 2. c4^. ees8.^-( g16 a4^.) \bar ".|"
+            c^. r r2 | r4 c,^. ees8.^-( g16 a4^.) |
+            c^. bes^. g8^-( f^.) r ees | r4 c^. ees8.^-( g16 a4^.) | \break
+            c^. r r2 | r4 c,^. ees8.^-( g16 a4^.) |
+            c^. bes^. g8^-( f^.) r ees | r4 c^. ees8.^-( g16 a4^.) | \break
             bes8.( g16 bes8. g16~ g4 bes8. g16 | bes8. g16~ g4 bes8. g16 b8 c) |
             R1 | R \bar "|."
           }
@@ -848,10 +848,10 @@
             \clef treble
             \key c \major
             \time 4/4
-            f1~ | f4 g,8 g d'( e4-.) g,8~ | g1~ | g2 r | \break
-            g'1~ | g4 g,8 g d'( e4-.) g,8~ | g1~ | g2 r \bar "||" \break
-            r4 d8( d a'4 b | bes8 a g e g4 a-.) | r d,8( d a'4 b | bes8 a g e d4 e-.) | \break
-            r d8( d a'4 bes | g-.) g8 g d'( e4-.) g,8~ | g1 | R \bar "|."
+            f1~ | f4 g,8 g d'( e4^.) g,8~ | g1~ | g2 r | \break
+            g'1~ | g4 g,8 g d'( e4^.) g,8~ | g1~ | g2 r \bar "||" \break
+            r4 d8( d a'4 b | bes8 a g e g4 a^.) | r d,8( d a'4 b | bes8 a g e d4 e^.) | \break
+            r d8( d a'4 bes | g^.) g8 g d'( e4^.) g,8~ | g1 | R \bar "|."
           }
         }
       >>
@@ -929,7 +929,7 @@
             g1~ | g4 f8 g f e d c |
             a4 d8 a~ a2~ | a4 a8 c d aes g f | \break
             d2~ d8 f a! c | e2. d4 |
-            bes2 e, | g4-^ f8 g a c d f \bar "||" \break
+            bes2 e, | g4^^ f8 g a c d f \bar "||" \break
             g1~ | g4 f8 g f e d c |
             a4 d8 a~ a2~ | a4 a8 c d aes g f | \break
             d2~ d8 f a! c | e2. d4 |
