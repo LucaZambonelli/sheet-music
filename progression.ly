@@ -14,30 +14,36 @@ execute = 128
 
 % rythm section
 scoreRythm = {
-  \key ges \major R1 | R | R | R | R | \key g \major R | \break
-  R | R \bar "||" R | R | \key aes \major R | R | \break
-  R | R | R | \key a \major R | R | R | \break
-  R | R | \key bes \major R | R | R | R | \break
-  R | \key b \major R | R | R | R | R | \break
-  \key c \major R | R | R | R | R | \key des \major R | \break
-  R | R | R | R \bar "||" \key d \major R | R | \break
-  R | R | R | \key ees \major R | R | R | \break
-  R | R | \key e \major R | R | R | R | \break
-  R | \key f \major R | R | R | R | R | \break
-  \key ges \major R | R | R | R | R | \key g \major R | \break
-  R | R | R | R | \key aes \major R | R | \bar "||" \break
-  R | R | R | \key a \major R | R | R | \break
-  R | R | \key bes \major R | R | R | R | \break
-  R | \key b \major R | R | R | \bar "||" R | R | \break
-  \key c \major R | R | R | R | R | \key des \major R | \break
-  R | R | R | R | \key d \major R | R | \break
-  R | R | R | \key ees \major R | R | R | \break
-  R | R | \key e \major R | R | R | R | \break
-  R | \key f \major R | R | R | R | R \bar "|."
+  \partial 2 r8 r4. |
+  R1 | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
 }
 chordsRythm = {
   \set chordChanges = ##t
   \chordmode {
+    s8 s4.
     bes1:m ees:m6- aes:m7 des:7 ges
     b:m e:m6- a:m7 d:7 g
     c:m f:m6- bes:m7 ees:7 aes
@@ -65,37 +71,304 @@ chordsRythm = {
   }
 }
 midiRythm = {
-  R1
+  \partial 2 r8 r4. |
+  R1 | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
 }
 
 
 % theme section
 scoreTheme = {
-  R1
+  \key f \major r8 r4. |
+  \key ges \major R1 | R | R | R | R |
+  \key g \major R |  R | R | R | R |
+  \key aes \major R | R | R | R | R |
+  \key a \major R | R | R |  R | R |
+  \key bes \major R | R | R | R | R |
+  \key b \major R | R | R | R | R |
+  \key c \major R | R | R | R | R |
+  \key des \major R | R | R | R | R |
+  \key d \major R | R | R | R | R |
+  \key ees \major R | R | R | R | R |
+  \key e \major R | R | R | R | R |
+  \key f \major R | R | R | R | R |
+  \key ges \major R | R | R | R | R |
+  \key g \major R | R | R | R | R |
+  \key aes \major R | R | | R | R | R |
+  \key a \major R | R | R | R | R |
+  \key bes \major R | R | R | R | R |
+  \key b \major R | R | R | | R | R |
+  \key c \major R | R | R | R | R |
+  \key des \major R | R | R | R | R |
+  \key d \major R | R | R | R | R |
+  \key ees \major R | R | R | R | R |
+  \key e \major R | R | R | R | R |
+  \key f \major R | R | R | R | R |
 }
 midiTheme = {
-  R1
+  r8 r4. |
+  R1 | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
+  R | R | R | R | R |
 }
 
 
 % bass section
 scoreBass = {
-  R1
+  r8 f8\2 f\2 f\2 \bar "||"
+  bes4.\1 f8\2~ f\2 bes\1 bes\1 bes\1 | ees,4.\3 bes'8\2~ bes\2 ees,\3 ees\3 ees\3 |
+  aes4.\2 ees8\3~ ees\3 aes\2 aes\2 aes\2 | des,4.\3 aes'8\2~ aes\2 des,\3 des\3 des\3 | \break
+  ges4.\2 des8\3~ des\3 ges\2 ges\2 ges\2 | b,4.\3 fis'8\2~ fis\2 b,\3 b\3 b\3 |
+  e4.\2 b8\3~ b\3 e\2 e\2 e\2 | a,4.\4 e'8\3~ e8\3 a,\4 a\4 a\4 \bar "||" % verse ends
+  d4.\3 a8\4~ a\4 d\3 d\3 d\3 | g,4.\4 d'8\3~ d\3 g,\4 g\4 g\4 | \break
+  c4.\3 g8\4~ g\4 c\3 c\3 c\3 | f4.\2 c'8\1~ c\1 f,\2 f\2 f\2 |
+  bes4.\1 f8\2~ f\2 bes\1 bes\1 bes\1 | ees,4.\3 bes'8\2~ bes\2 ees,\3 ees\3 ees\3 |
+  aes4.\2 ees8\3~ ees\3 aes\2 aes\2 aes\2 | cis,4.\3 gis'8\2~ gis\2 cis,\3 cis\3 cis\3 \bar"||" \break % A1 ends
+  fis4.\2 cis8\3~ cis\3 fis\2 fis\2 fis\2 | b,4.\3 fis'8\2~ fis\2 b,\3 b\3 b\3 |
+  e4.\2 b8\3~ b\3 e\2 e\2 e\2 | a,4.\4 e'8\3~ e8\3 a,\4 a\4 a\4 |
+  d4.\3 a8\4~ a\4 d\3 d\3 d\3 | g,4.\4 d'8\3~ d\3 g,\4 g\4 g\4 | \break
+  c4.\3 g8\4~ g\4 c\3 c\3 c\3 | f4.\2 c'8\1~ c\1 f,\2 f\2 f\2 \bar "||" % A2 ends
+  bes4.\1 f8\2~ f\2 bes\1 bes\1 bes\1 | dis,4.\3 ais'8\2~ ais\2 dis,\3 dis\3 dis\3 |
+  gis4.\2 dis8\3~ dis\3 gis\2 gis\2 gis\2 | cis,4.\3 gis'8\2~ gis\2 cis,\3 cis\3 cis\3 | \break
+  fis4.\2 cis8\3~ cis\3 fis\2 fis\2 fis\2 | b,4.\3 fis'8\2~ fis\2 b,\3 b\3 b\3 |
+  e4.\2 b8\3~ b\3 e\2 e\2 e\2 | a,4.\4 e'8\3~ e8\3 a,\4 a\4 a\4 \bar "||" % B ends
+  d4.\3 a8\4~ a\4 d\3 d\3 d\3 | g,4.\4 d'8\3~ d\3 g,\4 g\4 g\4 | \break
+  c4.\3 g8\4~ g\4 c\3 c\3 c\3 | f4.\2 c'8\1~ c\1 f,\2 f\2 f\2 |
+  bes4.\1 f8\2~ f\2 bes\1 bes\1 bes\1 | ees,4.\3 bes'8\2~ bes\2 ees,\3 ees\3 ees\3 |
+  aes4.\2 ees8\3~ ees\3 aes\2 aes\2 aes\2 | des,4.\3 aes'8\2~ aes\2 des,\3 des\3 des\3 \bar "||" \break % A3 ends
+  fis4.\2 cis8\3~ cis\3 fis\2 fis\2 fis\2 | b,4.\3 fis'8\2~ fis\2 b,\3 b\3 b\3 |
+  e4.\2 b8\3~ b\3 e\2 e\2 e\2 | a,4.\4 e'8\3~ e8\3 a,\4 a\4 a\4 |
+  d4.\3 a8\4~ a\4 d\3 d\3 d\3 | g,4.\4 d'8\3~ d\3 g,\4 g\4 g\4 | \break
+  c4.\3 g8\4~ g\4 c\3 c\3 c\3 | f4.\2 c'8\1~ c\1 f,\2 f\2 f\2 \bar "||" % A1 ends
+  bes4.\1 f8\2~ f\2 bes\1 bes\1 bes\1 | ees,4.\3 bes'8\2~ bes\2 ees,\3 ees\3 ees\3 |
+  gis4.\2 dis8\3~ dis\3 gis\2 gis\2 gis\2 | cis,4.\3 gis'8\2~ gis\2 cis,\3 cis\3 cis\3 | \break
+  fis4.\2 cis8\3~ cis\3 fis\2 fis\2 fis\2 | b,4.\3 fis'8\2~ fis\2 b,\3 b\3 b\3 |
 }
 midiBass = {
-  R1
+  \tuplet 3/2 { r4 f8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
+  bes4~ \tuplet 3/2 { bes4 f8~ } \tuplet 3/2 { f4 bes8 } \tuplet 3/2 { bes4 bes8 } |
+  ees,4~ \tuplet 3/2 { ees4 bes'8~ } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { ees4 ees8 } |
+  aes4~ \tuplet 3/2 { aes4 ees8~ } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { aes4 aes8 } |
+  des,4~ \tuplet 3/2 { des4 aes'8~ } \tuplet 3/2 { aes4 des,8 } \tuplet 3/2 { des4 des8 } |
+  ges4~ \tuplet 3/2 { ges4 des8~ } \tuplet 3/2 { des4 ges8 } \tuplet 3/2 { ges4 ges8 } |
+  b,4~ \tuplet 3/2 { b4 fis'8~ } \tuplet 3/2 { fis4 b,8 } \tuplet 3/2 { b4 b8 } |
+  e4~ \tuplet 3/2 { e4 b8~ } \tuplet 3/2 { b4 e8 } \tuplet 3/2 { e4 e8 } |
+  a,4~ \tuplet 3/2 { a4 e'8~ } \tuplet 3/2 { e4 a,8 } \tuplet 3/2 { a4 a8 } |
+  d4~ \tuplet 3/2 { d4 a8~ } \tuplet 3/2 { a4 d8 } \tuplet 3/2 { d4 d8 } |
+  g,4~ \tuplet 3/2 { g4 d'8~ } \tuplet 3/2 { d4 g,8 } \tuplet 3/2 { g4 g8 } |
+  c4~ \tuplet 3/2 { c4 g8~ } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { c4 c8 } |
+  f4~ \tuplet 3/2 { f4 c'8~ } \tuplet 3/2 { c4 f,8 } \tuplet 3/2 { f4 f8 } |
 }
 
 
 % drums section
 scoreDrums = {
   \drummode {
-    R1
+    r8 r4. |
+    R1 | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
   }
 }
 midiDrums = {
   \drummode {
-    R1
+    r8 r4. |
+    R1 | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
+    R | R | R | R | R |
   }
 }
 
