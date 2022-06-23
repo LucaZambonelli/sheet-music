@@ -13,7 +13,7 @@
       \set TabStaff.shortInstrumentName = #"B "
       \set Staff.stringTunings = #bass-tuning
       \relative c, {
-        g8\4 a\4 r a\4 a4.\4 a8\4 | g\4 a\4 a\4 a\4 a2\4 |
+        \bar ".|" g8\4 a\4 r a\4 a4.\4 a8\4 | g\4 a\4 a\4 a\4 a2\4 |
         e'4\2 f2\2 c4\3~ | c\3 bes\3 e,2\4 | \break
         g8\4 a\4 r a\4 a4.\4 a8\4 | g\4 a\4 a\4 a\4 a2\4 |
         e'4\2 f2\2 d4\3~ | d\3 b\3 e2\2 \bar "||" \break
@@ -32,19 +32,17 @@
       \set Staff.instrumentName = #"Organ "
       \set Staff.shortInstrumentName = #"O "
       \numericTimeSignature
-      <<
-        \relative c' {
-          R1 | r4 r r r | \bar ".|" \break
-          << e2~ a c >> << e, b' d >> | << f, a c >> << e, g c>> |
-          << f, a d >> << e, g c >> | << fis, a b~ >> << e, gis b>> |
-          << e,~ a c >> << e, b' d >> | << f, a c >> << e, g c>> |
-          << f, a d >> << e, g c >> | << fis, a b~ >> << e, gis b>> \bar "||" \break
-          << a1~ cis e >> | << a,~ d f >> |
-          << a,~ c e >> | << a,~ d f >> |
-          << a,~ e' g >> | << a,2~ c f >> << a, d g >> |
-          << a,1~ cis~ a'~>> | << a, cis a' >> \bar "|."
-        }
-      >>
+      \relative c' {
+        R1 | r4 r r r | \bar ".|" \break
+        << e2~ a c >> << e, b' d >> | << f, a c >> << e, g c>> |
+        << f, a d >> << e, g c >> | << fis, a b~ >> << e, gis b>> |
+        << e,~ a c >> << e, b' d >> | << f, a c >> << e, g c>> |
+        << f, a d >> << e, g c >> | << fis, a b~ >> << e, gis b>> \bar "||" \break
+        << a1~ cis e >> | << a,~ d f >> |
+        << a,~ c e >> | << a,~ d f >> |
+        << a,~ e' g >> | << a,2~ c f >> << a, d g >> |
+        << a,1~ cis~ a'~>> | << a, cis a' >> \bar "|."
+      }
     }
   }
 }
