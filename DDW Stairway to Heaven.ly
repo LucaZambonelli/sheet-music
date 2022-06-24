@@ -1,5 +1,3 @@
-\version "2.22.1"
-
 \book {
   \header{
   title = "Stairway to Heaven"
@@ -10,7 +8,7 @@
   \score {
     \new Staff {
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \set Staff.instrumentName = #"alto "
+      \set Staff.instrumentName = #"Alto "
       \relative c'' {
         \clef treble
         \key d \major
@@ -28,7 +26,7 @@
   \score {
     \new Staff {
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \set Staff.instrumentName = #"then "
+      \set Staff.instrumentName = #"Alto "
       \relative c'' {
         \clef treble
         \key d \major
