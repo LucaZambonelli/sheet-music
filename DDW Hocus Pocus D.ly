@@ -1,4 +1,4 @@
-\version "2.22.1"
+>\version "2.22.1"
 
 \book {
   \header{
@@ -11,7 +11,7 @@
     \new TabStaff {
       \set TabStaff.instrumentName = #"Bass "
       \set TabStaff.shortInstrumentName = #"B "
-      \set Staff.stringTunings = #bass-tuning
+      \set Staff.stringTunings = \stringTuning < d,, g,, c, f, >
       \relative c, {
         \bar ".|" g8\4 a\4 r a\4 a4.\4 a8\4 | g\4 a\4 a\4 a\4 a2\4 |
         e'4\2 f2\2 c4\3~ | c\3 bes\3 e,2\4 | \break
