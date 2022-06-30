@@ -9,39 +9,42 @@
 
   \score {
     \new TabStaff {
-      \set TabStaff.instrumentName = #"Bass "
+      \set TabStaff.instrumentName = #"Bb Bass "
       \set TabStaff.shortInstrumentName = #"B "
       \set Staff.stringTunings = \stringTuning < d,, g,, c, f, >
-      \relative c, {
-        \bar ".|" g8\4 a\4 r a\4 a4.\4 a8\4 | g\4 a\4 a\4 a\4 a2\4 |
-        e'4\2 f2\2 c4\3~ | c\3 bes\3 e,2\4 | \break
-        g8\4 a\4 r a\4 a4.\4 a8\4 | g\4 a\4 a\4 a\4 a2\4 |
-        e'4\2 f2\2 d4\3~ | d\3 b\3 e2\2 \bar "||" \break
-        g,8\4 a\4 r a\4 a4.\4 a8\4 | g\4 a\4 a\4 a\4 a2\4 |
-        e'4\2 f2\2 c4\3~ | c\3 bes\3 e,2\4 | \break
-        g8\4 a\4 r a\4 a4.\4 a8\4 | g\4 a\4 a\4 a\4 a2\4 |
-        e'4\2 f2\2 d4\3~ | d\3 b\3 e2\2 \bar "||" \break
-        a,4.\4 c\3 d4\3~ | d1\3 |
-        << d4.\3 a'\2 >> << f\2 c'\1 >> << g4\2~ d'\1~ >> | << d1\1 g,1\2 >> \bar "|."
+      \relative c,, {
+        \bar ".|" f8\4 g\4 r g\4 g4.\4 g8\4 | f\4 g\4 g\4 g\4 g2\4 |
+        d'4\2 ees2\2 bes4\3~ | bes\3 aes\3 d,2\4 | \break
+        f8\4 g\4 r g\4 g4.\4 g8\4 | f\4 g\4 g\4 g\4 g2\4 |
+        d'4\2 ees2\2 c4\3~ | c\3 a\3 d2\2 \bar "||" \break
+        f,8\4 g\4 r g\4 g4.\4 g8\4 | f\4 g\4 g\4 g\4 g2\4 |
+        d'4\2 ees2\2 bes4\3~ | bes\3 aes\3 d,2\4 | \break
+        f8\4 g\4 r g\4 g4.\4 g8\4 | f\4 g\4 g\4 g\4 g2\4 |
+        d'4\2 ees2\2 c4\3~ | c\3 a\3 d2\2 \bar "||" \break
+        g,4.\4 bes\3 c4\3~ | c1\3 |
+        << c4.\3 g'\2 >> << ees\2 bes'\1 >> << f4\2~ c'\1~ >> | << c1\1 f,1\2 >> \bar "|."
       }
     }
   }
 
   \score {
     \new Staff {
-      \set Staff.instrumentName = #"Organ "
+      \set Staff.instrumentName = #"Bb Organ "
       \set Staff.shortInstrumentName = #"O "
       \numericTimeSignature
-      \relative c' {
-        R1 | r4 r r r | \bar ".|" \break
-        << e2~ a c >> << e, b' d >> | << f, a c >> << e, g c>> |
-        << f, a d >> << e, g c >> | << fis, a b~ >> << e, gis b>> |
-        << e,~ a c >> << e, b' d >> | << f, a c >> << e, g c>> |
-        << f, a d >> << e, g c >> | << fis, a b~ >> << e, gis b>> \bar "||" \break
-        << a1~ cis e >> | << a,~ d f >> |
-        << a,~ c e >> | << a,~ d f >> |
-        << a,~ e' g >> | << a,2~ c f >> << a, d g >> |
-        << a,1~ cis~ a'~>> | << a, cis a' >> \bar "|."
+      \transpose c d {
+        \key bes \major
+        \relative c' {
+          R1 | r4 r r r | \bar ".|" \break
+          << d2~ g bes >> << d, a' c >> | << ees, g bes >> << d, f bes>> |
+          << ees, g c >> << d, f bes >> | << e, g a~ >> << d, fis a>> |
+          << d,2~ g bes >> << d, a' c >> | << ees, g bes >> << d, f bes>> |
+          << ees, g c >> << d, f bes >> | << e, g a~ >> << d, fis a>> | \bar "||" \break
+          << g1~ b d >> | << g,~ c ees >> |
+          << g,~ bes d >> | << g,~ c ees >> |
+          << g,~ d' f >> | << g,2~ bes ees >> << g,~ c f >> |
+          << g,1~ b~ g'~>> | << g, b g' >> \bar "|."
+        }
       }
     }
   }
@@ -52,11 +55,12 @@
       \set Staff.shortInstrumentName = #"F "
       \numericTimeSignature
       \clef "treble^8"
+      \key bes \major
       \relative c''' {
-        a8 a16 a a8^. a^. a^. a^. c4 | a8 a16 a a8^. a^. d^. cis^. a4 |
-        a8 a16 a a8^. a^. a^. a^. c4 | a8 a16 a a8^. a^. d^. cis^. a4 | \break
-        e' d c8 a g4 | e' d c8 a g4 |
-        a r b r | c r d r | e2 f4 g | a1 \bar "|."
+        g8 g16 g g8^. g^. g^. g^. bes4 | g8 g16 g g8^. g^. c^. b^. g4 |
+        g8 g16 g g8^. g^. g^. g^. bes4 | g8 g16 g g8^. g^. c^. b^. g4 | \break
+        d' c bes8 g f4 | d' c bes8 g f4 |
+        g r a r | bes r c r | d2 ees4 f | g1 \bar "|."
 
       }
     }
