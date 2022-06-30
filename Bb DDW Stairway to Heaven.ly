@@ -12,13 +12,13 @@
       \numericTimeSignature
       \transpose f c {
         \relative c'' {
-          \key g \major
-          e1 | c |
-          c | d8 e e2 r4 |
-          e2 fis | a4 g8 fis e4 r8 g | \break
-          g2 g | g8 a a2 r4 |
-          e a8 g g fis e d | a'4 c8 b c4 r8 d |
-          e2 d | g,8 a a2 r4 \bar "|."
+          \key f \major
+          d1 | bes |
+          bes | c8 f f2 r4 |
+          d2 e | g4 f8 e d4 r8 f | \break
+          f2 f | f8 g g2 r4 |
+          d g8 f f e d c | g'4 bes8 a bes4 r8 c |
+          d2 c | f,8 g g2 r4 \bar "|."
         }
       }
     }
@@ -31,9 +31,9 @@
       \numericTimeSignature
       \transpose f c {
         \relative c'' {
-          \key g \major
-          e1 | c2 c |
-          c1 | b8 e e2 r4 \bar "|." \break
+          \key f \major
+          d1 | bes2 bes |
+          bes1 | a8 d d2 r4 \bar "|." \break
         }
       }
     }
