@@ -9,16 +9,17 @@
     \new Staff {
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \set Staff.instrumentName = #"Alto "
-      \relative c'' {
-        \clef treble
-        \key d \major
-        \time 4/4
-        b1 | g |
-        g | a8 b b2 r4 |
-        b2 cis | e4 d8 cis b4 r8 d | \break
-        d2 d | d8 e e2 r4 |
-        b e8 d d cis b a | e'4 g8 fis g4 r8 a |
-        b2 a | d,8 e e2 r4 \bar "|."
+      \numericTimeSignature
+      \transpose f c {
+        \relative c'' {
+          \key g \major
+          e1 | c |
+          c | d8 e e2 r4 |
+          e2 fis | a4 g8 fis e4 r8 g | \break
+          g2 g | g8 a a2 r4 |
+          e a8 g g fis e d | a'4 c8 b c4 r8 d |
+          e2 d | g,8 a a2 r4 \bar "|."
+        }
       }
     }
   }
@@ -27,12 +28,13 @@
     \new Staff {
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \set Staff.instrumentName = #"Alto "
-      \relative c'' {
-        \clef treble
-        \key d \major
-        \time 4/4
-        b1 | g2 g |
-        g1 | fis8 b b2 r4 \bar "|." \break
+      \numericTimeSignature
+      \transpose f c {
+        \relative c'' {
+          \key g \major
+          e1 | c2 c |
+          c1 | b8 e e2 r4 \bar "|." \break
+        }
       }
     }
   }
