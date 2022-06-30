@@ -9,13 +9,14 @@
 
   \score {
     \new TabStaff {
-      \set TabStaff.instrumentName = #"Bass "
+      \set TabStaff.instrumentName = #"Bb Bass "
       \set TabStaff.shortInstrumentName = #"B "
       \set Staff.stringTunings = #bass-tuning
-      \relative c {
+      \set Staff.stringTunings = \stringTuning < d,, g,, c, f, >
+      \relative c, {
       \time 15/8
-      g32\2( a16.\2) g32\2( a16.\2) g16\2 e\3 c8\4 ( g\4) r4.
-      d'16\3 e\3 g\2 r d\3 e\3 a\2 r cis,8\3 a'16\2 d,\3 r e\3 |
+        f32\2( g16.\2) f32\2( g16.\2) f16\2 d\3 bes8\4 ( f\4) r4.
+        c'16\3 d\3 f\2 r c\3 d\3 g\2 r b,8\3 g'16\2 c,\3 r d\3 \bar "|."
       }
     }
   }
