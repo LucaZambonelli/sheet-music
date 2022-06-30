@@ -32,9 +32,9 @@
       \set Staff.instrumentName = #"Bb Organ "
       \set Staff.shortInstrumentName = #"O "
       \numericTimeSignature
-      \transpose c d {
+      \transpose bes c {
         \key bes \major
-        \relative c' {
+        \relative c'' {
           R1 | r4 r r r | \bar ".|" \break
           << d2~ g bes >> << d, a' c >> | << ees, g bes >> << d, f bes>> |
           << ees, g c >> << d, f bes >> | << e, g a~ >> << d, fis a>> |
