@@ -3,14 +3,16 @@
 song = "Preludio"
 album = "Suite in MI BEMOLLE maggiore BWV1010"
 author= "Luca Zambonelli"
-execute = 120
+execute = 108
 
 % guitar
 scoreGuitar = {
-  R1
+  ees8\f\5 ees'\3( bes\3) g\4( bes\4) ees,\5^. g\4^. bes,\6^. | 
+  ees\p\5 ees'\3( bes\3) g\4( bes\4) ees,\5^. g\4^. bes,\6^. | 
 }
 midiGuitar = {
-  R1
+  \tuplet 3/2 { ees4\f ees'8 } \tuplet 3/2 { bes4 g8 } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { g4 bes,8 }
+  \tuplet 3/2 { ees4\p ees'8 } \tuplet 3/2 { bes4 g8 } \tuplet 3/2 { bes4 ees,8 } \tuplet 3/2 { g4 bes,8 }
 }
 
 % bass
@@ -38,7 +40,7 @@ midiBass = {
           \set GrandStaff.instrumentName = #"Guitar "
           \set GrandStaff.shortInstrumentName = #"Gt "
           \new Staff {
-            \relative c {
+            \relative c' {
               \override StringNumber.stencil = ##F
               \clef treble
               \key ees \major
@@ -50,7 +52,7 @@ midiBass = {
           }
           \new TabStaff {
             \set Staff.stringTunings = \stringTuning < e, a, d g c' f' >
-            \relative c, {
+            \relative c {
               \scoreGuitar
             }
           }
@@ -87,7 +89,7 @@ midiBass = {
         \set Staff.midiInstrument = "electric guitar (clean)"
         \set Staff.midiMinimumVolume = #0.2
         \set Staff.midiMaximumVolume = #0.6
-        \relative c, {
+        \relative c {
           \midiGuitar
         }
       }
