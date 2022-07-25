@@ -16,57 +16,58 @@ scoreGuitar = {
   c'\3( aes\3) ees\4( aes\4) c,\5^. ees\5^. aes,\6^. ees'\f\5 |
   aes\4( f\4) d\5( f\5) bes,\6^. d\5^. aes\6^. ees'\p\5 |
   aes\4( f\4) d\5( f\5) bes,\6^. d\5^. aes\6^. ees'\5 | \break
-  g\4( ees\4) bes\5( ees\5) g\4^. bes\4^. ees,\5^. d\5 |
-  g\4( ees\4) bes\5( ees\5) g\4^. bes\4^. d,\5^. r |
+  g\4( ees\4) bes\5( ees\5) g\4^. bes,\6^. ees\5^. d\5 |
+  g\4( ees\4) bes\5( ees\5) g\4^. bes,\6^. d\5^. r |
 }
 midiGuitar = {
-  \tuplet 3/2 { ees4\f ees'8 } \tuplet 3/2 { bes4 g8 } \tuplet 3/2 { bes4 ees,16 r }
-    \tuplet 3/2 { g8 r bes,16 r }
-  \tuplet 3/2 { ees4\p ees'8 } \tuplet 3/2 { bes4 g8 } \tuplet 3/2 { bes4 ees,16 r }
-    \tuplet 3/2 { g8 r  bes,16 r }
-  \tuplet 3/2 { ees4\f des'8 } \tuplet 3/2 { bes4 g8 } \tuplet 3/2 { bes4 ees,16 r }
-    \tuplet 3/2 { g8 r  bes,16 r }
-  \tuplet 3/2 { ees4\p des'8 } \tuplet 3/2 { bes4 g8 } \tuplet 3/2 { bes4 ees,16 r }
-    \tuplet 3/2 { g8 r  bes,16 r }
-  \tuplet 3/2 { ees4\f c'8 } \tuplet 3/2 { aes4 ees8 } \tuplet 3/2 { aes4 c,16 r }
-    \tuplet 3/2 { ees8 r  aes,16 r }
-  \tuplet 3/2 { ees'4\p c'8 } \tuplet 3/2 { aes4 ees8 } \tuplet 3/2 { aes4 c,16 r }
-    \tuplet 3/2 { ees8 r  aes,16 r }
-  \tuplet 3/2 { ees'4\f aes8 } \tuplet 3/2 { f4 d8 } \tuplet 3/2 { f4 bes,16 r }
-    \tuplet 3/2 { d8 r  aes16 r }
-  \tuplet 3/2 { ees'4\p aes8 } \tuplet 3/2 { f4 d8 } \tuplet 3/2 { f4 bes,16 r }
-    \tuplet 3/2 { d8 r  aes16 r }
-  \tuplet 3/2 { ees'4\f g8 } \tuplet 3/2 { ees4 bes8 } \tuplet 3/2 { ees4 g16 r }
-    \tuplet 3/2 { bes8 r  ees,16 r }
-  \tuplet 3/2 { d4\p g8 } \tuplet 3/2 { ees4 bes8 } \tuplet 3/2 { ees4 g16 r }
-    \tuplet 3/2 { bes8 r  d16 r }
+  \partial 4 \tuplet 3/2 { r4 ees8\f } |
+  \tuplet 3/2 { ees'4 bes8 } \tuplet 3/2 { g4 bes8 } \tuplet 3/2 { ees,8 r g16 r }
+    \tuplet 3/2 { bes,8 r ees\p } |
+  \tuplet 3/2 { ees'4 bes8 } \tuplet 3/2 { g4 bes8 } \tuplet 3/2 { ees,8 r g16 r }
+    \tuplet 3/2 { bes,8 r  ees\f } |
+  \tuplet 3/2 { des'4 bes8 } \tuplet 3/2 { g4 bes8 } \tuplet 3/2 { ees,8 r g16 r }
+    \tuplet 3/2 { bes,8 r  ees\p } |
+  \tuplet 3/2 { des'4 bes8 } \tuplet 3/2 { g4 bes8 } \tuplet 3/2 { ees,8 r g16 r }
+    \tuplet 3/2 { bes,8 r  ees\f } |
+  \tuplet 3/2 { c'4 aes8 } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { c,8 r ees16 r }
+    \tuplet 3/2 { aes,8 r  ees'\p } |
+  \tuplet 3/2 { c'4 aes8 } \tuplet 3/2 { ees4 aes8 } \tuplet 3/2 { c,8 r ees16 r }
+    \tuplet 3/2 { aes,8 r  ees'\f } |
+  \tuplet 3/2 { aes4 f8 } \tuplet 3/2 { d4 f8 } \tuplet 3/2 { bes,8 r d16 r }
+    \tuplet 3/2 { aes8 r  ees'\p } |
+  \tuplet 3/2 { aes4 f8 } \tuplet 3/2 { d4 f8 } \tuplet 3/2 { bes,8 r d16 r }
+    \tuplet 3/2 { aes8 r  ees' } |
+  \tuplet 3/2 { g4 ees8 } \tuplet 3/2 { bes4 ees8 } \tuplet 3/2 { g8 r bes,16 r }
+    \tuplet 3/2 { ees8 r  d }
+  \tuplet 3/2 { g4 ees8 } \tuplet 3/2 { bes4 ees8 } \tuplet 3/2 { g8 r bes,16 r }
+    \tuplet 3/2 { d8 r  r }
 }
 
 % bass
 scoreBass = {
   ees8\f\3~ |
-  ees4\3 ees4\3 ees4\3 bes8\4 ees\p\3~ |
-  ees4\3 ees4\3 ees4\3 bes8\4 ees\f\3~ |
-  ees4\3 ees4\3 ees4\3 bes8\4 ees\p\3~ |
-  ees4\3 ees4\3 ees4\3 bes8\4 ees\f\3~ |
-  ees4\3 ees4\3 c4\3 aes8\4 ees'\p\3~ |
-  ees4\3 ees4\3 c4\3 aes8\4 ees'\f\3~ |
-  ees4\3 ees4\3 bes4\4 aes8\4 ees'\p\3~ |
-  ees4\3 ees4\3 bes4\4 aes8\4 ees'\3~ |
-  ees4\3 ees4\3 g,\4 ees'8\3 d\3~ |
-  d4\3 d4\3 g,\4 d'8\3 r |
+  ees4\3 ees4\3 ees4\3 bes8^.\4 ees\p\3~ |
+  ees4\3 ees4\3 ees4\3 bes8^.\4 ees\f\3~ |
+  ees4\3 ees4\3 ees4\3 bes8^.\4 ees\p\3~ |
+  ees4\3 ees4\3 ees4\3 bes8^.\4 ees\f\3~ |
+  ees4\3 ees4\3 c4\3 aes8^.\4 ees'\p\3~ |
+  ees4\3 ees4\3 c4\3 aes8^.\4 ees'\f\3~ |
+  ees4\3 ees4\3 bes4\4 aes8^.\4 ees'\p\3~ |
+  ees4\3 ees4\3 bes4\4 aes8^.\4 ees'\3~ |
+  ees4\3 ees4\3 g,\4 ees'8^.\3 d\3~ |
+  d4\3 d4\3 g,\4 d'8^.\3 r |
 }
 midiBass = {
-  ees4\f~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8 } |
-  ees4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8 } |
-  ees4\f~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8 } |
-  ees4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8 } |
-  ees4\f~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 c8~ } \tuplet 3/2 { c4 aes8 } |
-  ees'4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 c8~ } \tuplet 3/2 { c4 aes8 } |
-  ees'4\f~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8~ } \tuplet 3/2 { bes4 aes8 } |
-  ees'4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8~ } \tuplet 3/2 { bes4 aes8 } |
-  ees'4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 g,8~ } \tuplet 3/2 { g4 ees'8 } |
-  d4\p~ \tuplet 3/2 { d4 d8~ } \tuplet 3/2 { d4 g,8~ } \tuplet 3/2 { g4 d'8 } |
+%  ees4\f~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8 } |
+%  ees4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8 } |
+%  ees4\f~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8 } |
+%  ees4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8 } |
+%  ees4\f~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 c8~ } \tuplet 3/2 { c4 aes8 } |
+%  ees'4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 c8~ } \tuplet 3/2 { c4 aes8 } |
+%  ees'4\f~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8~ } \tuplet 3/2 { bes4 aes8 } |
+%  ees'4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 bes8~ } \tuplet 3/2 { bes4 aes8 } |
+%  ees'4\p~ \tuplet 3/2 { ees4 ees8~ } \tuplet 3/2 { ees4 g,8~ } \tuplet 3/2 { g4 ees'8 } |
+%  d4\p~ \tuplet 3/2 { d4 d8~ } \tuplet 3/2 { d4 g,8~ } \tuplet 3/2 { g4 d'8 } |
 }
 
 % writing down
