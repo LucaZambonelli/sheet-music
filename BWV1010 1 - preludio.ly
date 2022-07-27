@@ -3,6 +3,7 @@
 song = "Preludio"
 album = "Suite in MI BEMOLLE maggiore BWV1010"
 author= "Luca Zambonelli"
+originalComposer = "Johann Sebastian Bach"
 execute = 100
 
 makePercent = #(
@@ -61,24 +62,24 @@ midiGuitar = {
 
 % bass
 scoreBass = {
-  ees8\3~ |
+  \partial 8 ees8\3~ |
   ees2\3 ees4\3 bes'8^^\2 ees,\3~ |
   ees2\3 ees4\3 bes'8^^\2 ees,\3~ |
   ees2\3 ees4\3 bes'8^^\2 ees,\3~ |
-  ees2\3 ees4\3 bes'8^^\2 ees,\3~ |
+  ees2\3 ees4\3 bes'8^^\2 ees,\3~ | \break
   ees2\3 c4\3 aes'8^^\2 ees\3~ |
   ees2\3 c4\3 aes'8^^\2 ees\3~ |
   ees2\3 bes4\4 aes'8^^\2 ees\3~ |
-  ees2\3 bes4\4 aes'8^^\2 ees\3~ |
+  ees2\3 bes4\4 aes'8^^\2 ees\3~ | \break
   ees2\3 g,4\4 ees'8^^\3 d\3~ |
   d2\3 g,4\4 d'8^^\3 c\3~ |
   c2\3 ees4\3 g8\2^^ bes,\4~ |
-  bes2\4 ees4\3 g8\2^^ a,\4~ |
+  bes2\4 ees4\3 g8\2^^ a,\4~ | \break
   a2\4 ees'4\3 a8\2^^ f,\4~ |
   f2\4 a4\4 g'8\2^^ s8 |
 }
 midiBass = {
-  \tuplet 3/2 { r4 ees8\mf~ } |
+  \partial 4 \tuplet 3/2 { r4 ees8\mf~ } |
   ees2 ees4 \tuplet 3/2 { bes'16 r8. ees,8~ } |
   ees2 ees4 \tuplet 3/2 { bes'16 r8. ees,8~ } |
   ees2 ees4 \tuplet 3/2 { bes'16 r8. ees,8~ } |
@@ -101,29 +102,29 @@ scoreDrums = {
     \new DrumVoice {
       \voiceOne
       \drummode {
-        timl8 |
+        \partial 8 timl8 |
         timl timl timh timh timl4 timh8 timl |
       }
     }
     \new DrumVoice {
       \voiceTwo
       \drummode {
-        ssl8 |
+        \partial 8 ssl8 |
         ssl ssl ssl ssl ssl ssl ssl ssl |
       }
     }
   >>
   \makePercent s1 |
   \makePercent s1 |
+  \makePercent s1 | \break
   \makePercent s1 |
   \makePercent s1 |
   \makePercent s1 |
+  \makePercent s1 | \break
   \makePercent s1 |
   \makePercent s1 |
   \makePercent s1 |
-  \makePercent s1 |
-  \makePercent s1 |
-  \makePercent s1 |
+  \makePercent s1 | \break
   \makePercent s1 |
   \makePercent s1 |
 }
@@ -132,7 +133,7 @@ midiDrums = {
   <<
     \new DrumVoice {
       \drummode {
-        \tuplet 3/2 { r4 bd8\ff } |
+        \partial 4 \tuplet 3/2 { r4 bd8\ff } |
         \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
         \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
         \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
@@ -151,7 +152,7 @@ midiDrums = {
     }
     \new DrumVoice {
       \drummode {
-        \tuplet 3/2 { r4 hhp8\mf } |
+        \partial 4 \tuplet 3/2 { r4 hhp8\mf } |
         \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
         \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
         \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
@@ -177,6 +178,7 @@ midiDrums = {
     title = #song
     subtitle = #album
     composer = #author
+    poet = #originalComposer
     tagline = ##f
   }
 
@@ -185,8 +187,8 @@ midiDrums = {
     \score {
       <<
         \new GrandStaff <<
-          \set GrandStaff.instrumentName = #"Guitar "
-          \set GrandStaff.shortInstrumentName = #"Gt "
+          \set GrandStaff.instrumentName = #"Chitarra "
+          \set GrandStaff.shortInstrumentName = #"Ct "
           \new Staff {
             \relative c'' {
               \override StringNumber.stencil = ##F
@@ -206,7 +208,7 @@ midiDrums = {
           }
         >>
         \new GrandStaff <<
-          \set GrandStaff.instrumentName = #"Bass "
+          \set GrandStaff.instrumentName = #"Basso "
           \set GrandStaff.shortInstrumentName = #"Bs "
           \new Staff {
             \relative c {
@@ -226,8 +228,8 @@ midiDrums = {
           }
         >>
         \new DrumStaff \with {
-          instrumentName = #"Drums "
-          shortInstrumentName = #"Dr "
+          instrumentName = #"Perc. "
+          shortInstrumentName = #"Pc "
           \override StaffSymbol.line-count = #2
           \override StaffSymbol.staff-space = #2
           \override VerticalAxisGroup.minimum-Y-extent = #'(3.0 . 4.0)
