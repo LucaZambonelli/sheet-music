@@ -8,16 +8,18 @@ execute = 96
 % guitar
 scoreGuitar = {
   \partial 8 r8\5 |
-  ees'\3( bes\3) g\4( bes\4) ees,\5^. g\4^. bes,\6^. r | 
-  ees'\3( bes\3) g\4( bes\4) ees,\5^. g\4^. bes,\6^. r |
-  des'\3( bes\3) g\4( bes\4) ees,\5^. g\4^. bes,\6^. r |
-  des'\3( bes\3) g\4( bes\4) ees,\5^. g\4^. bes,\6^. r | \break
-  c'\3( aes\3) ees\4( aes\4) c,\5^. ees\5^. aes,\6^. r |
-  c'\3( aes\3) ees\4( aes\4) c,\5^. ees\5^. aes,\6^. r |
-  aes'\4( f\4) d\5( f\5) bes,\6^. d\5^. aes\6^. r |
-  aes'\4( f\4) d\5( f\5) bes,\6^. d\5^. aes\6^. r | \break
-  g'\4( ees\4) bes\5( ees\5) g\4^. bes,\6^. ees\5^. r |
-  g\4( ees\4) bes\5( ees\5) g\4^. bes,\6^. d\5^. r |
+  ees'\3 bes\3 g\4 bes\4 ees,\5^. g\4^. bes,\6^. r | 
+  ees'\3 bes\3 g\4 bes\4 ees,\5^. g\4^. bes,\6^. r |
+  des'\3 bes\3 g\4 bes\4 ees,\5^. g\4^. bes,\6^. r |
+  des'\3 bes\3 g\4 bes\4 ees,\5^. g\4^. bes,\6^. r | \break
+  c'\3 aes\3 ees\4 aes\4 c,\5^. ees\5^. aes,\6^. r |
+  c'\3 aes\3 ees\4 aes\4 c,\5^. ees\5^. aes,\6^. r |
+  aes'\4 f\4 d\5 f\5 bes,\6^. d\5^. aes\6^. r |
+  aes'\4 f\4 d\5 f\5 bes,\6^. d\5^. aes\6^. r | \break
+  g'\4 ees\4 bes\5 ees\5 g\4^. bes,\6^. ees\5^. r |
+  g\4 ees\4 bes\5 ees\5 g\4^. bes,\6^. d\5^. r |
+  ees'\3 c\3 g\4 c\4 ees,\5^. g\4^. c,\5^. r |
+  ees'\3 c\3 g\4 c\4 ees,\5^. g\4^. c,\5^. r |
 }
 midiGuitar = {
   \partial 4 r4 |
@@ -38,9 +40,13 @@ midiGuitar = {
   \tuplet 3/2 { aes'4 f8 } \tuplet 3/2 { d4 f8 } \tuplet 3/2 { bes,8 r d16 r }
     \tuplet 3/2 { aes8 r  r } |
   \tuplet 3/2 { g'4 ees8 } \tuplet 3/2 { bes4 ees8 } \tuplet 3/2 { g8 r bes,16 r }
-    \tuplet 3/2 { ees8 r  r }
+    \tuplet 3/2 { ees8 r  r } |
   \tuplet 3/2 { g4 ees8 } \tuplet 3/2 { bes4 ees8 } \tuplet 3/2 { g8 r bes,16 r }
-    \tuplet 3/2 { d8 r  r }
+    \tuplet 3/2 { d8 r  r } |
+  \tuplet 3/2 { ees'4 c8 } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { ees,8 r g16 r }
+    \tuplet 3/2 { c,8 r  r } |
+  \tuplet 3/2 { ees'4 c8 } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { ees,8 r g16 r }
+    \tuplet 3/2 { c,8 r  r } |
 }
 
 % bass
@@ -55,7 +61,9 @@ scoreBass = {
   ees2\3 bes4\4 aes8^.\4 ees'\3~ |
   ees2\3 bes4\4 aes8^.\4 ees'\3~ |
   ees2\3 g,4\4 ees'8^.\3 d\3~ |
-  d2\3 g,4\4 d'8^.\3 r |
+  d2\3 g,4\4 d'8^.\3 c\3~ |
+  c2\3 ees4\3 g,8\4^. bes\4~ |
+  bes2\4 ees4\3 g,8\4^. r |
 }
 midiBass = {
   \tuplet 3/2 { r4 ees8~ } |
@@ -68,7 +76,9 @@ midiBass = {
   ees2 bes4 \tuplet 3/2 { aes8 r ees'~ } |
   ees2 bes4 \tuplet 3/2 { aes8 r ees'~ } |
   ees2 g,4 \tuplet 3/2 { ees'8 r d~ } |
-  d2 g,4 \tuplet 3/2 { d'8 r r } |
+  d2 g,4 \tuplet 3/2 { d'8 r c~ } |
+  c2 ees4 \tuplet 3/2 { g,8 r bes~ } |
+  bes2 ees4 \tuplet 3/2 { g,8 r r } |
 }
 
 % writing down
