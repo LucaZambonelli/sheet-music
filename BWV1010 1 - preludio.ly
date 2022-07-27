@@ -5,6 +5,10 @@ album = "Suite in MI BEMOLLE maggiore BWV1010"
 author= "Luca Zambonelli"
 execute = 100
 
+makePercent = #(
+  define-music-function (note) (ly:music?) (make-music 'PercentEvent 'length (ly:music-length note))
+)
+
 % guitar
 scoreGuitar = {
   \partial 8 s8 |
@@ -19,7 +23,9 @@ scoreGuitar = {
   g'\2( ees\2) bes\3 ees\2 g,\4^^ bes\3 ees,\5^^ r |
   g'\2( ees\2) bes\3 ees\2 g,\4^^ bes\3 d,\5^^ r |
   ees''\1( c\1) g\2 c\1 ees,\3^^ g\2 c,\4^^ r |
-  ees'\1( c\1) g\2 c\1 ees,\3^^ g\2 c,\4^^ s |
+  ees'\1( c\1) g\2 c\1 ees,\3^^ g\2 c,\4^^ r | \break
+  ees'\1( c\1) f,\3 a\2 c,\4^^ ees\3 a,\4^^ r |
+  ees''\1( c\1) a\2 c\1 f,\3^^ a\2 ees\3^^ s |
 }
 midiGuitar = {
   \partial 4 r4 |
@@ -47,6 +53,10 @@ midiGuitar = {
     \tuplet 3/2 { c,16 r8.  r8 } |
   \tuplet 3/2 { ees'4 c8 } \tuplet 3/2 { g4 c8 } \tuplet 3/2 { ees,16 r8. g8 }
     \tuplet 3/2 { c,16 r8.  r8 } |
+  \tuplet 3/2 { ees'4 c8 } \tuplet 3/2 { f,4 a8 } \tuplet 3/2 { c,16 r8. ees8 }
+    \tuplet 3/2 { a,16 r8.  r8 } |
+  \tuplet 3/2 { ees''4 c8 } \tuplet 3/2 { a4 c8 } \tuplet 3/2 { f,16 r8. a8 }
+    \tuplet 3/2 { ees16 r8.  r8 } |
 }
 
 % bass
@@ -63,7 +73,9 @@ scoreBass = {
   ees2\3 g,4\4 ees'8^^\3 d\3~ |
   d2\3 g,4\4 d'8^^\3 c\3~ |
   c2\3 ees4\3 g8\2^^ bes,\4~ |
-  bes2\4 ees4\3 g8\2^^ s |
+  bes2\4 ees4\3 g8\2^^ a,\4~ |
+  a2\4 ees'4\3 a8\2^^ f,\4~ |
+  f2\4 a4\4 g'8\2^^ s8 |
 }
 midiBass = {
   \tuplet 3/2 { r4 ees8\mf~ } |
@@ -78,7 +90,9 @@ midiBass = {
   ees2 g,4 \tuplet 3/2 { ees'16 r8. d8~ } |
   d2 g,4 \tuplet 3/2 { d'16 r8. c8~ } |
   c2 ees4 \tuplet 3/2 { g16 r8. bes,8~ } |
-  bes2 ees4 \tuplet 3/2 { g16 r8. r8 } |
+  bes2 ees4 \tuplet 3/2 { g16 r8. a,8 } |
+  a2 ees'4 \tuplet 3/2 { a16 r8. f,8 } |
+  f2 a4 \tuplet 3/2 { g'16 r8. r8 } |
 }
 
 % drums
@@ -89,17 +103,6 @@ scoreDrums = {
       \drummode {
         timl8 |
         timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 timl |
-        timl timl timh timh timl4 timh8 s |
       }
     }
     \new DrumVoice {
@@ -107,20 +110,22 @@ scoreDrums = {
       \drummode {
         ssl8 |
         ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
-        ssl ssl ssl ssl ssl ssl ssl s |
       }
     }
   >>
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
+  \makePercent s1 |
 }
 
 midiDrums = {
@@ -139,12 +144,16 @@ midiDrums = {
         \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
         \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
         \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
+        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
+        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
         \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp r8 } |
       }
     }
     \new DrumVoice {
       \drummode {
         \tuplet 3/2 { r4 hhp8\mf } |
+        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
+        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
         \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
         \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
         \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
