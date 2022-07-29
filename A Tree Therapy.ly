@@ -7,8 +7,104 @@ execute = 44
 
 
 % pad section
-padTreble = {
+scorePadTreble = {
   \partial 4. r8. ges |
+  \repeat volta 2 {
+    aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+    aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+    aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+    aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+    aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+    aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+    aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+    aes aes16~ aes2~ aes16 ges8. | 
+  }
+  \alternative {
+    {
+     ees2~ ees8 r8. ges |
+    }
+    {
+      ees2~ ees8 r4. \bar "|."
+    }
+  }
+}
+scorePadBass = {
+  \partial4. aes4.~ |
+  \repeat volta 2 {
+    << aes1~ aes' >> | << aes,~ ges' >> |
+    << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+    << aes,1~ aes' >> | << aes,~ ges' >> |
+    << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
+    << aes,1~ aes' >> | << aes,~ ges' >> |
+    << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+    << aes,1~ aes' >> | << aes,~ ges' >> |
+    << aes,~ aes' >> |
+  }
+  \alternative {
+    {
+      << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4.~ |
+    }
+    {
+      << aes2~ ces'~ >> << aes,8~ ces' >> aes,8. r |
+    }
+  }
+}
+midiPadTreble = {
+  \partial 4. r8. ges |
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r8. ges \bar "||" \break
+
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r8. ges \bar "||" \break
+
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r8. ges \bar "||" \break
+
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r8. ges \bar "||" \break
+
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r8. ges \bar "||" \break
+
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
+  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
+  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r8. ges \bar "||" \break
+
   aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
   aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
   aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
@@ -27,8 +123,62 @@ padTreble = {
   aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
   aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r4. \bar "|." \break
 }
-padBass = {
+midiPadBass = {
   \partial4. aes4.~ |
+  << aes1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4.~ |
+
+  << aes1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4.~ |
+
+  << aes1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4.~ |
+
+  << aes1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4.~ |
+
+  << aes1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4.~ |
+
+  << aes1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
+  << aes,1~ aes' >> | << aes,~ ges' >> |
+  << aes,~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4.~ |
+
   << aes1~ aes' >> | << aes,~ ges' >> |
   << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
   << aes,1~ aes' >> | << aes,~ ges' >> |
@@ -71,7 +221,7 @@ padBass = {
               \time 4/4
               \tempo 4 = #execute
               \numericTimeSignature
-              \padTreble
+              \scorePadTreble
             }
           }
           \new Staff {
@@ -80,7 +230,7 @@ padBass = {
               \key ces \major
               \numericTimeSignature
               \time 4/4
-              \padBass
+              \scorePadBass
             }
           }
         >>
@@ -99,7 +249,7 @@ padBass = {
         \relative c' {
           \time 4/4
           \tempo 4 = #execute
-          \padTreble
+          \midiPadTreble
         }
       }
       \new Staff {
@@ -109,7 +259,7 @@ padBass = {
         \relative c, {
           \time 4/4
           \tempo 4 = #execute
-          \padBass
+          \midiPadBass
         }
       }
     >>
