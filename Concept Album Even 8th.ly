@@ -155,7 +155,7 @@ scoreDrums = {
     \new DrumVoice  = Triangle {
       \voiceThree
       \drummode {
-        s1 | s1 | s1 | s1 |
+        s1 | s1 | tro4 tro tro tro | s1 |
         s1 | s1 | s1 | s1 |
         s1 | s1 | s1 | s1 |
       }
@@ -202,11 +202,11 @@ midiDrums = {
     \new DrumVoice  = Triangle {
       \voiceThree
       \drummode {
-        s1 | s1 | s1 | s1 |
-        s1 | s1 | s1 | s1 |
-        s1 | s1 | s1 | s1 |
-        s1 | s1 | s1 | s1 |
-        s1 | s1 | s1 | s1 |
+        s1 | s1 | tro4\ff tro tro tro | tro tro tro tro |
+        tro tro tro tro | tro tro tro tro | tro tro tro tro | tro tro tro tro |
+        tro tro tro tro | tro tro tro tro | tro tro tro tro | tro tro tro tro |
+        tro tro tro tro | tro tro tro tro | tro tro tro tro | tro tro tro tro |
+        tro tro tro tro | tro tro tro tro | tro tro tro tro | tro tro tro tro |
       }
     }
   >>
