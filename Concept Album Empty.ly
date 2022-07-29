@@ -6,7 +6,7 @@ author = "Luca Zambonelli"
 execute = 120
 
 % bar definition
-\defineBarLine "[" #'("" "[" "")
+\defineBarLine "[" #'("|" "[" "")
 \defineBarLine "]" #'("]" "" "")
 
 % symbol definition
@@ -96,9 +96,26 @@ scoreDrums = {
   >>
 }
 midiDrums = {
-  \drummode {
-    R1
-  }
+  <<
+    \new DrumVoice  = Cajon {
+      \voiceOne
+      \drummode {
+        s1
+      }
+    }
+    \new DrumVoice  = Maracas {
+      \voiceTwo
+      \drummode {
+        s1
+      }
+    }
+    \new DrumVoice  = Triangle {
+      \voiceThree
+      \drummode {
+        s1
+      }
+    }
+  >>
 }
 
 
@@ -211,9 +228,9 @@ midiDrums = {
         }
       }
       \new Staff {
-        \set Staff.midiInstrument = "electric guitar (clean)"
-        \set Staff.midiMinimumVolume = #1.0
-        \set Staff.midiMaximumVolume = #1.0
+        \set Staff.midiInstrument = "overdriven guitar"
+        \set Staff.midiMinimumVolume = #0.4
+        \set Staff.midiMaximumVolume = #0.4
         \relative c' {
           \midiTheme
         }
@@ -227,8 +244,8 @@ midiDrums = {
         }
       }
       \new DrumStaff {
-        \set Staff.midiMinimumVolume = #0.6
-        \set Staff.midiMaximumVolume = #0.6
+        \set Staff.midiMinimumVolume = #0.2
+        \set Staff.midiMaximumVolume = #1.0
         \set Staff.drumPitchTable = #(alist->hash-table midiDrumPitches)
         \midiDrums
       }
