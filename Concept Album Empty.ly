@@ -1,55 +1,99 @@
 \version "2.22.1"
 
-\defineBarLine "[" #'("" "[" "")
-\defineBarLine "]" #'("]" "" "")
-
-makePercent = #(define-music-function (note) (ly:music?)
-  (make-music 'PercentEvent 'length (ly:music-length note)))
-
 song = "Empty"
 album = "Concept Album"
 author = "Luca Zambonelli"
 execute = 120
 
+% bar definition
+\defineBarLine "[" #'("" "[" "")
+\defineBarLine "]" #'("]" "" "")
+
+% symbol definition
+makePercent = #(
+  define-music-function
+  (note)
+  (ly:music?)
+  (make-music 'PercentEvent 'length (ly:music-length note))
+)
+
+% percussions definition
+drumPitchNames.cal = #'cal
+drumPitchNames.cah = #'cah
+drumPitchNames.mcs = #'mcs
+drumPitchNames.trc = #'trc
+drumPitchNames.tro = #'tro
+#(define cajon-style
+  '(
+    (cal  default  #f          -1)
+    (cah  default  #f           1)   
+    (mcs  cross    #f           0)
+    (trc  cross    "halfopen"   2)
+    (tro  cross    #f           2)
+  )
+)
+midiDrumPitches.cal = c,
+midiDrumPitches.cah = d,
+midiDrumPitches.mcs = gis,
+midiDrumPitches.trc = gis''
+midiDrumPitches.tro = a''
+
 
 % rythm section
 scoreRythm = {
-  R1
+  s1
 }
 chordsRythm = {
   \set chordChanges = ##t
   \chordmode {
-    R1
+    s1
   }
 }
 midiRythm = {
-  R1
+  s1
 }
 
 
 % theme section
 scoreTheme = {
-  R1
+  s1
 }
 midiTheme = {
-  R1
+  s1
 }
 
 
 % bass section
 scoreBass = {
-  R1
+  s1
 }
 midiBass = {
-  R1
+  s1
 }
 
 
 % drums section
 scoreDrums = {
-  \drummode {
-    R1
-  }
+  <<
+    \new DrumVoice  = Cajon {
+      \voiceOne
+      \drummode {
+        s1
+      }
+    }
+    \new DrumVoice  = Maracas {
+      \voiceTwo
+      \drummode {
+        s1
+      }
+    }
+    \new DrumVoice  = Triangle {
+      \voiceThree
+      \drummode {
+        s1
+      }
+    }
+  >>
 }
 midiDrums = {
   \drummode {
@@ -137,14 +181,13 @@ midiDrums = {
           }
         >>
         \new DrumStaff \with {
-          instrumentName = #"Drums "
-          shortInstrumentName = #"Dr "
-          \override StaffSymbol.line-count = #2
+          instrumentName = #"Perc. "
+          shortInstrumentName = #"Pc "
+          \override StaffSymbol.line-count = #1
           \override StaffSymbol.staff-space = #2
-          \override VerticalAxisGroup.minimum-Y-extent = #'(-3.0 . 4.0)
           \override Stem.length = #4
-          \override Stem.direction = #-1
-          drumStyleTable = #timbales-style
+          \override VerticalAxisGroup.minimum-Y-extent = #'(3.0 . 4.0)
+          drumStyleTable = #(alist->hash-table cajon-style)
         } {
           \numericTimeSignature
           \scoreDrums
@@ -186,6 +229,7 @@ midiDrums = {
       \new DrumStaff {
         \set Staff.midiMinimumVolume = #0.6
         \set Staff.midiMaximumVolume = #0.6
+        \set Staff.drumPitchTable = #(alist->hash-table midiDrumPitches)
         \midiDrums
       }
     >>
