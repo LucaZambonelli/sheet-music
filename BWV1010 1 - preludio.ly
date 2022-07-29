@@ -127,7 +127,7 @@ midiBass = {
 % drums
 scoreDrums = {
   <<
-    \new DrumVoice {
+    \new DrumVoice = Cajon {
       \voiceOne
       \drummode {
         \partial 8 cal8 |
@@ -156,7 +156,6 @@ scoreDrums = {
   \makePercent s1 |
   \makePercent s1 |
 }
-
 midiDrums = {
   <<
     \new DrumVoice {
