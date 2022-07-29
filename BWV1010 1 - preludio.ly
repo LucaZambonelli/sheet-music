@@ -6,9 +6,35 @@ author= "Luca Zambonelli"
 originalComposer = "Johann Sebastian Bach"
 execute = 100
 
+% symbol definition
 makePercent = #(
-  define-music-function (note) (ly:music?) (make-music 'PercentEvent 'length (ly:music-length note))
+  define-music-function
+  (note)
+  (ly:music?)
+  (make-music 'PercentEvent 'length (ly:music-length note))
 )
+
+% percussions definition
+drumPitchNames.cal = #'cal
+drumPitchNames.cah = #'cah
+drumPitchNames.mcs = #'mcs
+drumPitchNames.trc = #'trc
+drumPitchNames.tro = #'tro
+#(define cajon-style
+  '(
+    (cal  default  #f          -1)
+    (cah  default  #f           1)   
+    (mcs  cross    #f           0)
+    (trc  cross    "halfopen"   2)
+    (tro  cross    #f           2)
+  )
+)
+midiDrumPitches.cal = c,
+midiDrumPitches.cah = d,
+midiDrumPitches.mcs = gis,
+midiDrumPitches.trc = gis''
+midiDrumPitches.tro = a''
+
 
 % guitar
 scoreGuitar = {
@@ -60,6 +86,7 @@ midiGuitar = {
     \tuplet 3/2 { ees16 r8.  r8 } |
 }
 
+
 % bass
 scoreBass = {
   \partial 8 ees8\3~ |
@@ -96,21 +123,22 @@ midiBass = {
   f2 a4 \tuplet 3/2 { g'16 r8. r8 } |
 }
 
+
 % drums
 scoreDrums = {
   <<
     \new DrumVoice {
       \voiceOne
       \drummode {
-        \partial 8 timl8 |
-        timl timl timh timh timl4 timh8 timl |
+        \partial 8 cal8 |
+        cal cal cah cah cal4 cah8 cal |
       }
     }
     \new DrumVoice {
       \voiceTwo
       \drummode {
-        \partial 8 ssl8 |
-        ssl ssl ssl ssl ssl ssl ssl ssl |
+        \partial 8 mcs8 |
+        mcs mcs mcs mcs mcs mcs mcs mcs |
       }
     }
   >>
@@ -133,40 +161,40 @@ midiDrums = {
   <<
     \new DrumVoice {
       \drummode {
-        \partial 4 \tuplet 3/2 { r4 bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp bd8\ff } |
-        \tuplet 3/2 { bd4\ff bd8 } \tuplet 3/2 { sn4\pp sn8 } bd4\ff \tuplet 3/2 { sn\pp r8 } |
+        \partial 4 \tuplet 3/2 { r4 cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp cal8\ff } |
+        \tuplet 3/2 { cal4\ff cal8 } \tuplet 3/2 { cah4\pp cah8 } cal4\ff \tuplet 3/2 { cah\pp r8\ff } |
       }
     }
     \new DrumVoice {
       \drummode {
-        \partial 4 \tuplet 3/2 { r4 hhp8\mf } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } |
-        \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 hhp8 } \tuplet 3/2 { hhp4 r8 } |
+        \partial 4 \tuplet 3/2 { r4 mcs8\mf } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
+        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 r8 } |
       }
     }
   >>
@@ -230,11 +258,11 @@ midiDrums = {
         \new DrumStaff \with {
           instrumentName = #"Perc. "
           shortInstrumentName = #"Pc "
-          \override StaffSymbol.line-count = #2
+          \override StaffSymbol.line-count = #1
           \override StaffSymbol.staff-space = #2
-          \override VerticalAxisGroup.minimum-Y-extent = #'(3.0 . 4.0)
           \override Stem.length = #4
-          drumStyleTable = #timbales-style
+          \override VerticalAxisGroup.minimum-Y-extent = #'(3.0 . 4.0)
+          drumStyleTable = #(alist->hash-table cajon-style)
         } {
           \numericTimeSignature
           \scoreDrums
@@ -267,6 +295,7 @@ midiDrums = {
       \new DrumStaff {
         \set Staff.midiMinimumVolume = #0.2
         \set Staff.midiMaximumVolume = #1.0
+        \set Staff.drumPitchTable = #(alist->hash-table midiDrumPitches)
         \midiDrums
       }
     >>
