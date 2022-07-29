@@ -98,18 +98,21 @@ scoreDrums = {
 midiDrums = {
   <<
     \new DrumVoice  = Cajon {
+      % cal\ff cah\pp
       \voiceOne
       \drummode {
         s1
       }
     }
     \new DrumVoice  = Maracas {
+      % mcs\mf
       \voiceTwo
       \drummode {
         s1
       }
     }
     \new DrumVoice  = Triangle {
+      % trc\ff tro\ff
       \voiceThree
       \drummode {
         s1
