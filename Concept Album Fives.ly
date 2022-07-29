@@ -355,8 +355,8 @@ midiDrums = {
     tagline = ##f
   }
 
-  % verse
   \bookpart {
+    % verse
     \score {
       <<
         \new GrandStaff <<
@@ -397,10 +397,7 @@ midiDrums = {
       >>
       \layout { }
     }
-  }
-
-  % body
-  \bookpart {
+    % body
     \score {
       <<
         \new GrandStaff <<
