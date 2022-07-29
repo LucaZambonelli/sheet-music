@@ -1,7 +1,7 @@
 \version "2.22.1"
 
-song = "Therapy"
-album = "A Tree"
+song = "TA tree"
+album = "A tree"
 author = "Luca Zambonelli"
 execute = 44
 
