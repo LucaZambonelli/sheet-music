@@ -217,19 +217,19 @@ midiPadBass = {
           \new Staff {
             \relative c' {
               \clef "treble_8"
-              \key ces \major
               \time 4/4
               \tempo 4 = #execute
               \numericTimeSignature
+              \key ces \major
               \scorePadTreble
             }
           }
           \new Staff {
             \relative c, {
               \clef "bass_8"
-              \key ces \major
               \numericTimeSignature
               \time 4/4
+              \key ces \major
               \scorePadBass
             }
           }
