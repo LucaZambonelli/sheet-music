@@ -50,7 +50,7 @@ scorePadBass = {
   }
 }
 midiPadTreble = {
-  \partial 4. r8. ges |
+  \partial 4. r8. ges\mf |
   aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
   aes aes16~ aes4. ges8. ees~ | ees2.~ ees16 ges8. | \break
   aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
@@ -124,7 +124,7 @@ midiPadTreble = {
   aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r4. \bar "|." \break
 }
 midiPadBass = {
-  \partial4. aes4.~ |
+  \partial4. aes4.\mf~ |
   << aes1~ aes' >> | << aes,~ ges' >> |
   << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
   << aes,1~ aes' >> | << aes,~ ges' >> |
@@ -244,8 +244,8 @@ midiPadBass = {
     <<
       \new Staff {
         \set Staff.midiInstrument = "pad 1 (new age)"
-        \set Staff.midiMinimumVolume = #0.8
-        \set Staff.midiMaximumVolume = #0.8
+        \set Staff.midiMinimumVolume = #0.6
+        \set Staff.midiMaximumVolume = #0.6
         \relative c' {
           \time 4/4
           \tempo 4 = #execute
