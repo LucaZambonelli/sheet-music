@@ -1,15 +1,42 @@
 \version "2.22.1"
 
-\defineBarLine "[" #'("|" "[" "")
-\defineBarLine "]" #'("]" "" "")
-
-makePercent = #(define-music-function (note) (ly:music?)
-  (make-music 'PercentEvent 'length (ly:music-length note)))
-
 song = "Even 8th"
 album = "Concept Album"
 author = "Luca Zambonelli"
 execute = 136
+
+% bar definition
+\defineBarLine "[" #'("|" "[" "")
+\defineBarLine "]" #'("]" "" "")
+
+% symbol definition
+makePercent = #(
+  define-music-function
+  (note)
+  (ly:music?)
+  (make-music 'PercentEvent 'length (ly:music-length note))
+)
+
+% percussions definition
+drumPitchNames.cal = #'cal
+drumPitchNames.cah = #'cah
+drumPitchNames.mcs = #'mcs
+drumPitchNames.trc = #'trc
+drumPitchNames.tro = #'tro
+#(define cajon-style
+  '(
+    (cal  default  #f          -1)
+    (cah  default  #f           1)   
+    (mcs  cross    #f           0)
+    (trc  cross    "halfopen"   2)
+    (tro  cross    #f           2)
+  )
+)
+midiDrumPitches.cal = c,
+midiDrumPitches.cah = d,
+midiDrumPitches.mcs = gis,
+midiDrumPitches.trc = gis''
+midiDrumPitches.tro = a''
 
 
 % rythm section
@@ -99,44 +126,90 @@ midiBass = {
 
 % drums section
 scoreDrums = {
-  \drummode {
-    timl8 timl timh timh16 timh timl8 timl timh8. timl16 |
-    \makePercent s1 |
-    \makePercent s1 |
-    \makePercent s1 |
-    \makePercent s1 |
-    \makePercent s1 |
-    \makePercent s1 |
-    \makePercent s1 |
-    \makePercent s1 |
-    \makePercent s1 |
-    \makePercent s1 |
-    \makePercent s1 |
-  }
+  <<
+    \new DrumVoice  = Cajon {
+      \voiceOne
+      \drummode {
+        cal8 cal cah cah16 cah cal8 cal cah8. cal16 |
+        \makePercent s1 |
+        \makePercent s1 |
+        \makePercent s1 |
+        \makePercent s1 |
+        \makePercent s1 |
+        \makePercent s1 |
+        \makePercent s1 |
+        \makePercent s1 |
+        \makePercent s1 |
+        \makePercent s1 |
+        \makePercent s1 |
+      }
+    }
+    \new DrumVoice  = Maracas {
+      \voiceTwo
+      \drummode {
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+      }
+    }
+    \new DrumVoice  = Triangle {
+      \voiceThree
+      \drummode {
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+      }
+    }
+  >>
 }
 midiDrums = {
-  \drummode {
-    bd8\mf bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-    bd8 bd sn sn16 sn bd8 bd sn8. bd16 |
-  }
+  <<
+    \new DrumVoice  = Cajon {
+      \voiceOne
+      \drummode {
+        cal8\ff cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+        cal8 cal cah\pp cah16 cah cal8\ff cal cah8.\pp cal16\ff |
+      }
+    }
+    \new DrumVoice  = Maracas {
+      \voiceTwo
+      \drummode {
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+      }
+    }
+    \new DrumVoice  = Triangle {
+      \voiceThree
+      \drummode {
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+        s1 | s1 | s1 | s1 |
+      }
+    }
+  >>
 }
 
 
@@ -218,14 +291,13 @@ midiDrums = {
           }
         >>
         \new DrumStaff \with {
-          instrumentName = #"Drums "
-          shortInstrumentName = #"Dr "
-          \override StaffSymbol.line-count = #2
+          instrumentName = #"Perc. "
+          shortInstrumentName = #"Pc "
+          \override StaffSymbol.line-count = #1
           \override StaffSymbol.staff-space = #2
-          \override VerticalAxisGroup.minimum-Y-extent = #'(-3.0 . 4.0)
           \override Stem.length = #4
-          \override Stem.direction = #-1
-          drumStyleTable = #timbales-style
+          \override VerticalAxisGroup.minimum-Y-extent = #'(3.0 . 4.0)
+          drumStyleTable = #(alist->hash-table cajon-style)
         } {
           \numericTimeSignature
           \scoreDrums
@@ -249,9 +321,9 @@ midiDrums = {
         }
       }
       \new Staff {
-        \set Staff.midiInstrument = "electric guitar (clean)"
-        \set Staff.midiMinimumVolume = #1.0
-        \set Staff.midiMaximumVolume = #1.0
+        \set Staff.midiInstrument = "overdriven guitar"
+        \set Staff.midiMinimumVolume = #0.4
+        \set Staff.midiMaximumVolume = #0.4
         \relative c'' {
           \midiTheme
         }
@@ -265,8 +337,9 @@ midiDrums = {
         }
       }
       \new DrumStaff {
-        \set Staff.midiMinimumVolume = #0.6
-        \set Staff.midiMaximumVolume = #0.6
+        \set Staff.midiMinimumVolume = #0.2
+        \set Staff.midiMaximumVolume = #1.0
+        \set Staff.drumPitchTable = #(alist->hash-table midiDrumPitches)
         \midiDrums
       }
     >>
