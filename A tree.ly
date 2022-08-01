@@ -10,16 +10,21 @@ execute = 44
 scorePadTreble = {
   \partial 4. r8. ges |
   \repeat volta 4 {
-    aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-    aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-    aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. | \break
+    aes aes16~ aes2~ aes16 ges8. |
+    ces ces16~ ces2~ ces16 ges8. |
+    aes aes aes ges ees4~ | \break
+    ees2.~ ees16 ges8. |
+    aes aes16~ aes2~ aes16 ges8. |
+    des' ces16~ ces2~ ces16 ges8. |
   }
   \alternative {
     {
-      aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
+      aes aes aes ges ees4~ | \break
+      ees2.~ ees16 ges8. |
     }
     {
-      aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r4. |
+      aes aes16~ aes2~ aes16 ges8. |
+      ees2~ ees8 r4. |
       r2. r16 r8. \bar "|."
     }
   }
@@ -27,167 +32,28 @@ scorePadTreble = {
 scorePadBass = {
   \partial4. aes4.~ |
   \repeat volta 2 {
-    << aes1~ aes' >> | << aes,~ ges' >> |
-    << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-    << aes,1~ aes' >> | << aes,~ ges' >> |
+    << aes1~ aes' >> |
+    << aes,~ ges' >> |
+    << aes,2.~ aes' >> << aes,8.~ aes' >> << aes,16~ des'~ >> |
+    << aes,8~ des' >> << aes,~ ces'~ >> << aes,2.~ ces' >> |
+    << aes,1~ aes' >> |
+    << aes,~ ges' >> |
   }
   \alternative {
     {
-      << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
+      << aes,2.~ aes' >> << aes,8.~ aes' >> << aes,16~ des'~ >> |
+      << aes,8~ des' >> << aes,~ ces'~ >> << aes,2.~ ces' >> |
     }
     {
-      << aes,1~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4. |
+      << aes,1~ aes' >> |
+      << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4. |
       aes2.~ aes16 r8. |
     }
   }
 }
 midiPadTreble = {
-  \partial 4. r8. ges\mf |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r4. |
-  r2. r16 ges8. |
-
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r4. |
-  r2. r16 ges8. |
-
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r4. |
-  r2. r16 ges8. |
-
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ces ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes8 aes4 ges8. ees~ | ees2.~ ees16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | des' ces16~ ces2~ ces16 ges8. |
-  aes aes16~ aes2~ aes16 ges8. | ees2~ ees8 r4. |
-  r1 \bar "|."
 }
 midiPadBass = {
-  \partial4. aes4.\mf~ |
-  << aes1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,1~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4. |
-  aes1~ |
-
-  << aes1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,1~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4. |
-  aes1~ |
-
-  << aes1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,1~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4. |
-  aes1~ |
-
-  << aes~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ des' >> << aes,16~ ces'~ >> << aes,2.~ ces' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,~ aes' >> | << aes,8.~ ces' >> << aes,16~ des'~ >> << aes,2.~ des' >>|
-  << aes,1~ aes' >> | << aes,~ ges' >> |
-  << aes,1~ aes' >> | << aes,2~ ces'~ >> << aes,8~ ces' >> aes,4. |
-  aes2.~ aes16 r8. |
 }
 
 % writing down
