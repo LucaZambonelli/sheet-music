@@ -9,42 +9,42 @@
 
   \score {
     \new TabStaff {
-      \set TabStaff.instrumentName = #"Bass "
+      \set TabStaff.instrumentName = #"Bb Bass "
       \set TabStaff.shortInstrumentName = #"B "
-      \set Staff.stringTunings = #bass-tuning
+      \set Staff.stringTunings = \stringTuning < d,, g,, c, f, >
       \relative c {
-        \tuplet 3/2 { e8\1 e\1 e\1 } \tuplet 3/2 { e\1 e\1 e\1 }
-          \tuplet 3/2 { d\1 d\1 d\1 } \tuplet 3/2 { d\1 d\1 d\1 } |
-        \tuplet 3/2 { b\2 b\2 b\2 } \tuplet 3/2 { b\2 b\2 b\2 }
-          \tuplet 3/2 { g\2 g\2 g\2 } \tuplet 3/2 { g\2 g\2 g\2 } \bar ".|:"
-        e4\3 g8\2 e\3 d4\3 b8\4 d\3 |
-        e4\3 g8\2 e\3 a\2 g\2  e4\3 |
-        d8\3 e\3 r2. | g8\2 e\3 r2. \bar":|."
+        \tuplet 3/2 { d8\1 d\1 d\1 } \tuplet 3/2 { d\1 d\1 d\1 }
+          \tuplet 3/2 { c\1 c\1 c\1 } \tuplet 3/2 { c\1 c\1 c\1 } |
+        \tuplet 3/2 { a\2 a\2 a\2 } \tuplet 3/2 { a\2 a\2 a\2 }
+          \tuplet 3/2 { f\2 f\2 f\2 } \tuplet 3/2 { f\2 f\2 f\2 } \bar ".|:"
+        d4\3 f8\2 d\3 c4\3 a8\4 c\3 |
+        d4\3 f8\2 d\3 g\2 f\2  d4\3 |
+        c8\3 d\3 r2. | f8\2 d\3 r2. \bar ":|."
       }
     }
   }
 
   \score {
     \new TabStaff {
-      \set TabStaff.instrumentName = #"Bass "
+      \set TabStaff.instrumentName = #"Bb Bass "
       \set TabStaff.shortInstrumentName = #"B "
-      \set Staff.stringTunings = #bass-tuning
+      \set Staff.stringTunings = \stringTuning < d,, g,, c, f, >
       \relative c, {
-        \bar ".|:" e4\3 g8\2 e\3 d4\3 b8\4 d\3 |
-        e4\3 g8\2 e\3 a\2 g\2  e4\3 |
-        d8\3 e\3 r2. | g8\2 e\3 r2. \bar":|."
+        \bar ".|:" d4\3 f8\2 d\3 c4\3 a8\4 c\3 |
+        d4\3 f8\2 d\3 g\2 f\2  d4\3 |
+        c8\3 d\3 r2. | f8\2 d\3 r2. \bar":|."
       }
     }
   }
 
   \score {
     \new TabStaff {
-      \set TabStaff.instrumentName = #"Bass "
+      \set TabStaff.instrumentName = #"Bb Bass "
       \set TabStaff.shortInstrumentName = #"B "
-      \set Staff.stringTunings = #bass-tuning
+      \set Staff.stringTunings = \stringTuning < d,, g,, c, f, >
       \relative c, {
-        \bar ".|" e4\3 g8\2 e\3 d4\3 b8\4 d\3 |
-        e4\3 g8\2 e\3 a\2 g\2  e4\3 \bar "|."
+        \bar ".|" d4\3 f8\2 d\3 c4\3 a8\4 c\3 |
+        d4\3 f8\2 d\3 g\2 f\2  d4\3 \bar "|."
       }
     }
   }
