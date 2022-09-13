@@ -43,8 +43,8 @@
       \set TabStaff.shortInstrumentName = #"B "
       \set Staff.stringTunings = \stringTuning < d,, g,, c, f, >
       \relative c, {
-        \bar ".|" d4\3 f8\2 d\3 c4\3 a8\4 c\3 |
-        d4\3 f8\2 d\3 g\2 f\2  d4\3 \bar "|."
+        \bar ".|" d4\3 c8\3 a\4 c4\3 a8\4 c\3 |
+        e4\3 d8\3 c\3 \tuplet 3/2 { d4\3 c\3 a\4 }\bar "|."
       }
     }
   }
