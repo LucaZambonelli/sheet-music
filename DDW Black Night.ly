@@ -43,8 +43,8 @@
       \set TabStaff.shortInstrumentName = #"B "
       \set Staff.stringTunings = #bass-tuning
       \relative c, {
-        \bar ".|" e4\3 g8\2 e\3 d4\3 b8\4 d\3 |
-        e4\3 g8\2 e\3 a\2 g\2  e4\3 \bar "|."
+        \bar ".|" e4\3 d8\3 b\4 d4\3 b8\4 d\3 |
+        fis4\3 e8\3 d\3 \tuplet 3/2 { e4\3 d\3 b\4 }\bar "|."
       }
     }
   }
