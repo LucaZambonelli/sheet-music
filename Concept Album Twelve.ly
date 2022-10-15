@@ -3,7 +3,7 @@
 song = "Twelve"
 album = "Concept Album"
 author = "Luca Zambonelli"
-execute = 120
+execute = 96
 
 % bar definition
 \defineBarLine "[" #'("|" "[" "")
@@ -78,19 +78,22 @@ scoreDrums = {
     \new DrumVoice  = Cajon {
       \voiceOne
       \drummode {
-        s1
+        cal16 cal cal cal cah8 cal16 cal cal cal cah8 |
+        cal16 cal cal cal cah8 cah cal cah |
       }
     }
     \new DrumVoice  = Maracas {
       \voiceTwo
       \drummode {
-        s1
+        mcs8 mcs s mcs mcs s |
+        mcs mcs s s4. |
       }
     }
     \new DrumVoice  = Triangle {
       \voiceThree
       \drummode {
-        s1
+        s4 s16 tro s4 s16 tro |
+        s4 s16 tro s tro s tro s tro|
       }
     }
   >>
@@ -101,21 +104,24 @@ midiDrums = {
       % cal\ff cah\pp
       \voiceOne
       \drummode {
-        s1
+        cal16 cal cal cal cah8 cal16 cal cal cal cah8 |
+        cal16 cal cal cal cah8 cah cal cah |
       }
     }
     \new DrumVoice  = Maracas {
       % mcs\mf
       \voiceTwo
       \drummode {
-        s1
+        mcs8 mcs r mcs mcs r |
+        mcs mcs r r4. |
       }
     }
     \new DrumVoice  = Triangle {
       % trc\ff tro\ff
       \voiceThree
       \drummode {
-        s1
+        s4 s16 tro s4 s16 tro |
+        s4 s16 tro s tro s tro s tro |
       }
     }
   >>
@@ -145,8 +151,8 @@ midiDrums = {
                 \clef treble
                 \key c \major
                 \numericTimeSignature
-                \time 4/4
-                \tempo 4 = #execute
+                \time 6/8
+                \tempo 8. = #execute
                 \scoreRythm
               }
               \new ChordNames {
@@ -189,7 +195,6 @@ midiDrums = {
               \clef bass
               \key c \major
               \numericTimeSignature
-              \time 4/4
               \scoreBass
             }
           }
@@ -225,7 +230,7 @@ midiDrums = {
         \set Staff.midiMinimumVolume = #0.4
         \set Staff.midiMaximumVolume = #0.4
         \relative c {
-          \time 4/4
+          \time 6/8
           \tempo 4 = #execute
           \midiRythm
         }
