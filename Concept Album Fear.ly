@@ -3,7 +3,7 @@
 song = "Fear"
 album = "Concept Album"
 author = "Luca Zambonelli"
-execute = 56
+execute = 76
 
 % bar definition
 \defineBarLine "[" #'("|" "[" "")
@@ -45,7 +45,7 @@ scoreTheme = {
   ees2.\2 ees8\2 c\3 | bes2.\3 \tuplet 3/2 { bes8\3 aes\4 f\4 } | f1\4 | ees2.\5 c'4\3 \bar "||" \break
   ees2.\2 c8\3 b\3 | bes2.\3 \tuplet 3/2 { bes8\3 aes\4 f\4 } | ees1\5~ | ees1\5 \bar "||" \break
   g,8\6 bes\6 c\5 bes\6 c\5 d4.\5 |
-  c8\5 ees\5 f\4 ees\5 f\4 g4.\4 |
+  c8\5 d\5 f\4 d\5 f\4 g4.\4 |
   f8\4 aes\4 bes\3 aes\4 bes\3 b\3 c4\3~ |
   c1 \bar "]" \break
 }
@@ -60,7 +60,7 @@ midiTheme = {
   ees2. \tuplet 3/2 { c4 b8 } | bes2. \tuplet 3/2 { bes8 aes f } |
   ees1~ | ees1 |
   \tuplet 3/2 { g,4 bes8 } \tuplet 3/2 { c4 bes8 } \tuplet 3/2 { c4 d8~ } d4 |
-  \tuplet 3/2 { c4 ees8 } \tuplet 3/2 { f4 ees8 } \tuplet 3/2 { f4 g8~ } g4 |
+  \tuplet 3/2 { c4 d8 } \tuplet 3/2 { f4 d8 } \tuplet 3/2 { f4 g8~ } g4 |
   \tuplet 3/2 { f4 aes8 } \tuplet 3/2 { bes4 aes8 } \tuplet 3/2 { bes4 b8 } c4~ |
   c2. c4 |
 
@@ -69,7 +69,7 @@ midiTheme = {
   ees2. \tuplet 3/2 { c4 b8 } | bes2. \tuplet 3/2 { bes8 aes f } |
   ees1~ | ees1 |
   \tuplet 3/2 { g,4 bes8 } \tuplet 3/2 { c4 bes8 } \tuplet 3/2 { c4 d8~ } d4 |
-  \tuplet 3/2 { c4 ees8 } \tuplet 3/2 { f4 ees8 } \tuplet 3/2 { f4 g8~ } g4 |
+  \tuplet 3/2 { c4 d8 } \tuplet 3/2 { f4 d8 } \tuplet 3/2 { f4 g8~ } g4 |
   \tuplet 3/2 { f4 aes8 } \tuplet 3/2 { bes4 aes8 } \tuplet 3/2 { bes4 b8 } c4~ |
   c1 |
 }
@@ -82,7 +82,7 @@ scoreBass = {
   \makePercent s1 | \makePercent s |
   \makePercent s | \makePercent s |
   \makePercent s | \makePercent s |
-  g8\4 bes4\4 d\3 f4.\2 | c8\3 ees4\3 c\3 bes4.\4 |
+  g8\4 bes4\4 d\3 f4.\2 | c8\3 e4\3 c\3 bes4.\4 |
   c8\3 f4\2 ees4\3 f8\2 f4\2~ | f1\2 |
 }
 chordsBass = {
@@ -91,14 +91,14 @@ chordsBass = {
     s4 |
     f4.:m7 f8:m7/ees s2 | f4.:m7/des f8:m7/c s2 | f4.:m7 f8:m7/ees s2 | f4.:m7/des f8:m7/c s2 |
     f4.:m7 f8:m7/ees s2 | f4.:m7/des f8:m7/c s2 | f4.:m7 f8:m7/ees s2 | f4.:m7/des f8:m7/c s2 |
-    g1:m7 | c:m7 | f:m7 | s |
+    g1:m7 | c:7 | f:m7 | s |
   }
 }
 midiBass = {
   r1 | r1 |
 
   \tuplet 3/2 { g4\mf bes8~ } \tuplet 3/2 { bes4 d8~ } \tuplet 3/2 { d4 f8~ } f4  |
-  \tuplet 3/2 { c ees8~ } \tuplet 3/2 { ees4 c8~ } \tuplet 3/2 { c4 bes8~ } bes4  |
+  \tuplet 3/2 { c e8~ } \tuplet 3/2 { e4 c8~ } \tuplet 3/2 { c4 bes8~ } bes4  |
   \tuplet 3/2 { c f8~ } \tuplet 3/2 { f4 ees8~ } \tuplet 3/2 { ees4 f8 } f4~ |
   f1 |
 
@@ -116,7 +116,7 @@ midiBass = {
   f4~ \tuplet 3/2 { f4 ees8 } ees2 |
   des4~ \tuplet 3/2 { des c8 } c2 |
   \tuplet 3/2 { g4 bes8~ } \tuplet 3/2 { bes4 d8~ } \tuplet 3/2 { d4 f8~ } f4  |
-  \tuplet 3/2 { c ees8~ } \tuplet 3/2 { ees4 c8~ } \tuplet 3/2 { c4 bes8~ } bes4  |
+  \tuplet 3/2 { c e8~ } \tuplet 3/2 { e4 c8~ } \tuplet 3/2 { c4 bes8~ } bes4  |
   \tuplet 3/2 { c f8~ } \tuplet 3/2 { f4 ees8~ } \tuplet 3/2 { ees4 f8 } f4~ |
   f1 |
 
@@ -129,7 +129,7 @@ midiBass = {
   f4~ \tuplet 3/2 { f4 ees8 } ees2 |
   des4~ \tuplet 3/2 { des c8 } c2 |
   \tuplet 3/2 { g4 bes8~ } \tuplet 3/2 { bes4 d8~ } \tuplet 3/2 { d4 f8~ } f4  |
-  \tuplet 3/2 { c ees8~ } \tuplet 3/2 { ees4 c8~ } \tuplet 3/2 { c4 bes8~ } bes4  |
+  \tuplet 3/2 { c e8~ } \tuplet 3/2 { e4 c8~ } \tuplet 3/2 { c4 bes8~ } bes4  |
   \tuplet 3/2 { c f8~ } \tuplet 3/2 { f4 ees8~ } \tuplet 3/2 { ees4 f8 } f4~ |
   f1 |
 }
@@ -148,15 +148,6 @@ scoreDrums = {
         \makePercent s | \makePercent s |
         \makePercent s | \makePercent s |
         \makePercent s | \makePercent s |
-      }
-    }
-    \new DrumVoice  = Maracas {
-      \voiceTwo
-      \drummode {
-        s4 |
-        mcs8 mcs mcs mcs mcs mcs mcs mcs | s1 | s | s |
-        s | s | s | s |
-        s | s | s | s |
       }
     }
   >>
@@ -204,83 +195,6 @@ midiDrums = {
         \tuplet 3/2 { cal4\ff cah8\pp } \tuplet 3/2 { cah4 cal8\ff } cal4 cah\pp |
         \tuplet 3/2 { cal4\ff cah8\pp } \tuplet 3/2 { cah4 cal8\ff } cal4 cah\pp |
         \tuplet 3/2 { cal4\ff cah8\pp } \tuplet 3/2 { cah4 cal8\ff } cal4 cah\pp |
-      }
-    }
-    \new DrumVoice  = Maracas {
-      \voiceTwo
-      \drummode {
-        \tuplet 3/2 { mcs4\mf mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4\ff mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
-        \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 }
-          \tuplet 3/2 { mcs4 mcs8 } \tuplet 3/2 { mcs4 mcs8 } |
       }
     }
   >>
