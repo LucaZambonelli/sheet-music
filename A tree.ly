@@ -352,7 +352,7 @@ midiPadBass = {
               \clef "treble_8"
               \time 4/4
               \tempo 4 = #execute
-              \numericTimignature
+              \numericTimeSignature
               \key c \major
               \scorePadTreble
             }
@@ -360,7 +360,7 @@ midiPadBass = {
           \new Staff {
             \relative c, {
               \clef "bass_8"
-              \numericTimignature
+              \numericTimeSignature
               \time 4/4
               \key c \major
               \scorePadBass
