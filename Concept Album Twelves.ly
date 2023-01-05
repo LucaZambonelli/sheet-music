@@ -1,6 +1,6 @@
 \version "2.22.1"
 
-song = "Twelve"
+song = "Twelves"
 album = "Concept Album"
 author = "Luca Zambonelli"
 execute = 96
