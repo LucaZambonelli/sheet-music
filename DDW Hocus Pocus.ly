@@ -53,11 +53,11 @@
       \numericTimeSignature
       \clef "treble^8"
       \relative c''' {
+        R1 | r4 r r r | \bar ".|" \break
         a8 a16 a a8^. a^. a^. a^. c4 | a8 a16 a a8^. a^. d^. cis^. a4 |
         a8 a16 a a8^. a^. a^. a^. c4 | a8 a16 a a8^. a^. d^. cis^. a4 | \break
         e' d c8 a g4 | e' d c8 a g4 |
         a r b r | c r d r | e2 f4 g | a1 \bar "|."
-
       }
     }
   }
