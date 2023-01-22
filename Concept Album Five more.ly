@@ -3,7 +3,7 @@
 song = "Five more"
 album = "Concept Album"
 author = "Luca Zambonelli"
-execute = 108
+execute = 128
 
 % bar definition
 \defineBarLine "[" #'("|" "[" "")
@@ -60,31 +60,40 @@ scoreTheme = {
   \tuplet 5/4 { f\2 ees\2 f\2 ees\2 aes\1 } \tuplet 5/4 { g\2 f\2 g\2 f\2 des\3 } |
   \tuplet 5/4 { f\2 ees\2 f\2 ees\2 aes\1 } \tuplet 5/4 { g\2 f\2 g\2 f\2 des\3 } |
   \tuplet 5/4 { f\2 ees\2 f\2 ees\2 aes\1 } \tuplet 5/4 { g\2 f\2 g\2 f\2 des\3 } | \break
-  f2\2 ees4.\2 des8\3 | c2~\3 c4.\3 f8\2 | g2\2 f4.\2 ees8\3 | d1\3 | \break
-  f2\2 ees4.\2 des8\3 | c2~\3 c4.\3 c8\3 | b2\3 a4.\4 fis8\4 | g1\4 | \break
+  f2\2 ees4.\2 des8\3 | c2~\3 c4.\3 f8\2 | g2\2 f4.\2 ees8\3 | des1\3 | \break
+  f2\2 ees4.\2 des8\3 | c2~\3 c4.\3 c8\3 | bes2\3 aes4.\4 g8\4 | f1\4 | \break
 }
 midiTheme = {
   \tuplet 5/4 { f8 ees f ees aes } \tuplet 5/4 { g f g f des } |
   \tuplet 5/4 { f ees f ees aes } \tuplet 5/4 { g f g f des } |
   \tuplet 5/4 { f ees f ees aes } \tuplet 5/4 { g f g f des } |
   \tuplet 5/4 { f ees f ees aes } \tuplet 5/4 { g f g f des } |
-  f2 ees4. des8 | c2~ c4. f8 | g2 f4. ees8 | d1 |
-  f2 ees4. des8 | c2~ c4. c8 | b2 a4. fis8 | g1 |
+  f2 ees4. des8 | c2~ c4. f8 | g2 f4. ees8 | des1 |
+  f2 ees4. des8 | c2~ c4. c8 | bes2 aes4. g8 | f1 |
   \tuplet 5/4 { f'8 ees f ees aes } \tuplet 5/4 { g f g f des } |
   \tuplet 5/4 { f ees f ees aes } \tuplet 5/4 { g f g f des } |
   \tuplet 5/4 { f ees f ees aes } \tuplet 5/4 { g f g f des } |
   \tuplet 5/4 { f ees f ees aes } \tuplet 5/4 { g f g f des } |
-  f2 ees4. des8 | c2~ c4. f8 | g2 f4. ees8 | d1 |
-  f2 ees4. des8 | c2~ c4. c8 | b2 a4. fis8 | g1 |
+  f2 ees4. des8 | c2~ c4. f8 | g2 f4. ees8 | des1 |
+  f2 ees4. des8 | c2~ c4. c8 | bes2 aes4. g8 | f1 |
 }
 
 
 % bass section
 scoreBass = {
-  s1
+  R1 | R | f,2\4 aes\4 | c\3 aes\4 |
+  \makePercent { s1 } | \makePercent { s } |
+  \makePercent { s } | \makePercent { s } | 
+  \makePercent { s } | \makePercent { s } |
+  \makePercent { s } | \makePercent { s } | 
 }
 midiBass = {
-  s1
+  r1 | r | r | r |
+  r | r | r | r |
+  r | r | r | r |
+  r | r | f,2 aes | c aes |
+  f aes | c aes | f aes | c aes |
+  f aes | c aes | f aes | c aes |
 }
 
 
