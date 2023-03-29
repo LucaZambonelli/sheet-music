@@ -117,6 +117,15 @@
           << d4.\3 a'\2 >> << f\2 c'\1 >> << g4~\2 d'~\1 >> | << g,1\2 d'\1 >> \bar "|."
         }
       }
+      \layout {
+        #(layout-set-staff-size 20)
+      }
+    }
+  }
+
+  \bookpart {
+    \paper {
+      system-system-spacing.basic-distance = #7
     }
 
     % Hocus pocus keyboard
@@ -132,6 +141,9 @@
           << a1~ cis e >> | << a,~ d f >> | << a,~ c e >> | << a,~ d f >> |
           << a,~ e' g >> | << a,2~ c f >> << a,~ d g >> | << a,1~ cis a' >> | << a, cis a' >> \bar "|."
         }
+      }
+      \layout {
+        #(layout-set-staff-size 14)
       }
     }
 
@@ -149,11 +161,10 @@
           a2_. b^. | c^. d^. | e f4 g | a1 \bar "|."
         }
       }
+      \layout {
+        #(layout-set-staff-size 14)
+      }
     }
-  }
-
-
-  \bookpart {
     % Stairway to heaven
     \score {
       \new Staff {
@@ -164,16 +175,16 @@
           \key g \major
           s1 | \break
           \time 4/4
-          R1 | R | R | g8 a a2 r4 |
+          R1^\markup { \italic "intro" } | R | R | g8 a a2 r4 |
           e'1 | c | c | d8 e e2 r4 | \break
           e2 fis | a4 g8 fis e4 r8 g8 | g2 g | g8 a a2 r4 |
           e4 a8 g g fis e d | a'4 c8 b c4 r8 d | e2 d | g, 8 a a2 r4 \bar "||" \break
-          a2 aes | g fis | f1 | g8 a a2. |
+          a2^\markup { \italic "verse 1" } aes | g fis | f1 | g8 a a2. |
           e1 | c | c | b8 e e2. \bar "||" \break
-          R1 | R | R | R \bar "||"
-          g,4 c8 b b a g fis | a4 b c r | e2 fis | a8 b b2. | \break
+          R1 | R^\markup { \italic "Oh and she's buying..." } | R | R \bar "||"
+          g,4^\markup { \italic "verse 2" } c8 b b a g fis | a4 b c r | e2 fis | a8 b b2. | \break
           e,1 | c | c | g'8 e e2 r4 \bar "||"
-          e1 | c | c | b8 e e2 r4 \bar "|."
+          e1^\markup { \italic "to interlude" }  | c | c | b8 e e2 r4 \bar "|."
         }
       }
       \layout {
