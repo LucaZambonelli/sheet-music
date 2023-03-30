@@ -60,8 +60,8 @@
         \time 15/8
         \relative c {
           \override Score.BarNumber.break-visibility = ##(#f #f #f)
-          g32(\2 a16.)\2 g32(\2 a16.)\2 g16\2 e\3 c8(\4 g2)\4
-            d'16\3 e\3 g\2 r d\3 e\3 a\2 r des,8\3 a'16\2 d,\3 r e\3 \bar "|."
+          \bar ".|:" g32(\2 a16.)\2 g32(\2 a16.)\2 g16\2 e\3 c8(\4 g2)\4
+            d'16\3 e\3 g\2 r d\3 e\3 a\2 r des,8\3 a'16\2 d,\3 r e\3 \bar ":|."
         }
       }
     }
@@ -92,8 +92,14 @@
         \set Staff.stringTunings = #bass-tuning
         \relative c, {
           \override Score.BarNumber.break-visibility = ##(#f #f #f)
-          s1 | \break
-          r8 d\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } |
+          s1 \bar ".|:" \break
+          \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 }
+            \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 } |
+          \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 }
+            \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 } |
+          \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 }
+            \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 } \bar ":|.|:" \break
+          r8 d'\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } |
           g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 |
           g\4 d'\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } | \break
           g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 \bar "||"
@@ -111,7 +117,7 @@
           g8\4 g\4 g\4 g\4 g\4 g\4 g'4\2 \bar "||"
           f,\4 a8\4 a\4 ais\4 ais\4 b\4 b\4 |
           c4\3 e8\3 e\3 f\3 f\3 fis\3 fis\3 | \break
-          g1~\2 | g\2 | f,4\4 g2.\4 \bar "|."
+          g1~\2 | g\2 | f,4\4 g2.\4 \bar ":|."
         }
       }
     }
