@@ -4,6 +4,9 @@
 #(set-default-paper-size "a5")
 
 
+\defineBarLine "]" #'("]" "" "")
+
+
 \book{
   \paper {
     print-page-number  = ##f
@@ -114,10 +117,11 @@
           r8 d\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } |
           g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 |
           g\4 d'\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } | \break
-          g8\4 g\4 g\4 g\4 g\4 g\4 g'4\2 \bar "||"
-          f,\4 a8\4 a\4 ais\4 ais\4 b\4 b\4 |
-          c4\3 e8\3 e\3 f\3 f\3 fis\3 fis\3 | \break
-          g1~\2 | g\2 | f,4\4 g2.\4 \bar ":|."
+          g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 \bar "||"
+          g\4 g\4 g\4 g\4 g\4 g\4 g'4\2 |
+          f,\4 a8\4 a\4 ais\4 ais\4 b\4 b\4 | \break
+          c4\3 e8\3 e\3 f\3 f\3 fis\3 fis\3 |
+          g1~\2 \bar "]" g\2 | f,4\4 g2.\4 \bar ":|."
         }
       }
     }
@@ -183,8 +187,8 @@
           a2^\markup { \italic "verse 1" } aes | g fis | f1 | g8 a a2. |
           e1 | c | c | b8 e e2. \bar "||" \break
           R1 | R^\markup { \italic "Oh and she's buying..." } | R | R \bar "||"
-          g,4^\markup { \italic "verse 2" } c8 b b a g fis | a4 b c r | e2 fis | a8 b b2. | \break
-          e,1 | c | c | g'8 e e2 r4 \bar "||"
+          g,4^\markup { \italic "verse 2" } c8 b b a g fis | a4 b c r | e2 fis | g8 a a2. | \break
+          e1 | c | c | g'8 e e2 r4 \bar "||"
           e1^\markup { \italic "to interlude" }  | c | c | b8 e e2 r4 \bar "|."
         }
       }
