@@ -91,35 +91,39 @@
   \bookpart {
     % Demon's eye
     \score {
+      \new Staff {
+        \relative c {
+          \override Score.BarNumber.break-visibility = ##(#f #f #f)
+          \clef bass
+          \key g \minor
+          s1 \bar ".|:" \break
+          \tuplet 3/2 { bes8 g4 } \tuplet 3/2 { bes8 g4 }
+            \tuplet 3/2 { bes8 g4 } \tuplet 3/2 { bes8 g4 } |
+          \tuplet 3/2 { bes8 g4 } \tuplet 3/2 { bes8 g4 }
+            \tuplet 3/2 { bes8 g4 } \tuplet 3/2 { bes8 g4 } \bar ":|." \break
+        }
+      }
+    }
+    \score {
       \new TabStaff {
         \set Staff.stringTunings = #bass-tuning
         \relative c, {
           \override Score.BarNumber.break-visibility = ##(#f #f #f)
           s1 \bar ".|:" \break
-          \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 }
-            \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 } |
-          \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 }
-            \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 } |
-          \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 }
-            \tuplet 3/2 { bes8\4 g4\4 } \tuplet 3/2 { bes8\4 g4\4 } \bar ":|.|:" \break
-          r8 d'\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } |
+          r8 d\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } |
           g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 |
-          g\4 d'\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } | \break
-          g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 \bar "||"
           g\4 d'\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } |
-          g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 | \break
-          g\4 d'\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } |
-          g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 \bar "||"
-          r g'\2 ees'\1 c\1 \tuplet 3/2 { g2\2 ees4\3 } | \break
+          g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 \bar "||" \break
+          r g'\2 ees'\1 c\1 \tuplet 3/2 { g2\2 ees4\3 } |
           c8\3 c\3 c\3 c\3 c\3 c\3 c\3 c\3 |
           c\3 g'\2 ees'\1 c\1 \tuplet 3/2 { g2\2 ees4\3 } |
           c8\3 c\3 c\3 c\3 c\3 c\3 c\3 c\3 \bar "||" \break
           r8 d\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } |
           g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 |
-          g\4 d'\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } | \break
-          g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 \bar "||"
+          g\4 d'\3 bes'\2 g\2 \tuplet 3/2 { d2\3 bes4\4 } |
+          g8\4 g\4 g\4 g\4 g\4 g\4 g\4 g\4 \bar "||" \break
           g\4 g\4 g\4 g\4 g\4 g\4 g'4\2 |
-          f,\4 a8\4 a\4 ais\4 ais\4 b\4 b\4 | \break
+          f,\4 a8\4 a\4 ais\4 ais\4 b\4 b\4 |
           c4\3 e8\3 e\3 f\3 f\3 fis\3 fis\3 |
           g1~\2 \bar "]" g\2 | f,4\4 g2.\4 \bar ":|."
         }
