@@ -25,7 +25,7 @@
         \set Staff.stringTunings = #bass-tuning
         \relative c, {
           \override Score.BarNumber.break-visibility = ##(#f #f #f)
-          b4.\4 b8\4 bes\4 a4.\4 | a8\4 aes\4 g4.\4 ges4.\4 | f1\1 \bar "|."
+          b4.\4 b8\4 bes\4 a4.\4 | a8\4 aes\4 g4.\4 ges4.\4 | f1\4 \bar "|."
         }
       }
     }
@@ -126,6 +126,51 @@
           f,\4 a8\4 a\4 ais\4 ais\4 b\4 b\4 |
           c4\3 e8\3 e\3 f\3 f\3 fis\3 fis\3 |
           g1~\2 \bar "]" g\2 | f,4\4 g2.\4 \bar ":|."
+        }
+      }
+    }
+  }
+
+
+  \bookpart {
+    % Day tripper
+    \score {
+      \new TabStaff {
+        \set Staff.stringTunings = #bass-tuning
+        \relative c, {
+          \override Score.BarNumber.break-visibility = ##(#f #f #f)
+          s1 \bar ".|:" \break
+          e4.\3 g8\3 gis\3 b\2 e\1 d\2~ | 
+          \mark \markup { \tiny \italic "intro: 2 bars guitar solo, then x2" } d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 |
+          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ | d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 \bar ":..:" \break
+          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ |
+          \mark \markup { \tiny \italic "pre-verse" } d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 |
+          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ | d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 \bar "||" \break
+          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ |
+          \mark \markup { \tiny \italic "verse" } d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 |
+          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ | d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 \bar "||" \break
+          a,,4.\3 c8\3 cis\3 e\2 a\1 g\2~ | g4\2 e8\2 b'4\1 e,8\2 g\2 a\1 |
+          e4.\3 g8\3 gis\3 b\2 e\1 d\2~ | d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 \bar "||" \break
+          fis,8\3 fis\3 ais\2 cis\2 e\1 e\1 dis\1 fis\1 |
+          \mark \markup { \tiny \italic "chorus" } fis,\3 fis\3 ais\2 cis\2 e\1 e\1 dis\1 fis\1 |
+          fis,\3 fis\3 ais\2 cis\2 e\1 e\1 dis\1 fis\1 |
+          fis,\3 fis\3 ais\2 cis\2 e\1 e\1 dis\1 fis\1 \bar "||" \break
+          a,\3 a\3 cis\2 e\2 g\1 g\1 fis\1 e\2 |
+          gis,\3 gis\3 c\2 dis\2 fis\1 fis\1 f\1 dis\2 |
+          cis,\4 cis\4 f\3 f\3 gis\3 gis\3 f\3 cis\4 |
+          b\4 b\4 dis\3 dis\3 fis\3 fis\3 dis\3 b\4 \bar ":|." \break
+          b4\3 b\3 b\3 b\3 |
+          \mark \markup { \tiny \italic "bridge" } b\3 b\3 b\3 b\3 |
+          b\3 b\3 b\3 b\3 |
+          b\3 b\3 b\3 b\3 | \break
+          b8\3 b\3 b4\3 b8\3 b\3 b4\3 |
+          b8\3 b\3 b4\3 b8\3 b\3 b4\3 |
+          b8\3 b\3 b4\3 b8\3 b\3 b4\3 |
+          b8\3 b\3 b4\3 b8\3 b\3 b4\3 | \break
+          b8\3 b\3 b\3 b\3 b\3 b\3 b\3 b\3 |
+          b\3 b\3 b\3 b\3 b\3 b\3 b\3 b\3 |
+          b\3 b\3 b\3 b\3 b\3 b\3 b\3 b\3 |
+          \mark \markup { \tiny \italic "pre-verse, verse, chorus then intro ad lib." } b\3 b\3 b\3 b\3 b\3 b\3 b\3 b\3 |
         }
       }
     }
