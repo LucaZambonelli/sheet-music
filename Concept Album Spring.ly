@@ -77,7 +77,10 @@ chordsRythm = {
   }
 }
 midiRythm = {
-  s1
+  \partial 8 s8 |
+  s1 | s1 | s1 |
+  s1 | s1 | s1 |
+  s1 | s1 | s1 | s1 |
 }
 
 
@@ -86,7 +89,10 @@ scoreTheme = {
   s1
 }
 midiTheme = {
-  s1
+  \partial 8 s8 |
+  s1 | s1 | s1 |
+  s1 | s1 | s1 |
+  s1 | s1 | s1 | s1 |
 }
 
 
@@ -95,7 +101,10 @@ scoreBass = {
   s1
 }
 midiBass = {
-  s1
+  \partial 8 s8 |
+  s1 | s1 | s1 |
+  s1 | s1 | s1 |
+  s1 | s1 | s1 | s1 |
 }
 
 
@@ -128,21 +137,30 @@ midiDrums = {
       % cal\ff cah\pp
       \voiceOne
       \drummode {
-        s1
+      \partial 8 s8 |
+      s1 | s1 | s1 |
+      s1 | s1 | s1 |
+      s1 | s1 | s1 | s1 |
       }
     }
     \new DrumVoice  = Maracas {
       % mcs\mf
       \voiceTwo
       \drummode {
-        s1
+      \partial 8 s8 |
+      s1 | s1 | s1 |
+      s1 | s1 | s1 |
+      s1 | s1 | s1 | s1 |
       }
     }
     \new DrumVoice  = Triangle {
       % trc\ff tro\ff
       \voiceThree
       \drummode {
-        s1
+      \partial 8 s8 |
+      s1 | s1 | s1 |
+      s1 | s1 | s1 |
+      s1 | s1 | s1 | s1 |
       }
     }
   >>
