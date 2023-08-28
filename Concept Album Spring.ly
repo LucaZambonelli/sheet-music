@@ -3,7 +3,7 @@
 song = "Spring"
 album = "Concept Album"
 author = "Luca Zambonelli"
-execute = 120
+execute = 108
 
 % bar definition
 \defineBarLine "[" #'("|" "[" "")
