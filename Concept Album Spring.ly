@@ -9,34 +9,6 @@ execute = 108
 \defineBarLine "[" #'("|" "[" "")
 \defineBarLine "]" #'("]" "" "")
 
-% symbol definition
-makePercent = #(
-  define-music-function
-  (note)
-  (ly:music?)
-  (make-music 'PercentEvent 'length (ly:music-length note))
-)
-
-% percussions definition
-drumPitchNames.cal = #'cal
-drumPitchNames.cah = #'cah
-drumPitchNames.mcs = #'mcs
-drumPitchNames.trc = #'trc
-drumPitchNames.tro = #'tro
-#(define cajon-style
-  '(
-    (cal  default  #f          -1)
-    (cah  default  #f           1)   
-    (mcs  cross    #f           0)
-    (trc  cross    "halfopen"   2)
-    (tro  cross    #f           2)
-  )
-)
-midiDrumPitches.cal = c,
-midiDrumPitches.cah = d,
-midiDrumPitches.mcs = gis,
-midiDrumPitches.trc = gis''
-midiDrumPitches.tro = a''
 
 % flute section
 scoreFlute = {
