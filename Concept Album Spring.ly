@@ -111,7 +111,7 @@ midiTheme = {
 % bass section
 scoreBass = {
   \partial 8 s8 |
-  \tuplet 3/2 { e\2 e\2 e\2 } g\2 b,\1 e,4\4~ e8\4 fis\4|
+  \tuplet 3/2 { e\2 e\2 e\2 } g\2 b,\3 e,4\4~ e8\4 fis\4|
   \tuplet 3/2 { g\4 g\4 g\4} b\3 d\3 c4\3 b8\3 g\4 |
   fis\4 a\4 e'\2 c\3 b\3 a\4 fis\4 e\4 |
   \tuplet 3/2 { e'\2 e\2 e\2 } g\2 a\1 b4\1~ b8\1 a,\4 |
@@ -204,9 +204,9 @@ midiBass = {
                 \time 4/4
                 \scoreBass
               }
-              \new ChordNames {
-                \chordsBass
-              }
+              % \new ChordNames {
+              %   \chordsBass
+              % }
             >>
           }
           \new TabStaff {
