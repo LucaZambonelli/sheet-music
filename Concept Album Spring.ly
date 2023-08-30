@@ -3,7 +3,7 @@
 song = "Spring"
 album = "Concept Album"
 author = "Luca Zambonelli"
-execute = 108
+execute = 112
 
 % bar definition
 \defineBarLine "[" #'("|" "[" "")
@@ -68,12 +68,12 @@ midiFlute = {
 
 % rythm section
 scoreRythm = {
-  s1
+  \partial 8 s8
 }
 chordsRythm = {
   \set chordChanges = ##t
   \chordmode {
-    s1
+    \partial 8 s8
   }
 }
 midiRythm = {
@@ -86,19 +86,33 @@ midiRythm = {
 
 % theme section
 scoreTheme = {
-  s1
+  \partial 8 e8 |
+  \tuplet 3/2 { g g g } fis e b'4~ \tuplet 3/2 { b8 b a } |
+  \tuplet 3/2 { g g g } fis e b'4~ \tuplet 3/2 { b8 b a } |
+  \tuplet 3/2 { g a b } a g fis d b e | \break
+  \tuplet 3/2 { g g g } fis e b'4~ \tuplet 3/2 { b8 b a } |
+  \tuplet 3/2 { g g g } fis e b'4~ \tuplet 3/2 { b8 b a } |
+  \tuplet 3/2 { g a b } a g fis4 r8 e | \break
 }
 midiTheme = {
   \partial 8 s8 |
   s1 | s1 | s1 |
   s1 | s1 | s1 |
   s1 | s1 | s1 | s1 |
+  r2. \tuplet 3/2 { r4 e8 \mf } |
+  \tuplet 3/2 { g8 g g } \tuplet 3/2 { fis4 e8 } b'4~ \tuplet 3/2 { b8 b a } |
+  \tuplet 3/2 { g8 g g } \tuplet 3/2 { fis4 e8 } b'4~ \tuplet 3/2 { b8 b a } |
+  \tuplet 3/2 { g a b } \tuplet 3/2 { a4 g8 } \tuplet 3/2 { fis4 d8 }
+    \tuplet 3/2 { b4 e8 } |
+  \tuplet 3/2 { g8 g g } \tuplet 3/2 { fis4 e8 } b'4~ \tuplet 3/2 { b8 b a } |
+  \tuplet 3/2 { g8 g g } \tuplet 3/2 { fis4 e8 } b'4~ \tuplet 3/2 { b8 b a } |
+  \tuplet 3/2 { g a b } \tuplet 3/2 { a4 g8 } fis4 \tuplet 3/2 { r4 e8 } |
 }
 
 
 % bass section
 scoreBass = {
-  s1
+  \partial 8 s8
 }
 midiBass = {
   \partial 8 s8 |
@@ -114,19 +128,19 @@ scoreDrums = {
     \new DrumVoice  = Cajon {
       \voiceOne
       \drummode {
-        s1
+        \partial 8 s8
       }
     }
     \new DrumVoice  = Maracas {
       \voiceTwo
       \drummode {
-        s1
+        \partial 8 s8
       }
     }
     \new DrumVoice  = Triangle {
       \voiceThree
       \drummode {
-        s1
+        \partial 8 s8
       }
     }
   >>
