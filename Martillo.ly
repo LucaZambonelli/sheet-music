@@ -1,4 +1,4 @@
-\version "2.24.2"
+\version "2.22.1"
 
 
 \defineBarLine "[" #'("|" "[" "")
@@ -19,7 +19,7 @@ chordsMartillo = {
     f4. d:m d4:m | g4.:m c:7 c4:7 |
     a4.:m d:m d4:m | g4.:m c:7 c4:7 | \break
     f4. a:m a4:m | d4.:m g:m g4:m |
-    c4.:7 c:7 c4:7 | f4. f f4 \bar "||" \break
+    c4.:7 f f4 | f4. f f4 \bar "||" \break
 
     a4.:7 a:7 a4:7 | a4.:7 a:7 a4:7 |
     d4.:7 d:7 d4:7 | d4.:7 d:7 d4:7 | \break
@@ -29,7 +29,7 @@ chordsMartillo = {
     f4. d:m d4:m | g4.:m c:7 c4:7 |
     a4.:m d:m d4:m | g4.:m c:7 c4:7 | \break
     f4. d:m d4:m | g4.:m c:7 c4:7 |
-    a4.:m d:m d4:m | g4.:m c:7 \parenthesize c4:7 \bar "]" f1
+    a4.:m d:m d4:m | g4.:m c:7 \parenthesize c4:7 \bar "]" f1 \bar "|."
   }
 }
 
@@ -56,7 +56,7 @@ melodyMartillo = {
     g4. f8~ f4 r | R1 |
 
     a4. b8~ b4 cis | d4. cis8~ cis4 b |
-    a4. g8~ g4 fis | e4. fis8~ fis4 fis |
+    a4. g8~ g4 fis | e4. fis8~ fis4 r |
     g4. a8~ a4 b | c4. b8~ b4 a |
     g4. f8~ f4 e | c2 r4 a' |
 
@@ -74,7 +74,7 @@ melodyMartillo = {
 bridgeMartillo = {
   \lyricmode {
     blo blo blo blo blo blo
-    blo blo blo blo blo blo
+    blo blo blo blo blo
     blo blo blo blo blo blo
     blo blo blo blo
   }
