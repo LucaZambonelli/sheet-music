@@ -19,7 +19,7 @@ chordsMartillo = {
     f4. d:m d4:m | g4.:m c:7 c4:7 |
     a4.:m d:m d4:m | g4.:m c:7 c4:7 | \break
     f4. a:m a4:m | d4.:m g:m g4:m |
-    c4.:7 f f4 | f4. f f4 \bar "||" \break
+    c4.:7 f f4 | f f f f \bar "||" \break
 
     a4.:7 a:7 a4:7 | a4.:7 a:7 a4:7 |
     d4.:7 d:7 d4:7 | d4.:7 d:7 d4:7 | \break
