@@ -42,16 +42,20 @@ midiDrumPitches.tro = a''
 % piano section
 scoreOrganTreb = {
   r2 c4 b8 a \bar "["
-  e2 c'4 b8 a | e2 c'4 b8 a | f2 d'4 c8 b | f2 c'4 b8 a | \break
-  e2 c'4 b8 a | e2 c'4 b8 a | f2 d'4 c8 b | f2 c'4 b8 a \bar "]"
+  e2 c'4 b8 a | e2 c'4 b8 a |
+  f2 d'4 c8 b | f2 c'4 b8 a | \break
+  e2 c'4 b8 a | e2 c'4 b8 a |
+  f2 d'4 c8 b | f2 c'4 b8 a \bar "]"
 }
 scoreOrganBass = {
   R1 |
-  g | e | d | c |
-  g' | e | d | c |
+  g | e |
+  d | d |
+  g | e |
+  d | d |
 }
 midiOrganTreb = {
-  r2 c4 b8 a |
+  r2 c4\mf b8 a |
   e2 c'4 b8 a | e2 c'4 b8 a | f2 d'4 c8 b | f2 c'4 b8 a |
   e2 c'4 b8 a | e2 c'4 b8 a | f2 d'4 c8 b | f2 c'4 b8 a |
   e2 c'4 b8 a | e2 c'4 b8 a | f2 d'4 c8 b | f2 c'4 b8 a |
@@ -59,10 +63,10 @@ midiOrganTreb = {
 }
 midiOrganBass = {
   R1
-  g | e | d | c |
-  g' | e | d | c |
-  g' | e | d | c |
-  g' | e | d | c |
+  g\mf | e | d | d |
+  g | e | d | d |
+  g | e | d | d |
+  g | e | d | d |
 }
 
 
@@ -93,10 +97,17 @@ midiTheme = {
 % bass section
 scoreBass = {
   s1 |
-  g8\2 e\2 d4\3 g,2\2 |
+  g8\2 f\2 e\2 d\3 c2\3 | d8\3 e\2 f\2 g\2 a2\1 |
+  d,8\3 e\2 f\2 g\2 a2\1 | g8\2 f\2 e\2 d\3 c2\3 |
+  g'8\2 f\2 e\2 d\3 c2\3 | d8\3 e\2 f\2 g\2 a2\1 |
+  d,8\3 e\2 f\2 g\2 a2\1 | g8\2 f\2 e\2 d\3 c2\3 |
 }
 midiBass = {
   s1
+  g8\mf f e d c2 | d8 e f g a2 | d,8 e f g a2 | g8 f e d c2 |
+  g'8 f e d c2 | d8 e f g a2 | d,8 e f g a2 | g8 f e d c2 |
+  g'8 f e d c2 | d8 e f g a2 | d,8 e f g a2 | g8 f e d c2 |
+  g'8 f e d c2 | d8 e f g a2 | d,8 e f g a2 | g8 f e d c2 |
 }
 
 
