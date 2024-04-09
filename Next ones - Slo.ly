@@ -226,6 +226,8 @@ midiDrums = {
                 \override StringNumber.stencil = ##f
                 \clef treble
                 \key c \major
+                \numericTimeSignature
+                \time 4/4
                 \scoreRythm
               }
               \new ChordNames {
@@ -247,6 +249,8 @@ midiDrums = {
                 \override StringNumber.stencil = ##f
                 \clef treble
                 \key c \major
+                \numericTimeSignature
+                \time 4/4
                 \scoreTheme
               }
             }
@@ -263,7 +267,9 @@ midiDrums = {
             \relative c' {
               \override StringNumber.stencil = ##f
               \clef bass
-                \key c \major
+              \key c \major
+              \numericTimeSignature
+              \time 4/4
               \scoreBass
             }
           }
@@ -283,6 +289,8 @@ midiDrums = {
           \override VerticalAxisGroup.minimum-Y-extent = #'(3.0 . 4.0)
           drumStyleTable = #(alist->hash-table cajon-style)
         } {
+          \numericTimeSignature
+          \time 4/4
           \scoreDrums
         }
       >>
