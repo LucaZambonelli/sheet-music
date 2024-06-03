@@ -133,51 +133,6 @@
 
 
   \bookpart {
-    % Day tripper
-    \score {
-      \new TabStaff {
-        \set Staff.stringTunings = #bass-tuning
-        \relative c, {
-          \override Score.BarNumber.break-visibility = ##(#f #f #f)
-          s1 \bar ".|:" \break
-          e4.\3 g8\3 gis\3 b\2 e\1 d\2~ | 
-          \mark \markup { \tiny \italic "intro: 2 bars guitar solo, then x2" } d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 |
-          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ | d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 \bar ":..:" \break
-          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ |
-          \mark \markup { \tiny \italic "pre-verse" } d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 |
-          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ | d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 \bar "||" \break
-          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ |
-          \mark \markup { \tiny \italic "verse" } d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 |
-          e,4.\3 g8\3 gis\3 b\2 e\1 d\2~ | d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 \bar "||" \break
-          a,,4.\3 c8\3 cis\3 e\2 a\1 g\2~ | g4\2 e8\2 b'4\1 e,8\2 g\2 a\1 |
-          e4.\3 g8\3 gis\3 b\2 e\1 d\2~ | d4\2 b8\2 fis'4\1 b,8\2 d\2 e\1 \bar "||" \break
-          fis,8\3 fis\3 ais\2 cis\2 e\1 e\1 dis\1 fis\1 |
-          \mark \markup { \tiny \italic "chorus" } fis,\3 fis\3 ais\2 cis\2 e\1 e\1 dis\1 fis\1 |
-          fis,\3 fis\3 ais\2 cis\2 e\1 e\1 dis\1 fis\1 |
-          fis,\3 fis\3 ais\2 cis\2 e\1 e\1 dis\1 fis\1 \bar "||" \break
-          a,\3 a\3 cis\2 e\2 g\1 g\1 fis\1 e\2 |
-          gis,\3 gis\3 c\2 dis\2 fis\1 fis\1 f\1 dis\2 |
-          cis,\4 cis\4 f\3 f\3 gis\3 gis\3 f\3 cis\4 |
-          b\4 b\4 dis\3 dis\3 fis\3 fis\3 dis\3 b\4 \bar ":|." \break
-          b4\3 b\3 b\3 b\3 |
-          \mark \markup { \tiny \italic "bridge" } b\3 b\3 b\3 b\3 |
-          b\3 b\3 b\3 b\3 |
-          b\3 b\3 b\3 b\3 | \break
-          b8\3 b\3 b4\3 b8\3 b\3 b4\3 |
-          b8\3 b\3 b4\3 b8\3 b\3 b4\3 |
-          b8\3 b\3 b4\3 b8\3 b\3 b4\3 |
-          b8\3 b\3 b4\3 b8\3 b\3 b4\3 | \break
-          b8\3 b\3 b\3 b\3 b\3 b\3 b\3 b\3 |
-          b\3 b\3 b\3 b\3 b\3 b\3 b\3 b\3 |
-          b\3 b\3 b\3 b\3 b\3 b\3 b\3 b\3 |
-          \mark \markup { \tiny \italic "pre-verse, verse, chorus then intro ad lib." } b\3 b\3 b\3 b\3 b\3 b\3 b\3 b\3 |
-        }
-      }
-    }
-  }
-
-
-  \bookpart {
     \paper {
       system-system-spacing.basic-distance = #7
     }
@@ -233,7 +188,7 @@
           e'1 | c | c | d8 e e2 r4 | \break
           e2 fis | a4 g8 fis e4 r8 g8 | g2 g | g8 a a2 r4 |
           e4 a8 g g fis e d | a'4 c8 b c4 r8 d | e2 d | g, 8 a a2 r4 \bar "||" \break
-          a2^\markup { \italic "verse 1" } aes | g fis | f1 | g8 a a2. |
+          a,2^\markup { \italic "verse 1" } aes | g fis | f1 | g'8 a a2. |
           e1 | c | c | b8 e e2. \bar "||" \break
           R1 | R^\markup { \italic "Oh and she's buying..." } | R | R \bar "||"
           g,4^\markup { \italic "verse 2" } c8 b b a g fis | a4 b c r | e2 fis | g8 a a2. | \break
@@ -246,4 +201,69 @@
       }
     }
   }
+
+
+  \bookpart {
+    \paper {
+      system-system-spacing.basic-distance = #7
+    }
+
+    % Nothing else matters
+    \score {
+      \new GrandStaff <<
+        \new Staff {
+          \relative c' {
+            \numericTimeSignature
+            \override Score.BarNumber.break-visibility = ##(#f #f #f)
+            \clef treble
+            \key g \major
+            \time 6/8
+            \repeat volta 2 {
+              s2. | \break
+              r4. << e g >> | << fis a >> << e g >> |
+              r << e g >> | << fis a >> << g c >> | \break
+              r << b d >> | << d fis >> << e4 g >> << d8 fis >> |
+              b4. << b,~ fis'~ >> | \break
+            }
+            \alternative {
+              {
+                << b, fis' >> r | R2. |
+              }
+              {
+                b,8 e fis g fis g | << c,4. e >> << b d >> | \break
+                << a2.~ d~ >> | << a~ d~ >> |
+                << a4. d >> << b fis' >> | << c g' >> << a, d >> | \break
+                << b e >> << fis, fis' >> | << g, g' >> << e, g >> \bar ":|."
+              }
+            }
+          }
+        }
+        \new Staff {
+          \relative c, {
+            \clef bass
+            \key g \major
+            \repeat volta 2 {
+              s2. |
+              e4. e' | d c4 g8 |
+              e4. e' | d c4 g8 |
+              e4. e' | d c4 g8 |
+              g4. b |
+            }
+            \alternative {
+              {
+                e, e'4 e,8 | e4.~ e4 g16 fis |
+              }
+              {
+                e2. | c'4. a |
+                d8 d d d d d | c4. a |
+                d8 d d d d d | c4. a |
+                d8 d d e,4.~ | e~ e4 g16 fis |
+              }
+            }
+          }
+        }
+      >>
+    }
+  }
+
 }
